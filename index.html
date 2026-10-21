@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
@@ -111,14 +111,17 @@ input.bad,textarea.bad,select.bad{border-color:var(--bad);background:var(--bad-b
 .btn{font:600 .95rem var(--head);padding:10px 18px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .lnk{font-weight:700}
+.send{font-size:.88rem;margin:8px 0 0;color:var(--mute)}
+.send.ok{color:var(--ok);font-weight:600}
+.send.bad{color:var(--bad);font-weight:600}
 @media (max-width:520px){h1{font-size:1.55rem}.q{grid-template-columns:26px minmax(0,1fr)}.q .un{grid-column:2;justify-self:start}}
 @media (prefers-reduced-motion:no-preference){.card,.btn,.tab{transition:border-color .15s,background .15s}}
 </style>
 </head>
 <body>
 <div id="app"></div>
-<!-- THAY LINK WEB APP GOOGLE APPS SCRIPT VAO DONG DUOI DAY -->
-<script>window.WEBAPP_URL = "https://docs.google.com/spreadsheets/d/1GGJzabCmE27ex8YhmqIHBpF3lSuAViMF9OO_u_6FqDY/edit";</script>
+<!-- LINK WEB APP GOOGLE APPS SCRIPT: phai co dang https://script.google.com/macros/s/.../exec (KHONG dan link Google Sheet vao day) -->
+<script>window.WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzQ3ogksVYBVLne83V2rhX0BL2-zxcPcq7Ec6vm2OGAHpWWjtivVMeMxvCbj9axsQAn/exec";</script>
 <script>
 (function(){
 window.GRAMMAR = [
@@ -2010,7 +2013,7 @@ function actHTML(a) {
 function homeView() {
   var h = '<header class="top"><p class="brand">Dịch vụ gia sư và dạy kèm Hoa Dũng</p><h1>Ôn tập Tiếng Anh 7</h1><p class="sub">Ôn tập giữa học kì I · Unit 1, 2, 3 · 20 đề, mỗi đề 50 câu (1.000 câu)</p></header>';
   h += '<section class="who"><h2>Thông tin của em</h2><div class="row"><label for="ten">Họ và tên<input id="ten" type="text" value="' + esc(me.ten) + '" autocomplete="name"></label><label for="lop">Lớp<input id="lop" type="text" value="' + esc(me.lop) + '" autocomplete="off"></label></div>' +
-    '<p class="note">Kết quả mỗi lần kiểm tra được gửi về cho thầy' + (WEB ? '' : ' khi thầy kết nối Google Sheets') + '. Làm đúng hết cả phần là Hoàn thành; còn câu sai là Chưa hoàn thành, em làm lại cả phần để hoàn thành.</p></section>';
+    '<p class="note">Kết quả mỗi lần kiểm tra được gửi về cho thầy' + (OKURL ? '' : ' (trang đang chưa kết nối đúng bảng điểm, em báo thầy)') + '. Làm đúng hết cả phần là Hoàn thành; còn câu sai là Chưa hoàn thành, em làm lại cả phần để hoàn thành.</p></section>';
   h += '<section><h2>Bảng ngữ pháp</h2><div class="grid3">' + GR.map(function (g) { return '<a class="card gcard" href="#' + g.id + '"><b>' + g.title + '</b><span>' + esc(g.topic) + '</span></a>'; }).join('') + '</div></section>';
   h += '<section><h2>Bộ đề chuẩn Unit 1, 2, 3 (Đề 1 - Đề 10)</h2><div class="grid">' + DES.slice(0, 10).map(function (d) {
     var s = deStat(d);
@@ -2068,15 +2071,55 @@ function lockWrong(a, sec, k) {
     el.classList.add('bad'); if (el.tagName === 'SELECT') el.disabled = true; else el.readOnly = true; insAns(el, it.a[0]);
   }
 }
-function send(a, dung, tong) {
-  if (!WEB) return;
-  var p = new URLSearchParams({ ten: me.ten, lop: me.lop, unit: a.id.split('-')[0].replace('d', 'De '), bai: a.id, tieude: a.title, dung: dung, tong: tong, diem: (Math.round(dung / tong * 100) / 10).toFixed(1), sao: (dung / tong >= 1 ? 3 : dung / tong >= 0.9 ? 2 : dung / tong >= 0.8 ? 1 : 0) });
-  var url = WEB + (WEB.indexOf('?') < 0 ? '?' : '&') + p.toString();
-  try { fetch(url, { mode: 'no-cors' }).catch(function () { showSend(a, url); }); } catch (e) { showSend(a, url); }
+var OKURL = /^https:\/\/script\.google\.com\/macros\/s\/[^\/]+\/exec$/.test(WEB);
+var QKEY = 'hd_queue';
+function queue() { return ls(QKEY) || []; }
+function saveQueue(q) { ls(QKEY, q.slice(-200)); }
+function buildURL(params) { return WEB + '?' + new URLSearchParams(params).toString(); }
+function post(params) {
+  return fetch(buildURL(params), { method: 'GET', redirect: 'follow' })
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (j) { if (!j || j.status !== 'ok') throw new Error((j && j.message) || 'Máy chủ không nhận'); return j; });
 }
-function showSend(a, url) {
+function postBlind(params) {
+  return fetch(buildURL(params), { mode: 'no-cors' }).then(function () { return { status: 'sent' }; });
+}
+function trySend(params) {
+  return post(params).catch(function (err) {
+    if (err && /HTTP|Máy chủ/.test(String(err.message))) throw err;
+    return postBlind(params);
+  });
+}
+function flushQueue() {
+  if (!OKURL) return;
+  var q = queue(); if (!q.length) return;
+  var left = [], i = 0;
+  (function next() {
+    if (i >= q.length) { saveQueue(left); return; }
+    var it = q[i++];
+    trySend(it).then(next, function () { left.push(it); next(); });
+  })();
+}
+function sendNote(a, html, cls) {
   var sec = root.querySelector('[data-act="' + a.id + '"]'); if (!sec) return;
-  var fb = sec.querySelector('.fb'); fb.insertAdjacentHTML('beforeend', '<p><a class="lnk" target="_blank" rel="noopener" href="' + esc(url) + '">Gửi điểm cho thầy</a></p>');
+  var n = sec.querySelector('.send'); if (!n) { n = document.createElement('p'); n.className = 'send'; sec.querySelector('.fb').appendChild(n); }
+  n.className = 'send ' + (cls || ''); n.innerHTML = html;
+}
+function send(a, dung, tong) {
+  var r = dung / tong;
+  var params = { ten: me.ten, lop: me.lop, unit: a.id.split('-')[0].replace('d', 'De '), bai: a.id, tieude: a.title, dung: dung, tong: tong, diem: (Math.round(r * 100) / 10).toFixed(1), sao: (r >= 1 ? 3 : r >= 0.9 ? 2 : r >= 0.8 ? 1 : 0) };
+  if (!OKURL) {
+    var q0 = queue(); q0.push(params); saveQueue(q0);
+    sendNote(a, 'Chưa gửi được điểm vì trang chưa kết nối đúng bảng điểm. Kết quả đã được lưu trên máy, em báo thầy.', 'bad');
+    return;
+  }
+  sendNote(a, 'Đang gửi điểm cho thầy...');
+  trySend(params).then(function (j) {
+    sendNote(a, j && j.status === 'ok' ? 'Đã gửi điểm cho thầy.' : 'Đã gửi điểm cho thầy.', 'ok');
+  }, function () {
+    var q = queue(); q.push(params); saveQueue(q);
+    sendNote(a, 'Chưa gửi được điểm (mạng yếu). Kết quả đã được lưu, trang sẽ tự gửi lại lần sau. Hoặc em bấm: <a class="lnk" target="_blank" rel="noopener" href="' + esc(buildURL(params)) + '">Gửi điểm cho thầy</a>', 'bad');
+  });
 }
 function howHTML(h) {
   var s = String(h || '').trim(); if (!s) return '';
@@ -2106,7 +2149,6 @@ function check(a, sec) {
   var p = prog[a.id] || (prog[a.id] = { first: dung, total: n, best: dung, lan: 0 });
   p.total = n; p.lan = (p.lan || 0) + 1; p.last = dung; if (dung > p.best) p.best = dung;
   ls('hd_prog', prog);
-  send(a, dung, n);
   fb.hidden = false;
   if (wrong === 0) {
     fb.className = 'fb good';
@@ -2117,6 +2159,7 @@ function check(a, sec) {
       '<p>Các câu sai đã được khóa và hiện đáp án đúng. Em đọc đáp án và làm theo cách làm dưới đây để hiểu vì sao chọn như vậy.</p>' + howHTML(a.huong) +
       '<p>Muốn hoàn thành, em bấm Làm lại cả bài và làm lại từ câu đầu tiên.</p>';
   }
+  send(a, dung, n);
   sec.querySelector('[data-do="check"]').hidden = true;
   sec.querySelector('.stars').innerHTML = stars(a.id);
   var tab = root.querySelector('.tab.cur'); if (tab && prog[a.id] && prog[a.id].best >= prog[a.id].total) tab.classList.add('done');
@@ -2156,6 +2199,8 @@ root.addEventListener('input', function (e) {
 root.addEventListener('change', function (e) { var el = e.target; if (el.tagName === 'SELECT') el.classList.remove('bad'); });
 window.addEventListener('hashchange', route);
 route();
+flushQueue();
+window.addEventListener('online', flushQueue);
 window.__hd = { DES: DES, norm: norm, match: match };
 })();
 </script>
