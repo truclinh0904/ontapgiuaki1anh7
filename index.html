@@ -1,0 +1,2163 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ôn tập Tiếng Anh 7 - Hoa Dũng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+:root{
+  --bg:#F4F7FB; --card:#FFFFFF; --ink:#16263F; --mute:#55657D; --line:#D9E1EC;
+  --accent:#16406F; --accent-ink:#FFFFFF; --kite:#E9A524; --ok:#1B7F55; --ok-bg:#E2F4EB; --bad:#C23B2A; --bad-bg:#FBE8E5; --warn-bg:#FFF4DB; --sel:#DCE9F8;
+  --head:'Be Vietnam Pro','Segoe UI',Arial,sans-serif; --body:'Nunito','Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1626; --card:#172236; --ink:#E7EEF8; --mute:#9FB0C7; --line:#2B3A52; --accent:#7DB2F0; --accent-ink:#0E1626; --kite:#F2BA4B;
+  --ok:#5CD39B; --ok-bg:#133726; --bad:#FF8A78; --bad-bg:#3B1B18; --warn-bg:#3A2E10; --sel:#223A5C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1626; --card:#172236; --ink:#E7EEF8; --mute:#9FB0C7; --line:#2B3A52; --accent:#7DB2F0; --accent-ink:#0E1626; --kite:#F2BA4B;
+  --ok:#5CD39B; --ok-bg:#133726; --bad:#FF8A78; --bad-bg:#3B1B18; --warn-bg:#3A2E10; --sel:#223A5C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;padding-inline:16px;padding-block:20px 48px}
+#app{max-width:760px;margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--head);text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:1.9rem;font-weight:700} h2{font-size:1.15rem;font-weight:600;margin-block:28px 12px} h3{font-size:1.02rem;font-weight:600}
+p{margin:0 0 .6em}
+a{color:var(--accent)}
+.top{margin-bottom:8px}
+.brand{font-family:var(--head);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.sub{color:var(--mute);margin-top:6px}
+.back{display:inline-block;margin-bottom:14px;font-weight:600;text-decoration:none}
+.back::before{content:"\2190  "}
+.who{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 16px 14px;margin-top:20px}
+.who h2{margin-top:12px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row label{flex:1 1 200px;min-width:0;font-size:.85rem;font-weight:600;color:var(--mute);display:flex;flex-direction:column;gap:4px}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+input:focus,textarea:focus,select:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{font-size:.85rem;color:var(--mute);margin:10px 0 0}
+.grid,.grid3{display:grid;gap:12px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.grid3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--accent)}
+.card b{font-family:var(--head);font-size:1.05rem}
+.card span{font-size:.85rem;color:var(--mute)}
+.card .mini{color:var(--accent);font-weight:700}
+.gcard{border-top:4px solid var(--kite)}
+.gl{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.gc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.gc h3{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.ic{flex:none;color:var(--accent)}
+.gc p{font-size:.96rem}
+.tip{background:var(--warn-bg);border-radius:8px;padding:8px 10px;margin-top:10px}
+.tb{border-collapse:collapse;width:100%;font-size:.92rem;display:block;overflow-x:auto}
+.tb td{border:1px solid var(--line);padding:5px 9px}
+.pn{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pn a{padding:6px 12px;border:1px solid var(--line);border-radius:99px;text-decoration:none;font-weight:600;font-size:.9rem}
+.pn a.cur{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-block:10px 12px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+.tab{flex:none;min-width:44px;height:40px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;font:600 .95rem var(--head);cursor:pointer}
+.tab.cur{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.tab.done::after{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-left:5px;vertical-align:middle}
+.tab.cur.done::after{background:var(--kite)}
+.act{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.ah{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.instr{font-size:.88rem;color:var(--mute);font-style:italic;margin-top:4px}
+.stars{display:flex;gap:2px}
+.st{color:var(--line)} .st.on{color:var(--kite)} .st .ic{color:inherit;fill:currentColor}
+.box{list-style:none;padding:10px 12px;margin:12px 0;display:flex;flex-wrap:wrap;gap:8px;background:var(--bg);border:1px dashed var(--mute);border-radius:8px}
+.box li{font-weight:700;padding:2px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line)}
+.ql{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:14px}
+.q{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:8px;align-items:start}
+.no{font-family:var(--head);font-weight:700;color:var(--accent)}
+.qs{margin:0 0 6px;overflow-wrap:anywhere}
+.stub{font-size:.88rem;color:var(--mute);margin:0 0 6px}
+.un{font-size:.72rem;font-weight:700;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:1px 8px;white-space:nowrap}
+.unrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.bk{display:inline-block;width:3.2em;border-bottom:2px solid var(--mute);margin-inline:2px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.opt{display:flex;gap:8px;align-items:baseline;text-align:left;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;min-width:0;overflow-wrap:anywhere}
+.opt b{color:var(--accent)}
+.opt.sel{background:var(--sel);border-color:var(--accent)}
+.q.ok .opt.sel{background:var(--ok-bg);border-color:var(--ok)}
+.q.bad .opt.sel{background:var(--bad-bg);border-color:var(--bad)}
+.opt.key{background:var(--ok-bg);border-color:var(--ok)}
+.opt.key b{color:var(--ok)}
+.ans{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:6px;background:var(--ok-bg);color:var(--ok);font-weight:700;font-size:.92rem}
+.ty + .ans{display:block;margin:6px 0 0;width:fit-content}
+.more{margin-top:4px}
+.more summary{cursor:pointer;color:var(--accent);font-weight:600}
+.more p{margin:6px 0 0}
+.fb.stop{background:var(--warn-bg)}
+.rule{font-size:.85rem;color:var(--mute);margin:12px 0 0}
+.gp{width:9.5em;max-width:100%;display:inline-block;padding:4px 8px}
+.ty{width:100%;resize:vertical}
+input.ok,textarea.ok,select.ok{border-color:var(--ok);background:var(--ok-bg)}
+input.bad,textarea.bad,select.bad{border-color:var(--bad);background:var(--bad-bg)}
+.pass{margin-top:14px;padding:12px 14px;background:var(--bg);border-radius:8px;line-height:2.2}
+.pass h4{font-size:1rem;margin-bottom:6px}
+.pass p{margin:0}
+.pb{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.pb i{font-style:normal;font-size:.75rem;font-weight:700;color:var(--accent)}
+.sl{padding:4px 6px;max-width:100%}
+.fb{margin-top:16px;border-radius:8px;padding:10px 14px}
+.fb p{margin:0 0 6px}
+.fb.warn{background:var(--warn-bg)} .fb.good{background:var(--ok-bg)}
+.how{font-size:.94rem}
+.bt{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{font:600 .95rem var(--head);padding:10px 18px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.lnk{font-weight:700}
+@media (max-width:520px){h1{font-size:1.55rem}.q{grid-template-columns:26px minmax(0,1fr)}.q .un{grid-column:2;justify-self:start}}
+@media (prefers-reduced-motion:no-preference){.card,.btn,.tab{transition:border-color .15s,background .15s}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<!-- THAY LINK WEB APP GOOGLE APPS SCRIPT VAO DONG DUOI DAY -->
+<script>window.WEBAPP_URL = "";</script>
+<script>
+(function(){
+window.GRAMMAR = [
+  {
+    id: "u1",
+    title: "Unit 1: Hobbies",
+    topic: "Sở thích · Phát âm /ə/ và /ɜː/ · Thì hiện tại đơn · Động từ chỉ sự yêu thích",
+    cards: [
+      {
+        h: "1. Phát âm nguyên âm /ə/ và /ɜː/",
+        icon: "sound",
+        body: [
+          "<b>Âm /ə/ ( nguyên âm ngắn, nhẹ ):</b> thường gặp ở các âm tiết không nhấn trọng âm như <b><u>a</u></b>go, <b><u>a</u></b>bout, <b><u>a</u></b>mazing, <b><u>a</u></b>bove, <b><u>a</u></b>way, <b><u>a</u></b>lone, <b><u>a</u></b>rrange, <b><u>a</u></b>ffect, <b><u>a</u></b>llergy, <b><u>o</u></b>pinion, <b><u>o</u></b>fficial, <b><u>o</u></b>blige, <b><u>o</u></b>rigin, yog<b><u>a</u></b>, sof<b><u>a</u></b>, camer<b><u>a</u></b>, cinem<b><u>a</u></b>, banan<b><u>a</u></b>,umbrell<b><u>a</u></b>, col<b><u>o</u></b>r, neighb<b><u>ou</u></b>r, doct<b><u>o</u></b>r, teach<b><u>er</u></b>, fath<b><u>er</u></b>, moth<b><u>er</u></b>, sist<b><u>er</u></b>, broth<b><u>er</u></b>, <b><u>u</u></b>pon, s<b><u>u</u></b>pply, s<b><u>u</u></b>pport, c<b><u>o</u></b>llect, c<b><u>o</u></b>mputer.",
+          "<b>Âm /ɜː/ ( nguyên âm dài, cong lưỡi ):</b> thường đi với chữ <b>ir, ur, er, ear, or (sau w)</b> được nhấn trọng âm như b<b><u>ir</u></b>d, g<b><u>ir</u></b>l, f<b><u>ir</u></b>st, sh<b><u>ir</u></b>t, sk<b><u>ir</u></b>t, d<b><u>ir</u></b>ty, th<b><u>ir</u></b>ty, th<b><u>ir</u></b>teen, b<b><u>ir</u></b>thday, t<b><u>ur</u></b>n, b<b><u>ur</u></b>n, h<b><u>ur</u></b>t, n<b><u>ur</u></b>se, th<b><u>ur</u></b>sday, s<b><u>ur</u></b>f, c<b><u>ur</u></b>tain, l<b><u>ear</u></b>n, <b><u>ear</u></b>ly, <b><u>ear</u></b>th, h<b><u>ear</u></b>d, w<b><u>or</u></b>k, w<b><u>or</u></b>ld, w<b><u>or</u></b>se, w<b><u>or</u></b>st, pref<b><u>er</u></b>, v<b><u>er</u></b>b, p<b><u>er</u></b>son, s<b><u>er</u></b>vice."
+        ],
+        tip: "Khi làm bài phát âm, hãy chú ý: các chữ cái ir, ur, ear (đứng trước phụ âm), wor thường đọc là /ɜː/; còn chữ er, or ở cuối từ hoặc a ở đầu từ không nhấn trọng âm thường đọc là /ə/."
+      },
+      {
+        h: "2. Cụm động từ chỉ sở thích (Collocations)",
+        icon: "star",
+        body: [
+          "<b>go + V-ing:</b> go jogging (chạy bộ), go swimming (đi bơi), go cycling (đạp xe), go fishing (câu cá), go camping (cắm trại), go horse riding (cưỡi ngựa), go skating (trượt patin), go boating (chèo thuyền).",
+          "<b>do + danh từ (võ thuật, thể dục):</b> do judo (tập võ judo), do karate (tập võ karate), do yoga (tập yoga), do aerobics (tập thể dục nhịp điệu), do exercise (tập thể dục), do gardening (làm vườn).",
+          "<b>play + môn thể thao có bóng/đối kháng hoặc nhạc cụ:</b> play football, play basketball, play badminton, play table tennis, play volleyball, play chess, play computer games, play the guitar, play the piano, play the violin.",
+          "<b>make / build / collect:</b> make models (làm mô hình), make pottery (làm đồ gốm), build dollhouses (xây nhà búp bê), collect stamps (sưu tầm tem), collect coins (sưu tầm tiền xu), collect teddy bears (sưu tầm gấu bông), collect old books (sưu tầm sách cũ), take photos (chụp ảnh)."
+        ],
+        tip: "Ghi nhớ từ đi kèm: build dollhouses cần dùng cardboard (bìa cứng) và glue (keo dán); làm mô hình giúp phát triển creativity (sự sáng tạo) và giúp em patient (kiên nhẫn) hơn."
+      },
+      {
+        h: "3. Thì hiện tại đơn (Present Simple)",
+        icon: "clock",
+        body: [
+          "<b>Cách dùng:</b> Diễn tả thói quen, hành động lặp đi lặp lại ở hiện tại, một sự thật hiển nhiên, hoặc lịch trình thời gian biểu (tàu, xe, lớp học, bộ phim).",
+          "<b>Công thức với động từ thường:</b><br>- Khẳng định: <b>I / You / We / They / Danh từ số nhiều + V(nguyên thể)</b>; <b>He / She / It / Danh từ số ít + V(s/es)</b>.<br>- Phủ định: <b>S + do not (don't) / does not (doesn't) + V(nguyên thể)</b>.<br>- Nghi vấn: <b>Do / Does + S + V(nguyên thể)?</b>",
+          "<b>Dấu hiệu nhận biết:</b> always, usually, often, sometimes, seldom, rarely, never, every day/week/weekend/month/year/Sunday, once/twice a week, three times a week."
+        ],
+        tip: "Động từ tận cùng bằng o, s, ch, x, sh, z khi đi với chủ ngữ số ít thì thêm -es (watches, goes, does, washes). Động từ tận cùng là phụ âm + y thì đổi y thành i rồi thêm -es (studies, flies)."
+      },
+      {
+        h: "4. Động từ chỉ sự yêu thích (Verbs of liking and disliking)",
+        icon: "heart",
+        body: [
+          "<b>Nhóm cộng V-ing:</b> Sau các động từ chỉ sự yêu thích hoặc ghét bỏ, ta dùng danh động từ <b>V-ing</b>:<br><b>like / love / enjoy / fancy / adore + V-ing</b> (thích, yêu thích, mê)<br><b>dislike / hate / detest / don't like / can't stand + V-ing</b> (không thích, ghét, không chịu nổi)<br><b>be interested in / be fond of / be keen on / be crazy about + V-ing</b>.",
+          "<b>Nhóm cộng to-V:</b> <b>want / would like ('d like) / decide / hope / need + to V(nguyên thể)</b>."
+        ],
+        tip: "Khi viết lại câu tương đương: like / enjoy / love + V-ing = be interested in / be fond of / be keen on + V-ing."
+      }
+    ]
+  },
+  {
+    id: "u2",
+    title: "Unit 2: Healthy Living",
+    topic: "Lối sống lành mạnh · Phát âm /f/ và /v/ · Câu đơn (Simple sentences) · Lời khuyên should / shouldn't",
+    cards: [
+      {
+        h: "1. Phát âm phụ âm /f/ và /v/",
+        icon: "sound",
+        body: [
+          "<b>Âm /f/ (vô thanh):</b> được viết bằng chữ <b>f, ff, ph, gh</b> như <b><u>f</u></b>ood, <b><u>f</u></b>it, <b><u>f</u></b>at, <b><u>f</u></b>lu, <b><u>f</u></b>resh, <b><u>f</u></b>ast, lea<b><u>f</u></b>, sa<b><u>f</u></b>e, li<b><u>f</u></b>e, kni<b><u>f</u></b>e, co<b><u>ff</u></b>ee, <b><u>ph</u></b>oto, <b><u>ph</u></b>one, dol<b><u>ph</u></b>in, ear<b><u>ph</u></b>one, al<b><u>ph</u></b>abet, cou<b><u>gh</u></b>, enou<b><u>gh</u></b>, tou<b><u>gh</u></b>, rou<b><u>gh</u></b>, lau<b><u>gh</u></b>.",
+          "<b>Âm /v/ (hữu thanh):</b> được viết bằng chữ <b>v</b> và đặc biệt là từ <b>o<u>f</u></b> như <b><u>v</u></b>itamin, <b><u>v</u></b>egetable, <b><u>v</u></b>egetarian, <b><u>v</u></b>irus, a<b><u>v</u></b>oid, acti<b><u>v</u></b>e, acti<b><u>v</u></b>ity, li<b><u>v</u></b>e, gi<b><u>v</u></b>e, ha<b><u>v</u></b>e, lo<b><u>v</u></b>e, lea<b><u>v</u></b>e, pro<b><u>v</u></b>ide, o<b><u>f</u></b> (/ɒv/)."
+        ],
+        tip: "Chú ý hai trường hợp đặc biệt rất hay ra thi: chữ 'of' phát âm là /v/ (khác với leaf, fat, safe là /f/); chữ 'gh' trong 'through, high, night, flight, weigh' là âm câm (không phát âm), còn trong 'cough, enough, tough, laugh' phát âm là /f/."
+      },
+      {
+        h: "2. Từ vựng về sức khỏe và lối sống lành mạnh",
+        icon: "leaf",
+        body: [
+          "<b>Các vấn đề sức khỏe (Health problems):</b> acne (mụn trứng cá), red spots (nốt đỏ), chapped lips (môi nứt nẻ), chapped skin (da nứt nẻ), sunburn (cháy nắng), flu (cúm), fever / temperature (sốt), headache (đau đầu), stomachache (đau bụng), toothache (đau răng), earache (đau tai), backache (đau lưng), sore throat (đau họng), cough (ho), tired eyes (mỏi mắt), allergy (dị ứng - be allergic to), obesity (béo phì).",
+          "<b>Thực phẩm và vật dụng chăm sóc:</b> tofu (đậu phụ), coloured vegetables (rau củ nhiều màu sắc), lean meat (thịt nạc), fast food / junk food (đồ ăn nhanh / đồ ăn vặt), sweetened food (đồ ăn nhiều đường), soft drinks / fizzy drinks (nước ngọt có ga), lip balm (son dưỡng môi), suncream (kem chống nắng), eye drops (thuốc nhỏ mắt), soap (xà phòng), mask (khẩu trang).",
+          "<b>Cụm từ quan trọng:</b> keep fit = stay in shape (giữ dáng), put on weight = gain weight (tăng cân), lose weight (giảm cân), affect (ảnh hưởng đến), avoid + N/V-ing (tránh), be good FOR health (tốt cho sức khỏe)."
+        ],
+        tip: "Mẹo nối tình huống và lời khuyên: chapped lips -> put on lip balm; sunburn -> wear suncream / don't spend too much time in the sun; tired eyes -> use eye drops / don't look at the screen too long; acne -> wash face regularly / don't pop red spots."
+      },
+      {
+        h: "3. Câu đơn (Simple sentences) và cách gộp câu",
+        icon: "link",
+        body: [
+          "<b>Câu đơn là câu chỉ có MỘT mệnh đề độc lập</b> (gồm các thành phần: Chủ ngữ <b>S</b>, Động từ <b>V</b>, Tân ngữ <b>O</b>, Trạng từ <b>Adv</b>):<br>- S + V: <i>Mark and his father are boating.</i><br>- S + V + O: <i>The Japanese eat tofu.</i><br>- S + V + O + Adv: <i>She washes her face twice a day.</i>",
+          "<b>Gộp hai câu đơn thành một câu đơn bằng 'and' hoặc 'Both ... and ...':</b><br>- Cùng chủ ngữ, khác vị ngữ/tân ngữ: giữ lại chủ ngữ đầu, nối phần khác nhau bằng <b>and</b>.<br>Ví dụ: <i>We avoid sweetened food. We avoid soft drinks. -> We avoid sweetened food and soft drinks.</i><br>- Khác chủ ngữ, cùng vị ngữ: nối hai chủ ngữ bằng <b>and</b> hoặc <b>Both A and B</b>, đổi động từ sang số nhiều.<br>Ví dụ: <i>Bao is a student. Lan is a student. -> Both Bao and Lan are students.</i>"
+        ],
+        tip: "Khi gộp 2 chủ ngữ số ít bằng 'and' hoặc 'Both ... and ...' (ví dụ: Both my dad and I / Nam and his brother), chủ ngữ mới là SỐ NHIỀU nên động từ ở hiện tại đơn phải chia số nhiều (dùng like, love, are)."
+      },
+      {
+        h: "4. Lời khuyên với should / shouldn't và Câu điều kiện với If / Unless",
+        icon: "scale",
+        body: [
+          "<b>Lời khuyên:</b> <b>S + should / shouldn't + V(nguyên thể)</b> (nên / không nên làm gì).<br>Cấu trúc tương đương: <b>It is a good idea to + V(nguyên thể) <=> You should + V(nguyên thể)</b>.",
+          "<b>Câu điều kiện loại 1 (trong đề thi Giữa kì 1):</b><br><b>If + S + V(hiện tại đơn), S + will + V(nguyên thể)</b>.<br><b>Unless (Trừ khi = If ... not):</b> <i>Unless he learns hard, he will fail the exam.</i><br><b>Chuyển từ câu mệnh lệnh có 'or':</b> <i>You must be quick or you will be late. -> If you are not quick, you will be late.</i>"
+        ],
+        tip: "Sau cấu trúc 'help + tân ngữ' ta dùng động từ nguyên thể (hoặc to V): Healthy food helps us keep fit / stay healthy."
+      }
+    ]
+  },
+  {
+    id: "u3",
+    title: "Unit 3: Community Service",
+    topic: "Hoạt động cộng đồng · Phát âm đuôi -ed (/t/, /d/, /ɪd/) · Thì quá khứ đơn (Past Simple)",
+    cards: [
+      {
+        h: "1. Phát âm đuôi -ed và đuôi -s/-es",
+        icon: "sound",
+        body: [
+          "<b>Phát âm đuôi -ed:</b><br>- <b>/ɪd/:</b> sau âm <b>/t/, /d/</b> (wan<b><u>ted</u></b>, star<b><u>ted</u></b>, visi<b><u>ted</u></b>, dona<b><u>ted</u></b>, collec<b><u>ted</u></b>, plan<b><u>ted</u></b>, nee<b><u>ded</u></b>, deci<b><u>ded</u></b>, provi<b><u>ded</u></b>, floo<b><u>ded</u></b>).<br>- <b>/t/:</b> sau các âm vô thanh <b>k, p, f, gh, ph, s, ce, x, sh, ch</b> (hel<b><u>ped</u></b>, stop<b><u>ped</u></b>, wor<b><u>ked</u></b>, coo<b><u>ked</u></b>, loo<b><u>ked</u></b>, wal<b><u>ked</u></b>, wa<b><u>shed</u></b>, wat<b><u>ched</u></b>, lau<b><u>ghed</u></b>).<br>- <b>/d/:</b> các âm còn lại (clea<b><u>ned</u></b>, pla<b><u>yed</u></b>, ope<b><u>ned</u></b>, remem<b><u>bered</u></b>, mo<b><u>ved</u></b>, wa<b><u>tered</u></b>, tu<b><u>tored</u></b>, lo<b><u>ved</u></b>).",
+          "<b>Phát âm đuôi -s/-es (mở rộng trong đề Giữa kì):</b><br>- <b>/ɪz/:</b> sau <b>s, ss, sh, ch, x, z, ge, ce</b> (bru<b><u>shes</u></b>, wat<b><u>ches</u></b>, mis<b><u>ses</u></b>, wa<b><u>shes</u></b>).<br>- <b>/s/:</b> sau <b>p, k, t, f, gh (/f/), th (/θ/)</b> (than<b><u>ks</u></b>, lau<b><u>ghs</u></b>, visi<b><u>ts</u></b>, thin<b><u>ks</u></b>, boo<b><u>ks</u></b>, hel<b><u>ps</u></b>).<br>- <b>/z/:</b> các âm còn lại (goe<b><u>s</u></b>, doe<b><u>s</u></b>, clothe<b><u>s</u></b>, need<b><u>s</u></b>, buy<b><u>s</u></b>, play<b><u>s</u></b>)."
+        ],
+        tip: "Mẹo nhớ nhanh: Đuôi -ed có /ɪd/ (t, d) và /t/ (k, p, f, gh, s, sh, ch). Đuôi -s/-es có /ɪz/ (sh, ch, s, x) và /s/ (k, p, t, f, gh, th)."
+      },
+      {
+        h: "2. Từ vựng về phục vụ cộng đồng (Community Service)",
+        icon: "plus",
+        body: [
+          "<b>Hoạt động tình nguyện:</b> donate books / clothes / blood / food / money (quyên góp sách / quần áo / máu / thức ăn / tiền), tutor young children / primary students (dạy kèm trẻ nhỏ), help the elderly at a nursing home (giúp người già ở viện dưỡng lão), help street children / homeless children / orphans at an orphanage (giúp trẻ lang thang / trẻ mồ côi), pick up litter / rubbish / plastic bottles (nhặt rác / chai nhựa), clean up the park / streets / beach (dọn dẹp công viên / đường phố / bãi biển), plant trees and flowers (trồng cây và hoa), water vegetables (tưới rau), exchange used paper for notebooks (đổi giấy cũ lấy vở).",
+          "<b>Danh từ và tính từ:</b> community service (dịch vụ cộng đồng), volunteer (tình nguyện viên / làm tình nguyện), flooded area (vùng lũ lụt), mountainous area (vùng núi), nursing home (viện dưỡng lão), orphanage (trại trẻ mồ côi), homeless (vô gia cư), proud of (tự hào về)."
+        ],
+        tip: "Chú ý giới từ đi kèm: donate ... TO (quyên góp cho ai), provide ... FOR (cung cấp cho ai) hoặc provide somebody WITH something, exchange A FOR B (đổi A lấy B), proud OF (tự hào về)."
+      },
+      {
+        h: "3. Thì quá khứ đơn (Past Simple)",
+        icon: "clock",
+        body: [
+          "<b>Cách dùng:</b> Diễn tả hành động đã xảy ra và kết thúc hoàn toàn tại một thời điểm xác định trong quá khứ.",
+          "<b>Với động từ TO BE (was / were):</b><br>- <b>I / He / She / It / Danh từ số ít + was (was not / wasn't)</b>.<br>- <b>You / We / They / Danh từ số nhiều + were (were not / weren't)</b>.",
+          "<b>Với động từ thường:</b><br>- Khẳng định: <b>S + V-ed / V2(bất quy tắc)</b>.<br>- Phủ định: <b>S + did not (didn't) + V(nguyên thể)</b>.<br>- Nghi vấn: <b>Did + S + V(nguyên thể)?</b>",
+          "<b>Dấu hiệu nhận biết:</b> yesterday, last night / week / weekend / month / year / summer / Sunday, ... ago (two days ago, a year ago), in + năm trong quá khứ (in 2019, in 2020, in 2022)."
+        ],
+        tip: "Trong câu phủ định (didn't) và câu hỏi (Did ...?), động từ chính bắt buộc phải đưa về dạng NGUYÊN THỂ không chia (ví dụ: I didn't go fishing / Did you watch cartoons last night?)."
+      },
+      {
+        h: "4. Bảng động từ bất quy tắc trọng tâm Unit 1 - 3",
+        icon: "swap",
+        body: [
+          "<b>V1 (Nguyên thể) -> V2 (Quá khứ đơn):</b><br>- <b>give -> gave</b> (cho, tặng) | <b>buy -> bought</b> (mua) | <b>teach -> taught</b> (dạy)<br>- <b>go -> went</b> (đi) | <b>do -> did</b> (làm) | <b>have -> had</b> (có, ăn)<br>- <b>make -> made</b> (làm) | <b>build -> built</b> (xây) | <b>send -> sent</b> (gửi)<br>- <b>take -> took</b> (lấy, dẫn) | <b>read -> read</b> (đọc) | <b>write -> wrote</b> (viết)<br>- <b>see -> saw</b> (thấy) | <b>meet -> met</b> (gặp) | <b>come -> came</b> (đến)<br>- <b>begin -> began</b> (bắt đầu) | <b>sing -> sang</b> (hát) | <b>drink -> drank</b> (uống)<br>- <b>eat -> ate</b> (ăn) | <b>sleep -> slept</b> (ngủ) | <b>keep -> kept</b> (giữ)"
+        ],
+        tip: "Trong bài Odd one out (Tìm từ khác loại), hãy chú ý phân biệt nhóm 3 động từ thêm -ed (played, thanked, needed / collected) với 1 động từ bất quy tắc (ate, went, drank)."
+      }
+    ]
+  }
+];
+
+/* =========================================================================
+   PHẦN DỮ LIỆU CŨ: ĐỀ 1 ĐẾN ĐỀ 10 (500 CÂU) - GIỮ NGUYÊN 100%
+   ========================================================================= */
+var P1_BANK = [
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>a</u>go", "<u>a</u>bout", "<u>a</u>mazing", "<u>a</u>te"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["b<u>ir</u>d", "g<u>ir</u>l", "f<u>ir</u>st", "sist<u>er</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>f</u>at", "lea<u>f</u>", "o<u>f</u>", "sa<u>f</u>e"], a: 2, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["wan<u>ted</u>", "star<u>ted</u>", "dona<u>ted</u>", "hel<u>ped</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["clea<u>ned</u>", "pla<u>yed</u>", "wa<u>shed</u>", "voluntee<u>red</u>"], a: 2, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["l<u>ear</u>n", "<u>ear</u>ly", "<u>ear</u>th", "h<u>ear</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["doct<u>or</u>", "teach<u>er</u>", "w<u>or</u>k", "fath<u>er</u>"], a: 2, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["cou<u>gh</u>", "enou<u>gh</u>", "throu<u>gh</u>", "lau<u>gh</u>"], a: 2, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["collec<u>ted</u>", "plan<u>ted</u>", "nee<u>ded</u>", "coo<u>ked</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["loo<u>ked</u>", "wat<u>ched</u>", "pick<u>ed</u>", "wa<u>tered</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["b<u>ur</u>n", "t<u>ur</u>n", "s<u>ur</u>f", "s<u>u</u>pply"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["yog<u>a</u>", "sof<u>a</u>", "camer<u>a</u>", "w<u>or</u>ld"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["ni<u>gh</u>t", "tou<u>gh</u>", "fli<u>gh</u>t", "hi<u>gh</u>"], a: 1, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["visi<u>ted</u>", "provi<u>ded</u>", "floo<u>ded</u>", "wor<u>ked</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["tu<u>tored</u>", "jo<u>ined</u>", "stop<u>ped</u>", "lis<u>tened</u>"], a: 2, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["pref<u>er</u>", "p<u>er</u>son", "s<u>er</u>vice", "moth<u>er</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>a</u>lone", "<u>a</u>way", "<u>a</u>rrange", "n<u>ur</u>se"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["dol<u>ph</u>in", "u<u>ph</u>ill", "ear<u>ph</u>one", "al<u>ph</u>abet"], a: 1, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["deci<u>ded</u>", "invi<u>ted</u>", "pain<u>ted</u>", "as<u>ked</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["hel<u>ped</u>", "wal<u>ked</u>", "fi<u>nished</u>", "clea<u>ned</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["th<u>ir</u>ty", "sh<u>ir</u>t", "sk<u>ir</u>t", "neighb<u>ou</u>r"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["c<u>o</u>llect", "c<u>o</u>mputer", "<u>o</u>pinion", "w<u>or</u>se"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>f</u>ood", "<u>f</u>it", "<u>v</u>itamin", "<u>f</u>resh"], a: 2, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["wai<u>ted</u>", "en<u>ded</u>", "star<u>ted</u>", "tal<u>ked</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["sta<u>yed</u>", "en<u>joyed</u>", "lo<u>ved</u>", "miss<u>ed</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["h<u>ur</u>t", "th<u>ur</u>sday", "c<u>ur</u>tain", "broth<u>er</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>a</u>bove", "<u>a</u>ffect", "<u>a</u>llergy", "v<u>er</u>b"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["li<u>v</u>e", "gi<u>v</u>e", "ha<u>v</u>e", "li<u>f</u>e"], a: 3, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["dona<u>ted</u>", "collec<u>ted</u>", "plan<u>ted</u>", "dan<u>ced</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["ope<u>ned</u>", "lear<u>ned</u>", "lau<u>ghed</u>", "remem<u>bered</u>"], a: 2, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["b<u>ir</u>thday", "d<u>ir</u>ty", "th<u>ir</u>teen", "cinem<u>a</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["h<u>ear</u>d", "w<u>or</u>st", "l<u>ear</u>n", "banan<u>a</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>v</u>egetable", "<u>v</u>irus", "a<u>v</u>oid", "<u>f</u>lu"], a: 3, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["nee<u>ded</u>", "provi<u>ded</u>", "visi<u>ted</u>", "wa<u>shed</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["coo<u>ked</u>", "stop<u>ped</u>", "wat<u>ched</u>", "exchan<u>ged</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["s<u>u</u>pport", "<u>u</u>pon", "col<u>o</u>r", "t<u>ur</u>n"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["g<u>ir</u>l", "w<u>or</u>k", "b<u>ur</u>n", "umbrell<u>a</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["acti<u>v</u>e", "pro<u>v</u>ide", "kni<u>f</u>e", "lo<u>v</u>e"], a: 2, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["floo<u>ded</u>", "wan<u>ted</u>", "invi<u>ted</u>", "loo<u>ked</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["li<u>ved</u>", "u<u>sed</u>", "pla<u>yed</u>", "cou<u>ghed</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["f<u>ir</u>st", "s<u>ur</u>f", "<u>ear</u>th", "teach<u>er</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>o</u>fficial", "<u>o</u>rigin", "<u>a</u>bout", "p<u>er</u>son"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["co<u>ff</u>ee", "<u>ph</u>oto", "<u>f</u>ast", "<u>v</u>egetarian"], a: 3, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["pain<u>ted</u>", "deci<u>ded</u>", "star<u>ted</u>", "pick<u>ed</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["wor<u>ked</u>", "as<u>ked</u>", "hel<u>ped</u>", "wa<u>tered</u>"], a: 3, u: 3 },
+
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["<u>ear</u>ly", "n<u>ur</u>se", "w<u>or</u>ld", "doct<u>or</u>"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["sof<u>a</u>", "fath<u>er</u>", "<u>a</u>go", "sh<u>ir</u>t"], a: 3, u: 1 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["rou<u>gh</u>", "tou<u>gh</u>", "enou<u>gh</u>", "o<u>f</u>"], a: 3, u: 2 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["en<u>ded</u>", "wai<u>ted</u>", "dona<u>ted</u>", "fi<u>nished</u>"], a: 3, u: 3 },
+  { s: "Choose the word whose underlined part is pronounced differently.", o: ["voluntee<u>red</u>", "tu<u>tored</u>", "clea<u>ned</u>", "wal<u>ked</u>"], a: 3, u: 3 }
+];
+
+var P2_BANK = [
+  { s: "Nam has a bike. He often ___ his bike to school.", o: ["is", "goes", "rides", "makes"], a: 2, u: 1 },
+  { s: "Mai has lots of dolls. She wants to build a ___ for them.", o: ["doll", "coin", "model", "dollhouse"], a: 3, u: 1 },
+  { s: "You need some ___ and glue to build dollhouses.", o: ["cardboard", "money", "stamps", "films"], a: 0, u: 1 },
+  { s: "You can ___ some diseases by keeping yourself clean.", o: ["do", "have", "get", "avoid"], a: 3, u: 2 },
+  { s: "Don't skip breakfast or you may have a ___.", o: ["earache", "toothache", "stomachache", "backache"], a: 2, u: 2 },
+  { s: "Having enough sleep helps you ___ at school.", o: ["watch", "exercise", "sleep", "concentrate"], a: 3, u: 2 },
+  { s: "I have chapped lips. - You should put on some ___.", o: ["lip balm", "eye drops", "suncream", "soap"], a: 0, u: 2 },
+  { s: "Last year, our club ___ many books to children in rural areas.", o: ["donated", "tutored", "planted", "watered"], a: 0, u: 3 },
+  { s: "We helped the ___ at a nursing home last Sunday.", o: ["elderly", "stamps", "models", "calories"], a: 0, u: 3 },
+  { s: "They ___ trees and flowers in the school garden yesterday.", o: ["plant", "plants", "planted", "planting"], a: 2, u: 3 },
+
+  { s: "I have a big coin ___. They are from many different countries.", o: ["club", "hobby", "collection", "creativity"], a: 2, u: 1 },
+  { s: "At break time, we usually ___ basketball in the school yard.", o: ["write", "play", "go", "collect"], a: 1, u: 1 },
+  { s: "My father goes to the Riders' Club every weekend. His hobby is ___.", o: ["horse riding", "gardening", "swimming", "dancing"], a: 0, u: 1 },
+  { s: "Robin is in hospital because he has a ___ of 40 degrees Celsius.", o: ["temperature", "flu", "cough", "cold"], a: 0, u: 2 },
+  { s: "She is going to see the doctor because she has ___.", o: ["a vitamin", "an exercise", "a headache", "a diet"], a: 2, u: 2 },
+  { s: "Scarlet dislikes ___ such as chips, sweets and fizzy drinks.", o: ["vegetables", "junk food", "seafood", "fruits"], a: 1, u: 2 },
+  { s: "The Japanese eat ___, so they have high life expectancy.", o: ["good", "healthily", "little rice", "unhealthy"], a: 1, u: 2 },
+  { s: "My sister often ___ young children in mountainous areas.", o: ["tutors", "donates", "collects", "exchanges"], a: 0, u: 3 },
+  { s: "Volunteers ___ up litter in the local park two days ago.", o: ["picked", "planted", "tutored", "donated"], a: 0, u: 3 },
+  { s: "We ___ used paper for notebooks at the school fair last month.", o: ["exchanged", "watered", "cooked", "cleaned"], a: 0, u: 3 },
+
+  { s: "Jim doesn't want to ___ judo with his classmates.", o: ["play", "cook", "have", "do"], a: 3, u: 1 },
+  { s: "Collecting old books is Quan's ___. He has a lot of old books.", o: ["collection", "model", "dollhouse", "hobby"], a: 3, u: 1 },
+  { s: "Her painting isn't very impressive. She needs a bit of ___.", o: ["glue", "creativity", "paper", "cardboard"], a: 1, u: 1 },
+  { s: "There are about fifty ___ in an apple.", o: ["materials", "calories", "energies", "vegetables"], a: 1, u: 2 },
+  { s: "Kelley is coughing and sneezing. She may have ___.", o: ["a backache", "an earache", "sore eyes", "a sore throat"], a: 3, u: 2 },
+  { s: "My uncle is a ___. He doesn't eat meat or fish.", o: ["monk", "librarian", "vegetarian", "doctor"], a: 2, u: 2 },
+  { s: "I'm ___ to shellfish, so I can't eat lobster and shrimp.", o: ["allergic", "afraid", "excited", "happy"], a: 0, u: 2 },
+  { s: "Our school organized a project to help ___ children last winter.", o: ["homeless", "chapped", "sweetened", "patient"], a: 0, u: 3 },
+  { s: "They provided warm clothes ___ people in flooded areas.", o: ["for", "with", "at", "on"], a: 0, u: 3 },
+  { s: "___ you join the community service project last summer?", o: ["Do", "Did", "Were", "Are"], a: 1, u: 3 },
+
+  { s: "My grandfather always ___ tea in the morning.", o: ["drink", "drinks", "to drink", "drinking"], a: 1, u: 1 },
+  { s: "Phong adores ___ models. This is the one that he made yesterday.", o: ["making", "to make", "makes", "make"], a: 0, u: 1 },
+  { s: "Hoa dislikes ___ English grammar. She thinks it's very difficult.", o: ["learns", "learning", "learn", "to learn"], a: 1, u: 1 },
+  { s: "I got ___ during my beach vacation because I didn't wear suncream.", o: ["cold", "sunburn", "flu", "toothache"], a: 1, u: 2 },
+  { s: "If you want to ___ weight, you should follow a low-fat diet.", o: ["lose", "gain", "put on", "take"], a: 0, u: 2 },
+  { s: "Junk foods are high in fat and sugar, which can lead to ___.", o: ["fever", "allergy", "obesity", "earache"], a: 2, u: 2 },
+  { s: "Fruit tastes good ___ it is healthy for your body.", o: ["so", "but", "or", "and"], a: 3, u: 2 },
+  { s: "We felt very ___ because our volunteer work helped many people.", o: ["proud", "itchy", "chapped", "tired"], a: 0, u: 3 },
+  { s: "Students collected plastic bottles ___ recycling yesterday.", o: ["for", "to", "with", "by"], a: 0, u: 3 },
+  { s: "My mother ___ free meals for poor patients last weekend.", o: ["cooked", "cooks", "cooking", "to cook"], a: 0, u: 3 },
+
+  { s: "Do you enjoy ___ stamps in your free time?", o: ["collecting", "collect", "to collect", "collects"], a: 0, u: 1 },
+  { s: "Nam wants ___ our table tennis club this semester.", o: ["to join", "joining", "joins", "join"], a: 0, u: 1 },
+  { s: "Her uncle hates horse ___ because he is afraid of horses.", o: ["rides", "ride", "riding", "to ride"], a: 2, u: 1 },
+  { s: "My sister feels pain in her ear. She has ___.", o: ["an earache", "a toothache", "a sore throat", "a headache"], a: 0, u: 2 },
+  { s: "She looks very tired. She should work ___ or she will get sick.", o: ["well", "less", "more", "enough"], a: 1, u: 2 },
+  { s: "She stays in ___ by exercising daily and eating well.", o: ["health", "fit", "size", "shape"], a: 3, u: 2 },
+  { s: "Don't sit too close to the screen, ___ you'll get a headache.", o: ["and", "so", "or", "but"], a: 2, u: 2 },
+  { s: "Last month, we visited orphans at an ___ in the city.", o: ["orphanage", "allergy", "activity", "obesity"], a: 0, u: 3 },
+  { s: "Minh ___ English to primary students in the village last year.", o: ["taught", "teaches", "teach", "teaching"], a: 0, u: 3 },
+  { s: "They ___ old textbooks to children in rural areas three days ago.", o: ["gave", "give", "gives", "giving"], a: 0, u: 3 },
+
+  { s: "Making models helps you become more ___ and creative.", o: ["patient", "chapped", "homeless", "harmful"], a: 0, u: 1 },
+  { s: "My mother loves ___ in the garden every Sunday morning.", o: ["working", "work", "works", "to working"], a: 0, u: 1 },
+  { s: "The train to Da Nang ___ at 7 o'clock every morning.", o: ["leave", "leaves", "left", "leaving"], a: 1, u: 1 },
+  { s: "My eyes are tired. - You should use some ___.", o: ["eye drops", "lip balm", "suncream", "tofu"], a: 0, u: 2 },
+  { s: "Coloured vegetables and fruit provide us with a lot of ___.", o: ["vitamins", "acne", "sunburn", "flu"], a: 0, u: 2 },
+  { s: "Acne usually causes small, red ___ on the face.", o: ["spots", "lips", "drops", "calories"], a: 0, u: 2 },
+  { s: "She had a terrible headache last night, ___ she couldn't go out.", o: ["so", "but", "or", "because"], a: 0, u: 2 },
+  { s: "Our class ___ up the local beach last Saturday morning.", o: ["cleaned", "donated", "tutored", "exchanged"], a: 0, u: 3 },
+  { s: "Many volunteers ___ blood at the hospital yesterday.", o: ["donated", "planted", "watered", "picked"], a: 0, u: 3 },
+  { s: "We ___ very happy when we helped the elderly.", o: ["were", "was", "are", "did"], a: 0, u: 3 },
+
+  { s: "Laura wants to ___ a book about Vietnamese literature.", o: ["read", "ride", "play", "build"], a: 0, u: 1 },
+  { s: "My sister is fond ___ listening to pop music in her free time.", o: ["of", "in", "on", "at"], a: 0, u: 1 },
+  { s: "My brother is interested ___ making models and taking photos.", o: ["in", "of", "at", "for"], a: 0, u: 1 },
+  { s: "___ is a healthy food made from soybeans.", o: ["Tofu", "Junk food", "Fizzy drink", "Suncream"], a: 0, u: 2 },
+  { s: "You shouldn't ___ up too late because it is harmful to your health.", o: ["stay", "stays", "staying", "stayed"], a: 0, u: 2 },
+  { s: "I want to buy a new bike, ___ I don't have enough money.", o: ["but", "so", "or", "and"], a: 0, u: 2 },
+  { s: "Always remember to wear a ___ when you go out to avoid viruses.", o: ["mask", "lip balm", "soap", "tofu"], a: 0, u: 2 },
+  { s: "They ___ food and water to people in flooded areas last week.", o: ["sent", "send", "sends", "sending"], a: 0, u: 3 },
+  { s: "She ___ vegetables in the school garden yesterday afternoon.", o: ["watered", "tutored", "donated", "read"], a: 0, u: 3 },
+  { s: "I ___ a member of the Green Club two years ago.", o: ["became", "become", "becomes", "becoming"], a: 0, u: 3 },
+
+  { s: "They detest ___ for buses in the rain every morning.", o: ["waiting", "wait", "to wait", "waits"], a: 0, u: 1 },
+  { s: "My niece loves ___ adventure books before going to bed.", o: ["reading", "read", "reads", "to reading"], a: 0, u: 1 },
+  { s: "Doing ___ every morning helps my grandmother stay healthy.", o: ["yoga", "models", "stamps", "coins"], a: 0, u: 1 },
+  { s: "You should wash your hands often with ___ and clean water.", o: ["soap", "suncream", "lip balm", "eye drops"], a: 0, u: 2 },
+  { s: "My father has a backache. He shouldn't bring ___ things.", o: ["heavy", "healthy", "fresh", "clean"], a: 0, u: 2 },
+  { s: "Jane is putting on weight. She should eat ___ junk food.", o: ["less", "more", "many", "fewer"], a: 0, u: 2 },
+  { s: "Healthy food and regular exercise help us ___ fit.", o: ["keep", "keeping", "kept", "keeps"], a: 0, u: 2 },
+  { s: "We ___ stories to the elderly at the nursing home yesterday.", o: ["read", "plant", "pick", "water"], a: 0, u: 3 },
+  { s: "Our club ___ money to build a new library for poor children.", o: ["raised", "tutored", "cleaned", "watered"], a: 0, u: 3 },
+  { s: "He ___ not go to the volunteer club meeting last Friday.", o: ["did", "was", "does", "were"], a: 0, u: 3 },
+
+  { s: "Hobbies help children learn about ___ and maturity.", o: ["responsibility", "obesity", "sickness", "sunburn"], a: 0, u: 1 },
+  { s: "My brother often goes ___ in the park with his friends on Sundays.", o: ["cycling", "judo", "chess", "models"], a: 0, u: 1 },
+  { s: "Does your sister ___ dolls in her free time?", o: ["collect", "collects", "collecting", "collected"], a: 0, u: 1 },
+  { s: "Drinking unclean water can cause ___.", o: ["sickness", "calories", "vitamins", "creativity"], a: 0, u: 2 },
+  { s: "You shouldn't spend too much time in the sun, or you will get ___.", o: ["sunburn", "toothache", "earache", "flu"], a: 0, u: 2 },
+  { s: "My classmate studies very hard, ___ she always gets good marks.", o: ["so", "but", "or", "because"], a: 0, u: 2 },
+  { s: "Would you like cake ___ biscuits with your milk?", o: ["or", "but", "so", "because"], a: 0, u: 2 },
+  { s: "Volunteers ___ warm blankets to homeless people last night.", o: ["gave", "planted", "watered", "tutored"], a: 0, u: 3 },
+  { s: "What did you do to help your ___ last summer?", o: ["community", "collection", "cardboard", "calorie"], a: 0, u: 3 },
+  { s: "We ___ a lot of trees along the neighbourhood streets last month.", o: ["planted", "plant", "plants", "planting"], a: 0, u: 3 },
+
+  { s: "I can't stand ___ computer games all day.", o: ["playing", "play", "plays", "to play"], a: 0, u: 1 },
+  { s: "Miss Sarah ___ an English teacher at our secondary school.", o: ["is", "are", "be", "being"], a: 0, u: 1 },
+  { s: "We usually ___ camping in the countryside once a month.", o: ["go", "do", "play", "make"], a: 0, u: 1 },
+  { s: "Bad habits like eating too much sweetened food ___ harmful to our health.", o: ["are", "is", "was", "be"], a: 0, u: 2 },
+  { s: "You should brush your teeth ___ a day to keep them healthy.", o: ["twice", "two", "second", "double"], a: 0, u: 2 },
+  { s: "Eating too much fast food can make you ___ on weight quickly.", o: ["put", "lose", "keep", "stay"], a: 0, u: 2 },
+  { s: "My sister eats a lot of fruit ___ vegetables every day.", o: ["and", "but", "or", "so"], a: 0, u: 2 },
+  { s: "Last Sunday, we ___ a postcard to the children at the orphanage.", o: ["sent", "send", "sends", "sending"], a: 0, u: 3 },
+  { s: "They ___ rubbish in the school yard after the event yesterday.", o: ["collected", "tutored", "donated", "exchanged"], a: 0, u: 3 },
+  { s: "Where ___ you go with the volunteer team last weekend?", o: ["did", "do", "were", "are"], a: 0, u: 3 }
+];
+
+var P3_BANK = [
+  { s: "My mother usually (go) ___ to work by car every day.", a: ["goes"], u: 1 },
+  { s: "Phong enjoys (make) ___ models in his free time.", a: ["making"], u: 1 },
+  { s: "You should (wash) ___ your face regularly to avoid acne.", a: ["wash"], u: 2 },
+  { s: "Last summer, our school (donate) ___ hundreds of books to rural children.", a: ["donated"], u: 3 },
+  { s: "They (not join) ___ the clean-up activity yesterday morning.", a: ["did not join", "didn't join"], u: 3 },
+
+  { s: "Mai often (do) ___ her homework after dinner.", a: ["does"], u: 1 },
+  { s: "My sister dislikes (get) ___ up early on Sundays.", a: ["getting"], u: 1 },
+  { s: "People in my countryside (not have) ___ much stress.", a: ["do not have", "don't have"], u: 2 },
+  { s: "We (plant) ___ many trees in the local park last weekend.", a: ["planted"], u: 3 },
+  { s: "My brother (teach) ___ English to poor children two years ago.", a: ["taught"], u: 3 },
+
+  { s: "The art lesson (start) ___ at 8 o'clock every Tuesday.", a: ["starts"], u: 1 },
+  { s: "Do you fancy (collect) ___ coins from different countries?", a: ["collecting"], u: 1 },
+  { s: "You shouldn't (eat) ___ too much sweetened food at night.", a: ["eat"], u: 2 },
+  { s: "Volunteers (give) ___ warm clothes to homeless people last winter.", a: ["gave"], u: 3 },
+  { s: "Where (be) ___ you and your friends last Sunday morning?", a: ["were"], u: 3 },
+
+  { s: "My father (not like) ___ drinking soft drinks.", a: ["does not like", "doesn't like"], u: 1 },
+  { s: "My niece loves (read) ___ adventure books in the evening.", a: ["reading"], u: 1 },
+  { s: "Coloured vegetables (provide) ___ us with lots of vitamins.", a: ["provide"], u: 2 },
+  { s: "Our club (collect) ___ plastic bottles for recycling last month.", a: ["collected"], u: 3 },
+  { s: "She (buy) ___ some textbooks for the village children yesterday.", a: ["bought"], u: 3 },
+
+  { s: "He always (drink) ___ green tea with his grandfather in the morning.", a: ["drinks"], u: 1 },
+  { s: "They detest (wait) ___ for buses in the rain.", a: ["waiting"], u: 1 },
+  { s: "Sitting too close to the TV (hurt) ___ your eyes.", a: ["hurts"], u: 2 },
+  { s: "Minh and Lan (tutor) ___ primary students in their neighbourhood last year.", a: ["tutored"], u: 3 },
+  { s: "He (not go) ___ to the nursing home with us last Saturday.", a: ["did not go", "didn't go"], u: 3 },
+
+  { s: "Nam (ride) ___ his bike to school every morning.", a: ["rides"], u: 1 },
+  { s: "My brother adores (build) ___ dollhouses for our little sister.", a: ["building"], u: 1 },
+  { s: "You should (wear) ___ a hat and suncream when going out in summer.", a: ["wear"], u: 2 },
+  { s: "We (clean) ___ up the streets in our community three days ago.", a: ["cleaned"], u: 3 },
+  { s: "My mother (cook) ___ free meals for poor patients last Sunday.", a: ["cooked"], u: 3 },
+
+  { s: "What time (do) ___ the film begin tonight?", a: ["does"], u: 1 },
+  { s: "She hates (play) ___ computer games in her free time.", a: ["playing"], u: 1 },
+  { s: "Acne usually (affect) ___ 80% of young people.", a: ["affects"], u: 2 },
+  { s: "They (exchange) ___ used paper for notebooks at the fair yesterday.", a: ["exchanged"], u: 3 },
+  { s: "I (be) ___ very proud of our volunteer work last semester.", a: ["was"], u: 3 },
+
+  { s: "My parents (go) ___ jogging in the park every day.", a: ["go"], u: 1 },
+  { s: "We enjoy (do) ___ gardening together at weekends.", a: ["doing"], u: 1 },
+  { s: "You shouldn't (look) ___ at your smartphone screen too long.", a: ["look"], u: 2 },
+  { s: "The students (water) ___ the vegetables in the school garden yesterday.", a: ["watered"], u: 3 },
+  { s: "We (send) ___ ___ food and medicine to the flooded area last week.".replace("___ ___", "___"), a: ["sent"], u: 3 },
+
+  { s: "Lan (have) ___ a very big collection of teddy bears.", a: ["has"], u: 1 },
+  { s: "I am fond of (listen) ___ to music when I am free.", a: ["listening"], u: 1 },
+  { s: "Getting enough sleep (help) ___ students concentrate at school.", a: ["helps"], u: 2 },
+  { s: "Our team (pick) ___ up a lot of rubbish on the beach last weekend.", a: ["picked"], u: 3 },
+  { s: "She (read) ___ stories to the lonely elderly yesterday afternoon.", a: ["read"], u: 3 },
+
+  { s: "My cousin (study) ___ judo twice a week at the sports club.", a: ["studies"], u: 1 },
+  { s: "Does your brother like (take) ___ photos of nature?", a: ["taking"], u: 1 },
+  { s: "You should (exercise) ___ regularly to keep fit.", a: ["exercise"], u: 2 },
+  { s: "They (visit) ___ the children at the local orphanage last month.", a: ["visited"], u: 3 },
+  { s: "We (make) ___ postcards to raise money for charity yesterday.", a: ["made"], u: 3 }
+];
+
+var P4_BANK = [
+  { s: "I have a big coin (COLLECT) ___ from many countries.", a: ["collection"], u: 1 },
+  { s: "Making models helps develop your (CREATE) ___.", a: ["creativity"], u: 1 },
+  { s: "The Japanese eat (HEALTH) ___, so they live very long.", a: ["healthily"], u: 2 },
+  { s: "Eating too much junk food is (HARM) ___ to our health.", a: ["harmful"], u: 2 },
+  { s: "Many (VOLUNTEER) ___ helped clean up the park yesterday.", a: ["volunteers"], u: 3 },
+
+  { s: "Building dollhouses requires a lot of patience and (CREATIVE) ___.", a: ["creativity"], u: 1 },
+  { s: "Mr. Brown is a famous stamp (COLLECT) ___ in our town.", a: ["collector"], u: 1 },
+  { s: "Drinking unclean water can cause (SICK) ___.", a: ["sickness"], u: 2 },
+  { s: "Physical (ACTIVE) ___ help keep you strong and fit.", a: ["activities"], u: 2 },
+  { s: "Our school organized a project to help (HOME) ___ people last winter.", a: ["homeless"], u: 3 },
+
+  { s: "Hobbies teach children about (RESPONSIBLE) ___ and maturity.", a: ["responsibility"], u: 1 },
+  { s: "His old coins are very (VALUE) ___ today.", a: ["valuable"], u: 1 },
+  { s: "Tofu and coloured vegetables are very (HEALTH) ___ foods.", a: ["healthy"], u: 2 },
+  { s: "Lack of vitamin E can cause skin diseases and (TIRED) ___.", a: ["tiredness"], u: 2 },
+  { s: "We made a big book (DONATE) ___ to the village library last month.", a: ["donation"], u: 3 },
+
+  { s: "My sister is very (CREATE) ___; she paints beautiful pictures.", a: ["creative"], u: 1 },
+  { s: "Listening to music is my favourite leisure (ACT) ___.", a: ["activity"], u: 1 },
+  { s: "Watching too much TV is an (HEALTH) ___ habit.", a: ["unhealthy"], u: 2 },
+  { s: "I am (ALLERGY) ___ to seafood, so I cannot eat shrimp.", a: ["allergic"], u: 2 },
+  { s: "They sent food and warm clothes to the (FLOOD) ___ area yesterday.", a: ["flooded"], u: 3 },
+
+  { s: "Collecting stamps helps you become more (PATIENCE) ___.", a: ["patient"], u: 1 },
+  { s: "She is a (COMMON) ___ girl with a simple hobby of reading.", a: ["common"], u: 1 },
+  { s: "We shouldn't eat too much (SWEET) ___ food.", a: ["sweetened"], u: 2 },
+  { s: "You should eat more (COLOUR) ___ vegetables like carrots and tomatoes.", a: ["coloured", "colored"], u: 2 },
+  { s: "We helped the (OLD) ___ at the nursing home last Sunday.", a: ["elderly"], u: 3 },
+
+  { s: "My brother is very (ACT) ___; he plays sports every afternoon.", a: ["active"], u: 1 },
+  { s: "That painting is not very (IMPRESS) ___.", a: ["impressive"], u: 1 },
+  { s: "My uncle is a (VEGETABLE) ___; he never eats meat or fish.", a: ["vegetarian"], u: 2 },
+  { s: "She bought a tube of (SOOTHE) ___ cream for her red spots.", a: ["soothing"], u: 2 },
+  { s: "Our club does a lot of (COMMUNE) ___ service every summer.", a: ["community"], u: 3 },
+
+  { s: "Gardening is a (USE) ___ hobby because it provides fresh vegetables.", a: ["useful"], u: 1 },
+  { s: "He enjoys the (PEACE) ___ atmosphere of the countryside.", a: ["peaceful"], u: 1 },
+  { s: "He had an (ITCH) ___ toe from the mosquito bite.", a: ["itchy"], u: 2 },
+  { s: "Fast food contains a lot of fat, which can lead to (OBESE) ___.", a: ["obesity"], u: 2 },
+  { s: "Last year, we tutored children in a (MOUNTAIN) ___ village.", a: ["mountainous"], u: 3 },
+
+  { s: "Horse riding is an (USUAL) ___ hobby in my neighbourhood.", a: ["unusual"], u: 1 },
+  { s: "She is a big music (LOVER) ___ and buys many CDs.", a: ["lover"], u: 1 },
+  { s: "You should brush your teeth (REGULAR) ___ twice a day.", a: ["regularly"], u: 2 },
+  { s: "Having a balanced diet helps you stay (FIT) ___ and strong.", a: ["fit"], u: 2 },
+  { s: "We visited the children at the local (ORPHAN) ___ yesterday.", a: ["orphanage"], u: 3 },
+
+  { s: "Playing sports makes us feel (HAPPY) ___ and positive.", a: ["happy"], u: 1 },
+  { s: "My father is a keen (GARDEN) ___; he loves flowers and trees.", a: ["gardener"], u: 1 },
+  { s: "She feels weak and (TIRE) ___ because she stayed up late.", a: ["tired"], u: 2 },
+  { s: "Always keep your surroundings (CLEANLINESS) ___ to avoid viruses.", a: ["clean"], u: 2 },
+  { s: "Doing volunteer work is a (MEANING) ___ activity for students.", a: ["meaningful"], u: 3 },
+
+  { s: "My friend has a wonderful (COLLECT) ___ of old stamps.", a: ["collection"], u: 1 },
+  { s: "Camping with friends is an (EXCITE) ___ outdoor activity.", a: ["exciting"], u: 1 },
+  { s: "Skipping breakfast is (BADLY) ___ for your stomach.", a: ["bad"], u: 2 },
+  { s: "Good teeth help us look nice and chew (GOOD) ___.", a: ["well"], u: 2 },
+  { s: "We are very (PRIDE) ___ of our school's volunteer club.", a: ["proud"], u: 3 }
+];
+
+var P5_BANK = [
+  {
+    box: ["cardboard", "chapped", "suncream", "donated", "nursing"],
+    items: [
+      { s: "You need some ___ and glue to build a dollhouse.", a: ["cardboard"], u: 1 },
+      { s: "My sister puts on lip balm because she has ___ lips.", a: ["chapped"], u: 2 },
+      { s: "You should wear ___ when you spend time in the sun.", a: ["suncream"], u: 2 },
+      { s: "Our school ___ warm clothes to poor children last winter.", a: ["donated"], u: 3 },
+      { s: "We helped the elderly at a ___ home last Sunday.", a: ["nursing"], u: 3 }
+    ]
+  },
+  {
+    box: ["patient", "tofu", "stomachache", "tutored", "litter"],
+    items: [
+      { s: "Collecting stamps helps you become more ___.", a: ["patient"], u: 1 },
+      { s: "My grandmother likes eating ___ because it is healthy.", a: ["tofu"], u: 2 },
+      { s: "Don't skip breakfast or you may have a ___.", a: ["stomachache"], u: 2 },
+      { s: "Minh ___ English to primary students in the village last summer.", a: ["tutored"], u: 3 },
+      { s: "Volunteers picked up ___ in the central park yesterday.", a: ["litter"], u: 3 }
+    ]
+  },
+  {
+    box: ["models", "acne", "calories", "homeless", "exchanged"],
+    items: [
+      { s: "Phong adores making ___ in his free time.", a: ["models"], u: 1 },
+      { s: "You should go to bed early and wash your face to avoid ___.", a: ["acne"], u: 2 },
+      { s: "An apple contains about fifty ___.", a: ["calories"], u: 2 },
+      { s: "They gave food and blankets to ___ people last night.", a: ["homeless"], u: 3 },
+      { s: "We ___ used paper for notebooks at the school fair.", a: ["exchanged"], u: 3 }
+    ]
+  },
+  {
+    box: ["judo", "eyedrops", "vegetarian", "orphanage", "planted"],
+    items: [
+      { s: "Jim does ___ with his classmates at the sports club twice a week.", a: ["judo"], u: 1 },
+      { s: "My eyes are tired, so my mother gives me some ___.", a: ["eyedrops", "eye drops"], u: 2 },
+      { s: "My uncle is a ___; he never eats meat or fish.", a: ["vegetarian"], u: 2 },
+      { s: "Last month, we visited the children at a local ___.", a: ["orphanage"], u: 3 },
+      { s: "Students ___ trees and flowers along the school road yesterday.", a: ["planted"], u: 3 }
+    ]
+  },
+  {
+    box: ["gardening", "sunburn", "obesity", "flooded", "bottles"],
+    items: [
+      { s: "My mother loves ___ because she likes planting flowers.", a: ["gardening"], u: 1 },
+      { s: "I got ___ during my beach vacation last week.", a: ["sunburn"], u: 2 },
+      { s: "Eating too much junk food can lead to ___.", a: ["obesity"], u: 2 },
+      { s: "We sent medicine and food to people in ___ areas.", a: ["flooded"], u: 3 },
+      { s: "Children collected plastic ___ for recycling yesterday.", a: ["bottles"], u: 3 }
+    ]
+  },
+  {
+    box: ["creativity", "vitamins", "concentrate", "watered", "proud"],
+    items: [
+      { s: "Making pottery and models develops your ___.", a: ["creativity"], u: 1 },
+      { s: "Coloured vegetables provide us with a lot of ___.", a: ["vitamins"], u: 2 },
+      { s: "Having enough sleep helps students ___ at school.", a: ["concentrate"], u: 2 },
+      { s: "She ___ the vegetables in the school garden yesterday afternoon.", a: ["watered"], u: 3 },
+      { s: "We felt very ___ of our community service project.", a: ["proud"], u: 3 }
+    ]
+  },
+  {
+    box: ["horse", "allergic", "headache", "blood", "cleaned"],
+    items: [
+      { s: "My father goes to the Riders' Club because he loves ___ riding.", a: ["horse"], u: 1 },
+      { s: "I am ___ to shellfish, so I cannot eat shrimp or crab.", a: ["allergic"], u: 2 },
+      { s: "Don't sit too close to the TV screen or you will get a ___.", a: ["headache"], u: 2 },
+      { s: "Many young people donated ___ at the hospital yesterday.", a: ["blood"], u: 3 },
+      { s: "Our class ___ up the local beach last Saturday.", a: ["cleaned"], u: 3 }
+    ]
+  },
+  {
+    box: ["collection", "soap", "shape", "textbooks", "elderly"],
+    items: [
+      { s: "Nam has a big stamp ___ from different countries.", a: ["collection"], u: 1 },
+      { s: "You should wash your hands often with ___ to avoid viruses.", a: ["soap"], u: 2 },
+      { s: "She stays in ___ by exercising daily and eating healthily.", a: ["shape"], u: 2 },
+      { s: "We gave old ___ to students in mountainous areas last year.", a: ["textbooks"], u: 3 },
+      { s: "Volunteers read newspapers to the ___ at the nursing home.", a: ["elderly"], u: 3 }
+    ]
+  },
+  {
+    box: ["dollhouse", "spots", "avoid", "rural", "cooked"],
+    items: [
+      { s: "Mai used cardboard and glue to build a beautiful ___.", a: ["dollhouse"], u: 1 },
+      { s: "Acne usually causes small, red ___ on the face.", a: ["spots"], u: 2 },
+      { s: "You can ___ many diseases by keeping your surroundings clean.", a: ["avoid"], u: 2 },
+      { s: "Last year, our club donated books to children in ___ areas.", a: ["rural"], u: 3 },
+      { s: "My mother ___ free meals for poor patients last weekend.", a: ["cooked"], u: 3 }
+    ]
+  },
+  {
+    box: ["cycling", "mask", "weight", "community", "postcards"],
+    items: [
+      { s: "My family often goes ___ in the countryside on Sundays.", a: ["cycling"], u: 1 },
+      { s: "Always remember to wear a ___ when you go out.", a: ["mask"], u: 2 },
+      { s: "If you want to lose ___, you should eat less fast food.", a: ["weight"], u: 2 },
+      { s: "Doing ___ service helps students learn many useful skills.", a: ["community"], u: 3 },
+      { s: "We made ___ to raise money for poor children yesterday.", a: ["postcards"], u: 3 }
+    ]
+  }
+];
+
+var P6_BANK = [
+  {
+    ptitle: "A Penfriend Hobby",
+    box: ["hobby", "when", "taught", "improve", "cultures"],
+    passage: "My favourite {1} is writing letters to penfriends around the world. I started this hobby {2} I was in grade 6. My English teacher {3} me how to write a friendly letter and gave me my first penfriend's address. Writing letters helps me {4} my English writing skills every day. Moreover, I can learn a lot about different {5} and lifestyles in other countries.",
+    items: [ { a: ["hobby"], u: 1 }, { a: ["when"], u: 1 }, { a: ["taught"], u: 3 }, { a: ["improve"], u: 1 }, { a: ["cultures"], u: 1 } ]
+  },
+  {
+    ptitle: "How to Avoid Acne",
+    box: ["affects", "spots", "wash", "touch", "early"],
+    passage: "Acne is a common skin condition that {1} about 80% of young people. It causes small, red {2} on the face and back. To avoid acne, you should {3} your face twice a day with mild soap and clean water. You shouldn't {4} or pop the spots with your hands because it makes them worse. Besides, eating more coloured vegetables and going to bed {5} are very good for your skin.",
+    items: [ { a: ["affects"], u: 2 }, { a: ["spots"], u: 2 }, { a: ["wash"], u: 2 }, { a: ["touch"], u: 2 }, { a: ["early"], u: 2 } ]
+  },
+  {
+    ptitle: "Our Community Service Project",
+    box: ["volunteers", "donated", "elderly", "planted", "proud"],
+    passage: "Last month, our school organized a community service project. More than fifty {1} from grade 7 joined the activities. First, we collected old textbooks and {2} them to children in a mountainous village. Next, we visited a nursing home and read stories to the {3}. On Sunday morning, we {4} twenty new trees in the neighbourhood park. Everyone felt tired but very {5} of the work.",
+    items: [ { a: ["volunteers"], u: 3 }, { a: ["donated"], u: 3 }, { a: ["elderly"], u: 3 }, { a: ["planted"], u: 3 }, { a: ["proud"], u: 3 } ]
+  },
+  {
+    ptitle: "Building Dollhouses",
+    box: ["cardboard", "glue", "creativity", "patient", "shares"],
+    passage: "Mi's favourite hobby is building dollhouses. Every weekend, she uses {1} and {2} to make the house and small furniture for her dolls. This hobby develops her {3} because she designs every room by herself. It also helps her become more {4} because it takes a lot of time to finish one model. She often {5} her hobby with her cousin Trang.",
+    items: [ { a: ["cardboard"], u: 1 }, { a: ["glue"], u: 1 }, { a: ["creativity"], u: 1 }, { a: ["patient"], u: 1 }, { a: ["shares"], u: 1 } ]
+  },
+  {
+    ptitle: "The Secret of Long Life in Japan",
+    box: ["healthily", "tofu", "drinks", "exercise", "fit"],
+    passage: "The Japanese are famous for their long life expectancy because they eat very {1}. Their daily diet includes a lot of fish, coloured vegetables, and {2} made from soybeans. They seldom eat fast food or drink soft {3}. In addition, many Japanese people walk to work and do {4} regularly in the morning. These good habits help them keep {5} and avoid many diseases.",
+    items: [ { a: ["healthily"], u: 2 }, { a: ["tofu"], u: 2 }, { a: ["drinks"], u: 2 }, { a: ["exercise"], u: 2 }, { a: ["fit"], u: 2 } ]
+  },
+  {
+    ptitle: "Helping Flooded Areas",
+    box: ["flooded", "collected", "cooked", "sent", "homeless"],
+    passage: "Last October, heavy rain caused big floods in Central Viet Nam. Many people in the {1} areas lost their houses and became {2}. Our school's Green Club quickly {3} warm clothes, blankets, and clean water from students and parents. Some teachers also {4} hot meals and packed dry food. Two days later, we {5} all the donations to the people in need.",
+    items: [ { a: ["flooded"], u: 3 }, { a: ["homeless"], u: 3 }, { a: ["collected"], u: 3 }, { a: ["cooked"], u: 3 }, { a: ["sent"], u: 3 } ]
+  },
+  {
+    ptitle: "Gardening with My Mother",
+    box: ["gardening", "flowers", "water", "insects", "outdoors"],
+    passage: "My mother and I share the same hobby: {1}. We have a small garden behind our house where we grow vegetables and {2}. Every afternoon after school, I help my mother {3} the plants and pick dry leaves. We also learn how to protect our plants from harmful {4} and bugs. Working {5} in the garden makes us feel healthy and relaxed.",
+    items: [ { a: ["gardening"], u: 1 }, { a: ["flowers"], u: 1 }, { a: ["water"], u: 1 }, { a: ["insects"], u: 1 }, { a: ["outdoors"], u: 1 } ]
+  },
+  {
+    ptitle: "Protecting Your Eyes and Skin",
+    box: ["screen", "eyedrops", "suncream", "lipbalm", "water"],
+    passage: "Taking care of your eyes and skin is an important part of healthy living. You shouldn't look at a computer or smartphone {1} for too long. When your eyes feel tired, you can use {2} and take a short rest. In summer, remember to put on {3} and wear a hat to avoid sunburn. In winter, using {4} and drinking enough {5} will prevent chapped lips.",
+    items: [ { a: ["screen"], u: 2 }, { a: ["eyedrops", "eye drops"], u: 2 }, { a: ["suncream"], u: 2 }, { a: ["lipbalm", "lip balm"], u: 2 }, { a: ["water"], u: 2 } ]
+  },
+  {
+    ptitle: "Green Sunday in Our Neighbourhood",
+    box: ["cleaned", "picked", "bottles", "exchanged", "community"],
+    passage: "Last Sunday, the youth club held a 'Green Sunday' event in our {1}. In the morning, thirty students {2} up the streets and the local park. We {3} up litter and sorted plastic {4} and paper for recycling. In the afternoon, we {5} used paper for new notebooks and gave them to poor students.",
+    items: [ { a: ["community"], u: 3 }, { a: ["cleaned"], u: 3 }, { a: ["picked"], u: 3 }, { a: ["bottles"], u: 3 }, { a: ["exchanged"], u: 3 } ]
+  },
+  {
+    ptitle: "Collecting Stamps and Coins",
+    box: ["collecting", "countries", "valuable", "album", "responsibility"],
+    passage: "Many children enjoy {1} things such as stamps, coins, or teddy bears. My brother collects coins from different {2} in the world. Our uncle often gives him new coins after each business trip. Some old coins in his collection are very {3}. He keeps them carefully in a big {4}, which teaches him about care and {5}.",
+    items: [ { a: ["collecting"], u: 1 }, { a: ["countries"], u: 1 }, { a: ["valuable"], u: 1 }, { a: ["album"], u: 1 }, { a: ["responsibility"], u: 1 } ]
+  }
+];
+
+var P7_BANK = [
+  {
+    ptitle: "The Importance of Breakfast",
+    passage: "Breakfast is the {1} important meal of the day. It provides the nutrients your body needs for good health and the calories it needs for {2}. Studies show that people who don't have breakfast are often slow, tired, hungry and {3} to concentrate at school. It is easier to {4} weight if you eat in the morning rather than later in the day. Dividing the day's calories {5} three meals helps you stay fit more efficiently than skipping breakfast.",
+    items: [
+      { o: ["healthy", "tasty", "main", "most"], a: 3, u: 2 },
+      { o: ["strength", "power", "energy", "effort"], a: 2, u: 2 },
+      { o: ["able", "enable", "unable", "capable"], a: 2, u: 2 },
+      { o: ["lose", "put", "gain", "drop"], a: 0, u: 2 },
+      { o: ["in", "into", "up", "for"], a: 1, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Listening to Music",
+    passage: "Almost everybody has some kind of hobby. My hobbies are {1} to music and watching television. I am very fond {2} music. When I am free, I often listen to my favourite songs from an old cassette recorder. At weekends, I usually {3} to music shops in the downtown areas to buy good CDs. Music helps me {4} after hard lessons at school and makes me feel {5}.",
+    items: [
+      { o: ["listen", "listens", "listening", "listened"], a: 2, u: 1 },
+      { o: ["in", "of", "on", "at"], a: 1, u: 1 },
+      { o: ["go", "goes", "going", "went"], a: 0, u: 1 },
+      { o: ["relax", "tutors", "donates", "affects"], a: 0, u: 1 },
+      { o: ["chapped", "happy", "homeless", "itchy"], a: 1, u: 1 }
+    ]
+  },
+  {
+    ptitle: "Volunteer Work at a Nursing Home",
+    passage: "Last Saturday, our class {1} to a nursing home in the town to help the elderly. In the morning, we {2} the rooms and watered the flowers in the garden. Some girls helped the cooks {3} a healthy lunch with tofu and coloured vegetables. In the afternoon, we sang songs and {4} newspapers to the grandfathers and grandmothers. We felt very {5} because we brought joy to them.",
+    items: [
+      { o: ["go", "goes", "went", "going"], a: 2, u: 3 },
+      { o: ["cleaned", "tutored", "donated", "exchanged"], a: 0, u: 3 },
+      { o: ["prepare", "prepared", "preparing", "prepares"], a: 0, u: 3 },
+      { o: ["read", "planted", "picked", "collected"], a: 0, u: 3 },
+      { o: ["proud", "allergic", "harmful", "chapped"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Making Models",
+    passage: "Susan's favourite hobby is {1} models of planes and cars. She started this hobby about one year {2}. It usually takes her two weeks to {3} two models. She puts all her finished models on a big wooden shelf in her bedroom, and she will need another shelf soon. Last month, she tried to start a model club at school, and both teachers {4} students were very interested {5} it.",
+    items: [
+      { o: ["making", "doing", "playing", "going"], a: 0, u: 1 },
+      { o: ["last", "ago", "yesterday", "every"], a: 1, u: 3 },
+      { o: ["make", "makes", "made", "making"], a: 0, u: 1 },
+      { o: ["or", "but", "so", "and"], a: 3, u: 2 },
+      { o: ["in", "of", "on", "for"], a: 0, u: 1 }
+    ]
+  },
+  {
+    ptitle: "Habits to Avoid for a Healthy Life",
+    passage: "There are several bad habits we should {1} so that we can have a healthy life. Today, many people spend too much time looking at smartphone {2} or watching TV. This is bad for our eyes, and sitting for a long time can lead to {3}. Besides, eating too much fast food and junk food is harmful because they contain a lot of fat, salt, and {4}. Instead, we should eat home-made food to stay healthy and keep in good {5}.",
+    items: [
+      { o: ["avoid", "donate", "collect", "tutor"], a: 0, u: 2 },
+      { o: ["screens", "spots", "stamps", "coins"], a: 0, u: 2 },
+      { o: ["backache", "sunburn", "toothache", "earache"], a: 0, u: 2 },
+      { o: ["sugar", "cardboard", "glue", "litter"], a: 0, u: 2 },
+      { o: ["shape", "size", "model", "hobby"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Tutoring Children in Rural Areas",
+    passage: "Every summer, students from our secondary school join a volunteer programme in {1} areas. Last July, my team travelled to a small mountainous village. We brought a lot of old {2}, notebooks, and pencils that we collected from our classmates. During the week, we {3} English and Maths to primary children in the morning. In the afternoon, we played sports {4} taught them songs. The trip taught us a lot about {5} service.",
+    items: [
+      { o: ["rural", "chapped", "sweetened", "fizzy"], a: 0, u: 3 },
+      { o: ["textbooks", "calories", "vitamins", "eyedrops"], a: 0, u: 3 },
+      { o: ["tutored", "watered", "planted", "picked"], a: 0, u: 3 },
+      { o: ["and", "but", "or", "so"], a: 0, u: 2 },
+      { o: ["community", "collection", "creativity", "condition"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Doing Sports and Outdoor Activities",
+    passage: "My brother Mike is a very {1} boy. He loves outdoor activities and {2} sports every day. After school, he often plays basketball or {3} cycling in the park with his friends. At weekends, he goes swimming with our father. Mike never drinks soft {4} or eats junk food because he wants to stay fit. Thanks to his healthy lifestyle, he seldom gets {5} or tired.",
+    items: [
+      { o: ["active", "homeless", "itchy", "flooded"], a: 0, u: 1 },
+      { o: ["does", "plays", "goes", "makes"], a: 0, u: 1 },
+      { o: ["goes", "does", "plays", "builds"], a: 0, u: 1 },
+      { o: ["drinks", "models", "stamps", "spots"], a: 0, u: 2 },
+      { o: ["sick", "proud", "patient", "valuable"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "How to Prevent Viruses",
+    passage: "You can do many simple things every day to {1} viruses and stay healthy. First, always keep your house and surroundings {2}. Second, you should wash your hands often {3} soap and clean water, especially before meals. Third, drink two litres of water a day and eat more {4} vegetables and fruit to get enough vitamins. Finally, exercise at least three times a week and wear a {5} when going to crowded places.",
+    items: [
+      { o: ["avoid", "exchange", "donate", "collect"], a: 0, u: 2 },
+      { o: ["clean", "chapped", "heavy", "dirty"], a: 0, u: 2 },
+      { o: ["with", "by", "on", "to"], a: 0, u: 2 },
+      { o: ["coloured", "sweetened", "flooded", "homeless"], a: 0, u: 2 },
+      { o: ["mask", "dollhouse", "cardboard", "coin"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Recycling for a Greener School",
+    passage: "Last semester, our school started a recycling club to protect the environment. Every Friday afternoon, club members {1} plastic bottles, cans, and used paper around the school yard. We washed the plastic bottles and used them to {2} small flower pots for the classrooms. We also {3} used paper for new trees and notebooks. Last month, we sold our handmade products at the school fair and {4} all the money to an {5}.",
+    items: [
+      { o: ["collected", "tutored", "watered", "cooked"], a: 0, u: 3 },
+      { o: ["make", "makes", "making", "made"], a: 0, u: 1 },
+      { o: ["exchanged", "planted", "donated", "helped"], a: 0, u: 3 },
+      { o: ["donated", "avoided", "affected", "exercised"], a: 0, u: 3 },
+      { o: ["orphanage", "allergy", "obesity", "earache"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Horse Riding Club",
+    passage: "Most of my friends like common hobbies such as reading books or collecting stamps, {1} my hobby is quite unusual. I love horse {2}. Every Sunday morning, my father drives me to the Riders' Club in the countryside. At the club, I learn how to ride a horse safely and how to {3} care of it. After riding, I often brush the horse and {4} it fresh grass and carrots. This hobby makes me strong and teaches me to love {5}.",
+    items: [
+      { o: ["but", "so", "or", "because"], a: 0, u: 2 },
+      { o: ["riding", "cycling", "jogging", "skating"], a: 0, u: 1 },
+      { o: ["take", "do", "make", "play"], a: 0, u: 1 },
+      { o: ["give", "gave", "giving", "gives"], a: 0, u: 1 },
+      { o: ["animals", "models", "coins", "calories"], a: 0, u: 1 }
+    ]
+  }
+];
+
+var P8_BANK = [
+  { s: "My grandmother / like / eat / tofu.", stub: "My grandmother", a: ["My grandmother likes eating tofu.", "My grandmother likes to eat tofu."], u: 1 },
+  { s: "Coloured vegetables / provide / us / a lot of / vitamins.", stub: "Coloured vegetables", a: ["Coloured vegetables provide us a lot of vitamins.", "Coloured vegetables provide us with a lot of vitamins."], u: 2 },
+  { s: "John / do / karate / regularly / to / stay healthy.", stub: "John", a: ["John does karate regularly to stay healthy."], u: 1 },
+  { s: "You / should / go to bed / early / to / avoid / acne.", stub: "You", a: ["You should go to bed early to avoid acne."], u: 2 },
+  { s: "We / donate / books / to / homeless children / last month.", stub: "We", a: ["We donated books to homeless children last month."], u: 3 },
+
+  { s: "Acne / usually / cause / small, red spots / on the face.", stub: "Acne", a: ["Acne usually causes small, red spots on the face.", "Acne usually causes small red spots on the face."], u: 2 },
+  { s: "My sister / never / drink / soft drinks.", stub: "My sister", a: ["My sister never drinks soft drinks."], u: 2 },
+  { s: "Making models / develop / your / creativity.", stub: "Making models", a: ["Making models develops your creativity."], u: 1 },
+  { s: "Collecting stamps / help / you / be / more patient.", stub: "Collecting stamps", a: ["Collecting stamps helps you be more patient.", "Collecting stamps helps you to be more patient."], u: 1 },
+  { s: "They / plant / trees / in / the school garden / yesterday.", stub: "They", a: ["They planted trees in the school garden yesterday."], u: 3 },
+
+  { s: "Tofu / be / healthy / for / our body.", stub: "Tofu", a: ["Tofu is healthy for our body."], u: 2 },
+  { s: "Many Vietnamese / drink / green tea / every day.", stub: "Many Vietnamese", a: ["Many Vietnamese drink green tea every day."], u: 2 },
+  { s: "She / not / use / suncream / in / winter.", stub: "She", a: ["She does not use suncream in winter.", "She doesn't use suncream in winter."], u: 2 },
+  { s: "My brother / enjoy / build / dollhouses.", stub: "My brother", a: ["My brother enjoys building dollhouses."], u: 1 },
+  { s: "Our club / help / the elderly / at / a nursing home / last Sunday.", stub: "Our club", a: ["Our club helped the elderly at a nursing home last Sunday."], u: 3 },
+
+  { s: "Phong / eat / lots of / junk food / so / he / put on / weight.", stub: "Phong", a: ["Phong eats lots of junk food, so he puts on weight.", "Phong eats lots of junk food, so he is putting on weight."], u: 2 },
+  { s: "I / exercise / daily / because / I / want / stay / healthy.", stub: "I", a: ["I exercise daily because I want to stay healthy."], u: 2 },
+  { s: "Sitting / too / close / to the TV / hurt / your eyes.", stub: "Sitting", a: ["Sitting too close to the TV hurts your eyes."], u: 2 },
+  { s: "Nam / often / ride / his bike / to school.", stub: "Nam", a: ["Nam often rides his bike to school."], u: 1 },
+  { s: "Volunteers / pick up / litter / in / the local park / two days ago.", stub: "Volunteers", a: ["Volunteers picked up litter in the local park two days ago."], u: 3 },
+
+  { s: "Getting / enough / sleep / at night / be / good / for / you.", stub: "Getting", a: ["Getting enough sleep at night is good for you."], u: 2 },
+  { s: "You / should / eat / coloured vegetables / and / lean meat.", stub: "You", a: ["You should eat coloured vegetables and lean meat.", "You should eat colored vegetables and lean meat."], u: 2 },
+  { s: "Avoid / eat / too much / fast food / and / sugar.", stub: "Avoid", a: ["Avoid eating too much fast food and sugar."], u: 2 },
+  { s: "Hoa / dislike / play / computer games / in / her free time.", stub: "Hoa", a: ["Hoa dislikes playing computer games in her free time."], u: 1 },
+  { s: "Minh / tutor / primary students / in / the village / last year.", stub: "Minh", a: ["Minh tutored primary students in the village last year."], u: 3 },
+
+  { s: "Fruit and vegetables / have / a lot of / vitamins.", stub: "Fruit and vegetables", a: ["Fruit and vegetables have a lot of vitamins."], u: 2 },
+  { s: "Healthy food / help / people / keep fit.", stub: "Healthy food", a: ["Healthy food helps people keep fit.", "Healthy food helps people to keep fit."], u: 2 },
+  { s: "You / should / keep / your room / tidy.", stub: "You", a: ["You should keep your room tidy."], u: 2 },
+  { s: "My father / go / horse riding / every Sunday.", stub: "My father", a: ["My father goes horse riding every Sunday."], u: 1 },
+  { s: "We / exchange / used paper / for / notebooks / yesterday.", stub: "We", a: ["We exchanged used paper for notebooks yesterday."], u: 3 },
+
+  { s: "We / not / eat / much / fast food.", stub: "We", a: ["We do not eat much fast food.", "We don't eat much fast food."], u: 2 },
+  { s: "He / have / bread and eggs / for / breakfast / every morning.", stub: "He", a: ["He has bread and eggs for breakfast every morning."], u: 2 },
+  { s: "Watching / television / too much / be / bad / for / your health.", stub: "Watching", a: ["Watching television too much is bad for your health."], u: 2 },
+  { s: "My mother / love / do / gardening / at weekends.", stub: "My mother", a: ["My mother loves doing gardening at weekends."], u: 1 },
+  { s: "They / give / warm clothes / to / homeless people / last winter.", stub: "They", a: ["They gave warm clothes to homeless people last winter."], u: 3 },
+
+  { s: "You / can / avoid / some diseases / by / keep / yourself / clean.", stub: "You", a: ["You can avoid some diseases by keeping yourself clean."], u: 2 },
+  { s: "Jim / eat / too much / fast food / so / he / be / overweight.", stub: "Jim", a: ["Jim eats too much fast food, so he is overweight."], u: 2 },
+  { s: "You / should / wear / a mask / when / you / go out.", stub: "You", a: ["You should wear a mask when you go out."], u: 2 },
+  { s: "Mai / need / cardboard and glue / to / build / a dollhouse.", stub: "Mai", a: ["Mai needs cardboard and glue to build a dollhouse."], u: 1 },
+  { s: "Our class / clean up / the local beach / last Saturday.", stub: "Our class", a: ["Our class cleaned up the local beach last Saturday."], u: 3 },
+
+  { s: "You / shouldn't / look / at / your smartphone screen / too long.", stub: "You", a: ["You shouldn't look at your smartphone screen too long.", "You should not look at your smartphone screen too long."], u: 2 },
+  { s: "My sister / put on / lip balm / because / she / have / chapped lips.", stub: "My sister", a: ["My sister puts on lip balm because she has chapped lips."], u: 2 },
+  { s: "Playing / sports / help / us / stay / in shape.", stub: "Playing", a: ["Playing sports helps us stay in shape.", "Playing sports helps us to stay in shape."], u: 1 },
+  { s: "The train / leave / the station / at / 6 o'clock / every morning.", stub: "The train", a: ["The train leaves the station at 6 o'clock every morning."], u: 1 },
+  { s: "Students / collect / plastic bottles / for / recycling / last week.", stub: "Students", a: ["Students collected plastic bottles for recycling last week."], u: 3 },
+
+  { s: "You / should / brush / your teeth / twice / a day.", stub: "You", a: ["You should brush your teeth twice a day."], u: 2 },
+  { s: "She / often / take / eye drops / for / her tired eyes.", stub: "She", a: ["She often takes eye drops for her tired eyes."], u: 2 },
+  { s: "My cousin / adore / collect / coins / from / different countries.", stub: "My cousin", a: ["My cousin adores collecting coins from different countries."], u: 1 },
+  { s: "My parents / go / jogging / in / the park / every morning.", stub: "My parents", a: ["My parents go jogging in the park every morning."], u: 1 },
+  { s: "We / cook / free meals / for / poor patients / last Sunday.", stub: "We", a: ["We cooked free meals for poor patients last Sunday."], u: 3 }
+];
+
+var P9_BANK = [
+  { s: "He is clever. He is active.", stub: "He is clever", a: ["He is clever and active."], u: 2 },
+  { s: "I wash my face. I brush my teeth.", stub: "I wash", a: ["I wash my face and brush my teeth."], u: 2 },
+  { s: "Nam likes playing chess. His brother likes playing chess.", stub: "Nam and his brother", a: ["Nam and his brother like playing chess."], u: 2 },
+  { s: "It is a good idea to do exercise regularly.", stub: "You should", a: ["You should do exercise regularly."], u: 2 },
+  { s: "My sister enjoys collecting stamps.", stub: "My sister is interested", a: ["My sister is interested in collecting stamps."], u: 1 },
+
+  { s: "You shouldn't eat much fast food. You shouldn't eat sweetened food.", stub: "You shouldn't eat", a: ["You shouldn't eat much fast food and sweetened food.", "You should not eat much fast food and sweetened food."], u: 2 },
+  { s: "Some students are jogging. Some students are talking.", stub: "Some students are", a: ["Some students are jogging and talking."], u: 2 },
+  { s: "My dad loves outdoor activities. I love outdoor activities.", stub: "My dad and I", a: ["My dad and I love outdoor activities."], u: 2 },
+  { s: "It is not a good idea to stay up late at night.", stub: "You shouldn't", a: ["You shouldn't stay up late at night.", "You should not stay up late at night."], u: 2 },
+  { s: "Phong loves making models in his free time.", stub: "Phong is fond", a: ["Phong is fond of making models in his free time."], u: 1 },
+
+  { s: "She wears a hat. She puts on some suncream.", stub: "She wears", a: ["She wears a hat and puts on some suncream."], u: 2 },
+  { s: "The Japanese study hard. The Japanese work hard.", stub: "The Japanese", a: ["The Japanese study and work hard.", "The Japanese study hard and work hard."], u: 2 },
+  { s: "Eating lots of vegetables is good for your health. Eating lots of fruit is good for your health.", stub: "Eating lots of vegetables", a: ["Eating lots of vegetables and fruit is good for your health.", "Eating lots of vegetables and lots of fruit is good for your health."], u: 2 },
+  { s: "July stayed home from school yesterday because she had a high fever.", stub: "July had a high fever,", a: ["July had a high fever, so she stayed home from school yesterday."], u: 3 },
+  { s: "My hobby is building dollhouses.", stub: "I enjoy", a: ["I enjoy building dollhouses."], u: 1 },
+
+  { s: "My cousin learns English. My cousin learns Japanese.", stub: "My cousin learns", a: ["My cousin learns English and Japanese."], u: 2 },
+  { s: "The car is new. The car is comfortable.", stub: "The car is", a: ["The car is new and comfortable."], u: 2 },
+  { s: "My brother likes outdoor activities. I like outdoor activities.", stub: "My brother and I", a: ["My brother and I like outdoor activities."], u: 2 },
+  { s: "If you often go swimming, you will keep fit.", stub: "Swimming", a: ["Swimming will help you keep fit.", "Swimming helps you keep fit."], u: 2 },
+  { s: "Lan is interested in doing gardening at weekends.", stub: "Lan likes", a: ["Lan likes doing gardening at weekends.", "Lan likes gardening at weekends."], u: 1 },
+
+  { s: "We have breakfast. We go to school.", stub: "We have", a: ["We have breakfast and go to school."], u: 2 },
+  { s: "He should avoid fast food. He should avoid soft drinks.", stub: "He should avoid", a: ["He should avoid fast food and soft drinks."], u: 2 },
+  { s: "Eating healthily is good for our health. Exercising regularly is good for our health.", stub: "Eating healthily and", a: ["Eating healthily and exercising regularly is good for our health.", "Eating healthily and exercising regularly are good for our health."], u: 2 },
+  { s: "It is bad for your heart if you eat too much meat.", stub: "Eating too much meat", a: ["Eating too much meat is bad for your heart."], u: 2 },
+  { s: "They donated warm clothes to poor children last winter.", stub: "They gave", a: ["They gave warm clothes to poor children last winter."], u: 3 },
+
+  { s: "Tom likes reading comic books. Tom likes playing video games.", stub: "Tom likes", a: ["Tom likes reading comic books and playing video games."], u: 2 },
+  { s: "Lan eats lots of carrots. Lan eats lots of tomatoes.", stub: "Lan eats lots of", a: ["Lan eats lots of carrots and tomatoes."], u: 2 },
+  { s: "Your house is large. Your house is comfortable.", stub: "Your house is", a: ["Your house is large and comfortable."], u: 2 },
+  { s: "She took an aspirin because she wanted to stop her toothache.", stub: "She took an aspirin to", a: ["She took an aspirin to stop her toothache."], u: 3 },
+  { s: "My father is keen on riding horses.", stub: "My father loves", a: ["My father loves riding horses.", "My father loves horse riding."], u: 1 },
+
+  { s: "We avoid sweetened food. We avoid soft drinks.", stub: "We avoid", a: ["We avoid sweetened food and soft drinks."], u: 2 },
+  { s: "You should wear a hat. You should wear suncream.", stub: "You should wear", a: ["You should wear a hat and suncream."], u: 2 },
+  { s: "My mother read the health tips. My mother downloaded the health tips.", stub: "My mother read", a: ["My mother read and downloaded the health tips."], u: 3 },
+  { s: "It is a good idea to wash your hands with soap.", stub: "You should", a: ["You should wash your hands with soap."], u: 2 },
+  { s: "Hoa hates waiting for buses in the rain.", stub: "Hoa doesn't", a: ["Hoa doesn't like waiting for buses in the rain.", "Hoa does not like waiting for buses in the rain."], u: 1 },
+
+  { s: "Your room looks dark. Your room looks untidy.", stub: "Your room looks", a: ["Your room looks dark and untidy."], u: 2 },
+  { s: "The Japanese work hard. They exercise regularly.", stub: "The Japanese work hard", a: ["The Japanese work hard and exercise regularly."], u: 2 },
+  { s: "My mother eats a lot of fruit. She eats a lot of vegetables.", stub: "My mother eats a lot of", a: ["My mother eats a lot of fruit and vegetables."], u: 2 },
+  { s: "Minh had a stomachache because he skipped breakfast yesterday.", stub: "Minh skipped breakfast yesterday,", a: ["Minh skipped breakfast yesterday, so he had a stomachache."], u: 3 },
+  { s: "My favourite hobby is listening to music.", stub: "I am fond", a: ["I am fond of listening to music."], u: 1 },
+
+  { s: "Some people are jogging. Some people are talking.", stub: "Some people are", a: ["Some people are jogging and talking."], u: 2 },
+  { s: "Mai likes drawing. Her sister likes drawing.", stub: "Mai and her sister", a: ["Mai and her sister like drawing."], u: 2 },
+  { s: "It is not a good idea to look at the computer screen for too long.", stub: "You shouldn't", a: ["You shouldn't look at the computer screen for too long.", "You should not look at the computer screen for too long."], u: 2 },
+  { s: "Because it rained heavily last Sunday, we did not clean up the park.", stub: "It rained heavily last Sunday,", a: ["It rained heavily last Sunday, so we did not clean up the park.", "It rained heavily last Sunday, so we didn't clean up the park."], u: 3 },
+  { s: "Do you enjoy playing badminton after school?", stub: "Are you interested", a: ["Are you interested in playing badminton after school?"], u: 1 },
+
+  { s: "The soup is hot. The soup is delicious.", stub: "The soup is", a: ["The soup is hot and delicious."], u: 2 },
+  { s: "I cleaned the house yesterday. I watered the flowers yesterday.", stub: "I cleaned the house", a: ["I cleaned the house and watered the flowers yesterday."], u: 3 },
+  { s: "It is a good idea to put on lip balm when you have chapped lips.", stub: "You should", a: ["You should put on lip balm when you have chapped lips."], u: 2 },
+  { s: "Jane is putting on weight because she eats too much junk food.", stub: "Jane eats too much junk food,", a: ["Jane eats too much junk food, so she is putting on weight."], u: 2 },
+  { s: "Nick adores taking photos of nature.", stub: "Nick is crazy", a: ["Nick is crazy about taking photos of nature."], u: 1 }
+];
+
+window.DES = [];
+for (var d = 0; d < 10; d++) {
+  var dId = "d" + (d + 1);
+  var p5 = P5_BANK[d];
+  var p6 = P6_BANK[d];
+  var p7 = P7_BANK[d];
+  window.DES.push({
+    id: dId,
+    no: d + 1,
+    title: "Đề số " + (d + 1),
+    acts: [
+      {
+        id: dId + "-I",
+        part: "I",
+        title: "Phần I. Phát âm",
+        instr: "Choose the word whose underlined part is pronounced differently from the others.",
+        type: "choice",
+        start: 1,
+        huong: "Đọc kĩ phần gạch chân ở từng từ để tìm từ có âm khác với 3 từ còn lại. Unit 1 phân biệt âm /ə/ (ơ ngắn ở âm tiết nhẹ như ago, about, sofa, doctor, teacher) và âm /ɜː/ (ơ dài ở chữ ir, ur, ear, wor như bird, girl, burn, learn, work). Unit 2 phân biệt âm /f/ (fat, leaf, safe, cough, enough, laugh, photo) với âm /v/ (of, vitamin, active, avoid) hoặc gh câm (through, high, night). Unit 3 phân biệt đuôi -ed: /ɪd/ sau t, d (wanted, started, donated, needed, flooded); /t/ sau k, p, f, gh, s, ce, sh, ch (helped, cooked, washed, watched); /d/ sau các âm còn lại (cleaned, played, watered, tutored).",
+        items: P1_BANK.slice(d * 5, d * 5 + 5)
+      },
+      {
+        id: dId + "-II",
+        part: "II",
+        title: "Phần II. Trắc nghiệm từ vựng và ngữ pháp",
+        instr: "Choose the best answer (A, B, C, or D) to complete each sentence.",
+        type: "choice",
+        start: 6,
+        huong: "Xác định từ khóa trong câu để chọn từ vựng hoặc cấu trúc ngữ pháp phù hợp. Unit 1: go + V-ing (cycling, jogging, horse riding), do + judo/karate/yoga/gardening, play + sports, build dollhouses (dùng cardboard và glue), make models; sau like/love/enjoy/adore/dislike/hate/detest + V-ing; sau want/would like + to V. Unit 2: các vấn đề sức khỏe (chapped lips -> lip balm, sunburn -> suncream, tired eyes -> eye drops, acne -> red spots), liên từ and, or, but, so và should/shouldn't + V. Unit 3: từ vựng tình nguyện (donate ... to, provide ... for, exchange ... for, tutor, nursing home, orphanage, homeless, flooded area) và thì quá khứ đơn.",
+        items: P2_BANK.slice(d * 10, d * 10 + 10)
+      },
+      {
+        id: dId + "-III",
+        part: "III",
+        title: "Phần III. Chia động từ trong ngoặc",
+        instr: "Give the correct form of the verbs in brackets.",
+        type: "gap",
+        start: 16,
+        huong: "Dựa vào dấu hiệu thời gian hoặc động từ đứng trước chỗ trống để chia đúng dạng. Nếu có trạng từ chỉ tần suất (usually, often, always, every...) hoặc nói về sự thật hiển nhiên (Unit 1, 2): chia Hiện tại đơn (chủ ngữ số ít thêm -s/-es, phủ định dùng don't/doesn't + V). Nếu đứng sau động từ chỉ sự yêu thích (enjoy, love, like, dislike, hate, detest, fancy, adore) hoặc giới từ (of, in, about): chia V-ing. Nếu đứng sau should / shouldn't: giữ nguyên thể. Nếu có yesterday, last..., ... ago (Unit 3): chia Quá khứ đơn (V-ed/V2, phủ định dùng didn't + V).",
+        items: P3_BANK.slice(d * 5, d * 5 + 5)
+      },
+      {
+        id: dId + "-IV",
+        part: "IV",
+        title: "Phần IV. Dạng từ của từ in hoa",
+        instr: "Give the correct form of the words in capital letters.",
+        type: "gap",
+        start: 21,
+        huong: "Xác định từ loại cần điền (danh từ, tính từ hay trạng từ) dựa vào từ đứng trước và sau chỗ trống. Sau mạo từ (a/an/the), tính từ sở hữu (my, your, his) hoặc giới từ cần Danh từ: COLLECT -> collection (bộ sưu tập) / collector (người sưu tập), CREATE -> creativity (sự sáng tạo), RESPONSIBLE -> responsibility, SICK -> sickness, OBESE -> obesity, DONATE -> donation, ORPHAN -> orphanage, VOLUNTEER -> volunteers. Trước danh từ hoặc sau to be/feel/look/stay/become cần Tính từ: HEALTH -> healthy / unhealthy, HARM -> harmful, PATIENCE -> patient, ALLERGY -> allergic, FLOOD -> flooded, HOME -> homeless, OLD -> elderly. Bổ nghĩa cho động từ thường cần Trạng từ: HEALTH -> healthily, REGULAR -> regularly.",
+        items: P4_BANK.slice(d * 5, d * 5 + 5)
+      },
+      {
+        id: dId + "-V",
+        part: "V",
+        title: "Phần V. Điền từ trong khung",
+        instr: "Complete the sentences with the words from the box. Use each word once.",
+        type: "gap",
+        start: 26,
+        huong: "Đọc nghĩa cả câu và loại từ của các từ trong khung để chọn từ khớp ngữ cảnh. Mỗi từ trong khung chỉ dùng đúng một lần cho 5 câu thuộc Unit 1, 2, 3.",
+        box: p5.box,
+        items: p5.items
+      },
+      {
+        id: dId + "-VI",
+        part: "VI",
+        title: "Phần VI. Điền từ vào đoạn văn",
+        instr: "Read the passage and fill in each blank with ONE suitable word from the box.",
+        type: "pgap",
+        start: 31,
+        huong: "Đọc lướt toàn bộ đoạn văn để nắm chủ đề, sau đó xét các từ đứng ngay trước và sau mỗi chỗ trống để chọn từ đúng trong khung. Chú ý sự hòa hợp về ngữ pháp (danh từ số nhiều, động từ quá khứ hay nguyên thể) và nghĩa của câu.",
+        ptitle: p6.ptitle,
+        box: p6.box,
+        passage: p6.passage,
+        items: p6.items
+      },
+      {
+        id: dId + "-VII",
+        part: "VII",
+        title: "Phần VII. Chọn đáp án cho đoạn văn",
+        instr: "Read the passage and choose the best option (A, B, C, or D) for each blank.",
+        type: "pchoice",
+        start: 36,
+        huong: "Đọc câu chứa chỗ trống và đối chiếu 4 lựa chọn A, B, C, D. Chú ý các cụm từ cố định trong chương trình: the most important meal, calories for energy, unable to concentrate, lose weight, divide ... into, fond of, interested in, avoid diseases, stay in shape, rural/mountainous areas, community service.",
+        ptitle: p7.ptitle,
+        passage: p7.passage,
+        items: p7.items
+      },
+      {
+        id: dId + "-VIII",
+        part: "VIII",
+        title: "Phần VIII. Viết câu theo từ gợi ý",
+        instr: "Write complete sentences from the prompts. You may have to change the words or add some.",
+        type: "type",
+        start: 41,
+        huong: "Dựa vào các từ gợi ý, thêm giới từ/mạo từ nếu cần và chia động từ theo đúng thì của câu. Với câu ở hiện tại đơn (Unit 1, 2), nhớ thêm -s/-es vào động từ khi chủ ngữ là ngôi thứ 3 số ít (My grandmother likes, John does, Acne causes, Making models develops, Sitting hurts). Sau like/love/enjoy/dislike/avoid nhớ chuyển động từ sang V-ing. Với câu có last..., yesterday, ... ago (Unit 3), nhớ chia động từ ở quá khứ đơn (donated, planted, helped, picked, tutored, exchanged, gave, cleaned, collected, cooked).",
+        items: P8_BANK.slice(d * 5, d * 5 + 5)
+      },
+      {
+        id: dId + "-IX",
+        part: "IX",
+        title: "Phần IX. Viết lại câu",
+        instr: "Rewrite the second sentence so that it has the same meaning as the first one, beginning with the given words.",
+        type: "type",
+        start: 46,
+        huong: "Giữ nguyên nghĩa của câu gốc và bắt đầu bằng cụm từ gợi ý. 1) Gộp hai câu đơn thành một câu đơn bằng 'and': giữ phần chung, nối hai phần khác nhau bằng 'and' (lưu ý khi gộp 2 chủ ngữ bằng 'and' như 'Nam and his brother' hay 'My dad and I' thì động từ chia số nhiều: like, love). 2) Lời khuyên: It is (not) a good idea to + V <=> You should (shouldn't) + V. 3) Nguyên nhân - kết quả: Because + mệnh đề nguyên nhân, mệnh đề kết quả <=> Mệnh đề nguyên nhân, so + mệnh đề kết quả. 4) Sở thích: enjoy/like/love + V-ing <=> be interested in / be fond of / be keen on / be crazy about + V-ing.",
+        items: P9_BANK.slice(d * 5, d * 5 + 5)
+      }
+    ]
+  });
+}
+
+/* =========================================================================
+   PHẦN BỔ SUNG MỚI: ĐỀ 11 ĐẾN ĐỀ 20 (500 CÂU)
+   BÁM SÁT CẤU TRÚC 2 FILE ĐỀ TIẾNG ANH 7 - GIỮA KÌ 1
+   ========================================================================= */
+
+/* Phần I (Câu 1-5): Phát âm theo đúng dạng đề thi Giữa kì 1 */
+var M_P1 = [
+  { s: "Find the word which has a different sound in the part underlined.", o: ["wan<u>ted</u>", "pla<u>yed</u>", "mo<u>ved</u>", "remem<u>bered</u>"], a: 0, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["h<u>a</u>nd", "tr<u>a</u>nsport", "ch<u>a</u>racter", "celebr<u>a</u>tion"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["thank<u>s</u>", "laugh<u>s</u>", "visit<u>s</u>", "need<u>s</u>"], a: 3, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>h</u>ouse", "<u>h</u>at", "<u>h</u>our", "<u>h</u>ot"], a: 2, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["r<u>ea</u>d", "h<u>ea</u>vy", "m<u>ea</u>t", "s<u>ea</u>t"], a: 1, u: 2 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["ope<u>ned</u>", "pla<u>yed</u>", "collec<u>ted</u>", "remem<u>bered</u>"], a: 2, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["h<u>a</u>nd", "tr<u>a</u>nsport", "ch<u>a</u>racter", "intern<u>a</u>tional"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["buy<u>s</u>", "laugh<u>s</u>", "visit<u>s</u>", "think<u>s</u>"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>h</u>ouse", "<u>h</u>our", "<u>h</u>orse", "<u>h</u>ot"], a: 1, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["m<u>ea</u>l", "h<u>ea</u>lth", "m<u>ea</u>t", "s<u>ea</u>t"], a: 1, u: 2 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["wan<u>ted</u>", "nee<u>ded</u>", "pla<u>yed</u>", "star<u>ted</u>"], a: 2, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["l<u>ear</u>n", "<u>ear</u>ly", "<u>ear</u>th", "h<u>ear</u>"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["bru<u>shes</u>", "wat<u>ches</u>", "goe<u>s</u>", "mis<u>ses</u>"], a: 2, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>th</u>ere", "<u>th</u>ank", "<u>th</u>at", "<u>th</u>ese"], a: 1, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>s</u>ee", "<u>s</u>o", "<u>s</u>port", "<u>s</u>ure"], a: 3, u: 1 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["wat<u>ched</u>", "nee<u>ded</u>", "visi<u>ted</u>", "star<u>ted</u>"], a: 0, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["l<u>ear</u>n", "n<u>ear</u>", "<u>ear</u>th", "<u>ear</u>ly"], a: 1, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["doe<u>s</u>", "clothe<u>s</u>", "goe<u>s</u>", "bru<u>shes</u>"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>th</u>ere", "<u>th</u>ank", "<u>th</u>in", "<u>th</u>ick"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>s</u>port", "<u>s</u>o", "<u>s</u>ugar", "<u>s</u>ee"], a: 2, u: 2 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["pref<u>er</u>", "bett<u>er</u>", "teach<u>er</u>", "work<u>er</u>"], a: 0, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["b<u>ear</u>", "h<u>ear</u>", "d<u>ear</u>", "n<u>ear</u>"], a: 0, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["p<u>u</u>t", "ad<u>u</u>lt", "j<u>u</u>nk", "s<u>u</u>n"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>i</u>tchy", "r<u>i</u>ding", "s<u>i</u>ck", "sw<u>i</u>mming"], a: 1, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["par<u>ked</u>", "wai<u>ted</u>", "pos<u>ted</u>", "deci<u>ded</u>"], a: 0, u: 3 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["fut<u>ure</u>", "ret<u>ur</u>n", "pict<u>ure</u>", "cult<u>ure</u>"], a: 1, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["advan<u>ced</u>", "jum<u>ped</u>", "appoin<u>ted</u>", "develo<u>ped</u>"], a: 2, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["m<u>a</u>n", "wom<u>a</u>n", "account<u>a</u>nt", "highl<u>a</u>nd"], a: 0, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>f</u>ind", "<u>f</u>ame", "o<u>f</u>", "<u>f</u>ish"], a: 2, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["li<u>fe</u>", "so<u>fa</u>", "lau<u>gh</u>", "ni<u>gh</u>t"], a: 3, u: 2 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["enou<u>gh</u>", "li<u>gh</u>t", "bri<u>gh</u>t", "si<u>gh</u>t"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>v</u>oice", "o<u>f</u>", "nati<u>v</u>e", "lea<u>f</u>"], a: 3, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["loo<u>ked</u>", "kis<u>sed</u>", "cal<u>led</u>", "stop<u>ped</u>"], a: 2, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["invi<u>ted</u>", "lo<u>ved</u>", "u<u>sed</u>", "clea<u>ned</u>"], a: 0, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["b<u>ir</u>d", "fam<u>i</u>ly", "husb<u>a</u>nd", "Sat<u>u</u>rday"], a: 0, u: 1 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>a</u>mong", "carr<u>o</u>t", "j<u>ou</u>rney", "Septemb<u>e</u>r"], a: 2, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["lett<u>e</u>r", "<u>ea</u>rn", "p<u>u</u>rple", "b<u>i</u>rthday"], a: 0, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["a<u>v</u>oid", "lea<u>v</u>e", "le<u>f</u>t", "o<u>f</u>"], a: 2, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["bou<u>gh</u>t", "<u>f</u>ood", "<u>ph</u>oto", "tele<u>ph</u>one"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["as<u>ked</u>", "comple<u>ted</u>", "fini<u>shed</u>", "lau<u>ghed</u>"], a: 1, u: 3 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["hol<u>i</u>day", "comput<u>e</u>r", "<u>a</u>fraid", "d<u>i</u>rty"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["col<u>o</u>r", "<u>a</u>go", "c<u>u</u>rly", "s<u>u</u>rprise"], a: 2, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["<u>f</u>orm", "<u>v</u>an", "acti<u>v</u>ity", "lo<u>v</u>e"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["offe<u>red</u>", "enjo<u>yed</u>", "follo<u>wed</u>", "hel<u>ped</u>"], a: 3, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["li<u>ved</u>", "tal<u>ked</u>", "wate<u>red</u>", "ope<u>ned</u>"], a: 1, u: 3 },
+
+  { s: "Find the word which has a different sound in the part underlined.", o: ["v<u>e</u>rb", "w<u>o</u>rse", "w<u>o</u>rd", "pepp<u>e</u>r"], a: 3, u: 1 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["head<u>a</u>che", "spr<u>ea</u>d", "h<u>ea</u>lth", "w<u>ea</u>k"], a: 3, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["fl<u>u</u>", "s<u>u</u>nburn", "j<u>u</u>nk", "m<u>u</u>ch"], a: 0, u: 2 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["res<u>ted</u>", "hi<u>ked</u>", "dres<u>sed</u>", "advan<u>ced</u>"], a: 0, u: 3 },
+  { s: "Find the word which has a different sound in the part underlined.", o: ["than<u>ked</u>", "par<u>ked</u>", "liste<u>ned</u>", "boo<u>ked</u>"], a: 2, u: 3 }
+];
+
+/* Phần II (Câu 6-10): Odd one out (Tìm từ khác loại) theo đúng cấu trúc đề Giữa kì 1 */
+var M_P2 = [
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["hobby", "stamp", "coin", "doll"], a: 0, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["played", "thanked", "needed", "ate"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["enjoy", "hate", "like", "love"], a: 1, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["karate", "judo", "bike", "yoga"], a: 2, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["carrots", "tomatoes", "soft drinks", "cabbages"], a: 2, u: 2 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["collecting", "gardening", "painting", "model"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["went", "ate", "drank", "collected"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["adore", "hate", "like", "love"], a: 1, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["karate", "judo", "car", "yoga"], a: 2, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["carrots", "apple juice", "tomatoes", "cabbages"], a: 1, u: 2 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["horse-riding", "camping", "fishing", "dollhouse"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["sunburn", "acne", "chapped lips", "suncream"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["lip balm", "eye drops", "suncream", "stomachache"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["donate", "tutor", "volunteer", "homeless"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["nursing home", "orphanage", "hospital", "elderly"], a: 3, u: 3 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["football", "badminton", "volleyball", "cardboard"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["tofu", "vegetables", "fresh fruit", "junk food"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["headache", "toothache", "earache", "vitamin"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["donated", "planted", "watered", "taught"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["dislike", "detest", "hate", "fancy"], a: 3, u: 1 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["piano", "guitar", "violin", "chess"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["healthy", "fit", "strong", "sickness"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["cough", "flu", "fever", "soap"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["gave", "bought", "sent", "helped"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["homeless", "elderly", "lonely", "orphanage"], a: 3, u: 3 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["cardboard", "glue", "paper", "jogging"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["fast food", "fizzy drinks", "sweetened food", "tofu"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["always", "usually", "often", "yesterday"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["cleaned", "picked", "exchanged", "wrote"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["creativity", "patience", "responsibility", "patient"], a: 3, u: 1 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["swimming", "cycling", "skating", "album"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["eyes", "lips", "skin", "acne"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["and", "but", "or", "should"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["books", "clothes", "blankets", "donate"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["took", "made", "built", "visited"], a: 3, u: 3 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["teddy bear", "doll", "toy car", "gardening"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["fish", "meat", "eggs", "sunburn"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["tired", "weak", "sick", "vitamin"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["rural", "mountainous", "flooded", "volunteer"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["started", "wanted", "decided", "met"], a: 3, u: 3 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["aerobics", "karate", "judo", "stamp"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["soybean", "carrot", "potato", "allergy"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["sore throat", "backache", "stomachache", "suncream"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["litter", "rubbish", "plastic bottles", "tutor"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["saw", "came", "began", "washed"], a: 3, u: 3 },
+
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["collector", "gardener", "rider", "dollhouse"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["breakfast", "lunch", "dinner", "calorie"], a: 3, u: 2 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["in", "on", "at", "enjoy"], a: 3, u: 1 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["plant", "water", "clean", "orphan"], a: 3, u: 3 },
+  { s: "Odd one out (Choose the word that does not belong to the group).", o: ["cooked", "walked", "talked", "slept"], a: 3, u: 3 }
+];
+
+/* Phần III (Câu 11-20): Trắc nghiệm Ngữ pháp & Từ vựng theo đề thi Giữa kì 1 */
+var M_P3 = [
+  { s: "He usually ___ jogging for half an hour before breakfast.", o: ["goes", "rides", "takes", "cycles"], a: 0, u: 1 },
+  { s: "Playing sports is very good for our ___.", o: ["chapped lips", "suncream", "acne", "health"], a: 3, u: 2 },
+  { s: "You should wear a hat and put on suncream to avoid ___.", o: ["skin", "fitness", "activity", "sunburn"], a: 3, u: 2 },
+  { s: "___ is good for our eyes.", o: ["Alcohol", "Vitamin A", "Vitamin D", "Fast food"], a: 1, u: 2 },
+  { s: "She exercises regularly to keep ___.", o: ["fit", "clean", "tidy", "unhealthy"], a: 0, u: 2 },
+  { s: "Jack is now learning to ___ the piano.", o: ["perform", "sing", "play", "listen"], a: 2, u: 1 },
+  { s: "My mother loves ___ meals for my family.", o: ["sewing", "cooking", "gardening", "painting"], a: 1, u: 1 },
+  { s: "Mary is keen ___ reading comic books.", o: ["in", "by", "on", "from"], a: 2, u: 1 },
+  { s: "We often ___ old clothes to the local orphanage.", o: ["water", "donate", "tutor", "exchange"], a: 1, u: 3 },
+  { s: "Did you ___ cartoons on TV last night?", o: ["watch", "watched", "to watch", "watches"], a: 0, u: 3 },
+
+  { s: "My hobby is ___ to music in my free time.", o: ["listening", "climbing", "fishing", "gardening"], a: 0, u: 1 },
+  { s: "My sister goes ___ every day to keep fit.", o: ["collecting", "shopping", "fishing", "swimming"], a: 3, u: 1 },
+  { s: "My cooking lesson ___ at 9 a.m. every Saturday.", o: ["starts", "start", "to start", "is starting"], a: 0, u: 1 },
+  { s: "Doing morning exercise every day is good ___ your health.", o: ["on", "to", "for", "at"], a: 2, u: 2 },
+  { s: "If you walk under the sun without wearing a hat, you will get ___.", o: ["spots", "sunburn", "an allergy", "toothache"], a: 1, u: 2 },
+  { s: "___ do you go to school? - Every school day.", o: ["How long", "How often", "How far", "How"], a: 1, u: 1 },
+  { s: "Myhobby is ___ cartoons on TV after dinner.".replace("Myhobby", "My hobby"), o: ["listening", "watching", "fishing", "gardening"], a: 1, u: 1 },
+  { s: "Lan does ___ every day to keep fit and strong.", o: ["judo", "dolls", "chess", "swimming"], a: 0, u: 1 },
+  { s: "The volunteer students often ___ the children at the local orphanage.", o: ["water", "donate", "tutor", "exchange"], a: 2, u: 3 },
+  { s: "___ do you go to school every day? - By bike.", o: ["How long", "How often", "How far", "How"], a: 3, u: 1 },
+
+  { s: "My sister has a lot of coins from different countries. Her hobby is ___.", o: ["building dollhouses", "collecting coins", "swimming", "making models"], a: 1, u: 1 },
+  { s: "My uncle has a big bookshelf because he loves ___ old books.", o: ["playing", "doing", "collecting", "going"], a: 2, u: 1 },
+  { s: "My friend Lan likes ___ camping at the weekend.", o: ["playing", "collecting", "making", "going"], a: 3, u: 1 },
+  { s: "Hoa is very creative, and she paints very well. Her hobby is ___.", o: ["horse riding", "painting", "swimming", "skating"], a: 1, u: 1 },
+  { s: "My father loves doing the ___ in the backyard.", o: ["gardening", "horse riding", "ice-skating", "painting"], a: 0, u: 1 },
+  { s: "Reading in dim light ___ your eyes.", o: ["harms", "helps", "keeps", "avoids"], a: 0, u: 2 },
+  { s: "Cold weather causes ___ lips and skin in winter.", o: ["chapped", "healthy", "fit", "clean"], a: 0, u: 2 },
+  { s: "Physical activities like running help you lose ___.", o: ["weight", "height", "health", "fit"], a: 0, u: 2 },
+  { s: "Our school club ___ gloves for old people in nursing homes last winter.", o: ["made", "making", "make", "is making"], a: 0, u: 3 },
+  { s: "We ___ plastic bottles to help the environment last month.", o: ["reusing", "reuse", "reused", "to reuse"], a: 2, u: 3 },
+
+  { s: "My mother enjoys ___ comedies on TV at weekends.", o: ["going", "watching", "playing", "collecting"], a: 1, u: 1 },
+  { s: "Mai hates ___ judo because she finds it hard.", o: ["going", "doing", "taking", "collecting"], a: 1, u: 1 },
+  { s: "She likes ___. She goes to the swimming club every Sunday.", o: ["taking", "collecting", "playing", "swimming"], a: 3, u: 1 },
+  { s: "Nam adores ___ comic books in his free time.", o: ["playing", "reading", "going", "making"], a: 1, u: 1 },
+  { s: "They don't like horse riding. They like ___ football.", o: ["playing", "collecting", "making", "going"], a: 0, u: 1 },
+  { s: "The weather may affect our ___ condition.", o: ["skin", "lip", "eye", "tooth"], a: 0, u: 2 },
+  { s: "There should be more rubbish ___ in public places.", o: ["bins", "bottles", "boxes", "bags"], a: 0, u: 3 },
+  { s: "My cousin is getting sick. He feels weak and ___.", o: ["tired", "heavy", "well", "strong"], a: 0, u: 2 },
+  { s: "My mother ___ to work yesterday morning because she was ill.", o: ["didn't go", "not went", "wasn't went", "didn't went"], a: 0, u: 3 },
+  { s: "The film that I ___ last night ___ very interesting.", o: ["see / was", "saw / were", "see / were", "saw / was"], a: 3, u: 3 },
+
+  { s: "Lan has a lot of dolls. Her favourite hobby is ___ dolls.", o: ["going", "collecting", "playing", "doing"], a: 1, u: 1 },
+  { s: "My best friend Linh hates ___ computer games.", o: ["going", "collecting", "playing", "doing"], a: 2, u: 1 },
+  { s: "I dislike ___ up early every morning in winter.", o: ["making", "getting", "painting", "going"], a: 1, u: 1 },
+  { s: "My cousin loves ___ stamps of countries in the world.", o: ["making", "collecting", "doing", "buying"], a: 1, u: 1 },
+  { s: "You shouldn't ___ too many computer games.", o: ["go", "do", "play", "make"], a: 2, u: 2 },
+  { s: "Doing housework is a kind of exercise. It helps keep you ___.", o: ["fit", "fat", "sick", "tired"], a: 0, u: 2 },
+  { s: "Some of a vegetarian's main foods are ___ and vegetables.", o: ["tofu", "meat", "fish", "chicken"], a: 0, u: 2 },
+  { s: "How can we help people in ___ areas after the storm?", o: ["flooded", "chapped", "sweetened", "healthy"], a: 0, u: 3 },
+  { s: "Nam ___ absent at the club's meeting last Monday.", o: ["was", "were", "is", "are"], a: 0, u: 3 },
+  { s: "I ___ English seven years ago when I was in grade 1.", o: ["learned", "did learned", "learning", "learns"], a: 0, u: 3 },
+
+  { s: "Lan loves ___. She plants a lot of flowers and trees.", o: ["gardening", "watering", "cooking", "watching"], a: 0, u: 1 },
+  { s: "My brother is a big fan of ___. He often plays it after school.", o: ["judo", "swimming", "football", "cooking"], a: 2, u: 1 },
+  { s: "She is very talented. She can make ___ like the real ones.", o: ["coins", "models", "paintings", "stamps"], a: 1, u: 1 },
+  { s: "Nick doesn't like ___ shopping with his mother at weekends.", o: ["going", "making", "walking", "cooking"], a: 0, u: 1 },
+  { s: "My mother ___ breakfast for our family every morning.", o: ["cook", "cooks", "is cooking", "cooking"], a: 1, u: 1 },
+  { s: "Good teeth help us look nice and chew ___.", o: ["well", "good", "bad", "badly"], a: 0, u: 2 },
+  { s: "I have some red spots on my face. - You should ___ your face regularly.", o: ["wash", "watch", "wear", "brush"], a: 0, u: 2 },
+  { s: "My eyes can't concentrate on anything. - You shouldn't read in ___ light.", o: ["dim", "bright", "good", "clean"], a: 0, u: 2 },
+  { s: "We plant vegetables in our school garden and ___ them to a homeless centre.", o: ["donate", "tutor", "clean", "recycle"], a: 0, u: 3 },
+  { s: "Last summer, we ___ English to 20 kids in the mountainous area.", o: ["taught", "teach", "teaches", "teaching"], a: 0, u: 3 },
+
+  { s: "I like cartoons, but I don't ___ them much.", o: ["watch", "to watch", "watches", "watching"], a: 0, u: 1 },
+  { s: "The book is divided ___ twelve units.", o: ["into", "to", "for", "with"], a: 0, u: 1 },
+  { s: "Do you belong ___ any clubs in our school?", o: ["to", "in", "on", "at"], a: 0, u: 1 },
+  { s: "My brother went to a carpentry class to learn how to ___ chairs and tables.", o: ["make", "do", "play", "go"], a: 0, u: 1 },
+  { s: "I have a fever and a running nose. - You have ___. Take some medicine and rest.", o: ["flu", "sunburn", "acne", "backache"], a: 0, u: 2 },
+  { s: "To stay in shape, you should have about 2,000 ___ a day.", o: ["calories", "stamps", "models", "coins"], a: 0, u: 2 },
+  { s: "Breakfast is the most important ___ of a day.", o: ["meal", "food", "dish", "drink"], a: 0, u: 2 },
+  { s: "We recycle plastic bottles and change them ___ plant pots.", o: ["into", "for", "with", "on"], a: 0, u: 3 },
+  { s: "How can we help sick children? - We can visit them and ___ stories.", o: ["read", "plant", "water", "clean"], a: 0, u: 3 },
+  { s: "___ you start a community garden project last month?", o: ["Did", "Do", "Were", "Are"], a: 0, u: 3 },
+
+  { s: "What is your favourite hobby? - I collect ___ rings from other countries.", o: ["key", "door", "lock", "car"], a: 0, u: 1 },
+  { s: "When did you start your hobby? - I got my first key rings two years ___.", o: ["ago", "last", "before", "every"], a: 0, u: 3 },
+  { s: "What are the benefits of playing football? - It makes me ___ and active.", o: ["strong", "weak", "tired", "itchy"], a: 0, u: 1 },
+  { s: "Dean got a new camera because ___ is a great way for him to be creative.", o: ["photography", "painting", "camping", "cooking"], a: 0, u: 1 },
+  { s: "The island of Okinawa in Japan is famous for people who live ___ 100 years of age.", o: ["beyond", "under", "between", "among"], a: 0, u: 2 },
+  { s: "People in Okinawa rarely buy food from a supermarket; they ___ their own vegetables.", o: ["grow", "make", "do", "build"], a: 0, u: 2 },
+  { s: "If people eat too much high-calorie food, they are easy to get ___.", o: ["overweight", "fit", "slim", "healthy"], a: 0, u: 2 },
+  { s: "Volunteering gives children a sense of ___ and teaches them valuable lessons.", o: ["responsibility", "allergy", "sickness", "sunburn"], a: 0, u: 3 },
+  { s: "At my age, I can't donate blood, ___ I often donate books and toys.", o: ["so", "because", "or", "although"], a: 0, u: 3 },
+  { s: "Last week, we ___ visit sick children in the hospital because we had exams.", o: ["didn't", "weren't", "don't", "aren't"], a: 0, u: 3 },
+
+  { s: "Postal stamps are a source of interesting ___ about every country.", o: ["facts", "models", "glues", "calories"], a: 0, u: 1 },
+  { s: "Looking at the colourful pages of a stamp album can make you feel ___.", o: ["relaxed", "chapped", "homeless", "flooded"], a: 0, u: 1 },
+  { s: "Which of the following is NOT an outdoor hobby?", o: ["Watching movies", "Gardening", "Camping", "Cycling"], a: 0, u: 1 },
+  { s: "The Red River ___ through Ha Noi to the sea.", o: ["flows", "flow", "flowing", "flowed"], a: 0, u: 1 },
+  { s: "We eat a lot of garlic to ___ the flu in winter.", o: ["prevent", "provide", "donate", "tutor"], a: 0, u: 2 },
+  { s: "Let's do something outdoors this afternoon. <=> How about ___ something outdoors?", o: ["doing", "do", "to do", "does"], a: 0, u: 1 },
+  { s: "My younger sister is not fond ___ eating seafood.", o: ["of", "in", "on", "with"], a: 0, u: 2 },
+  { s: "Our school organized a musical concert to ___ funds for orphans.", o: ["raise", "rise", "plant", "water"], a: 0, u: 3 },
+  { s: "We sold tickets for the concert to our parents ___ friends.", o: ["and", "but", "so", "because"], a: 0, u: 2 },
+  { s: "All the students at my school were excited to ___ hands in that special event.", o: ["join", "take", "make", "do"], a: 0, u: 3 },
+
+  { s: "The Earth ___ round the Sun once every year.", o: ["goes", "go", "going", "went"], a: 0, u: 1 },
+  { s: "Water ___ at 100 degrees Celsius.", o: ["boils", "boil", "boiling", "boiled"], a: 0, u: 1 },
+  { s: "The sun ___ in the east and sets in the west.", o: ["rises", "rise", "rising", "rose"], a: 0, u: 1 },
+  { s: "Our Maths lesson usually ___ at 4.00 p.m. on Tuesdays.", o: ["finishes", "finish", "finishing", "finished"], a: 0, u: 1 },
+  { s: "The reason why Susan doesn't eat meat is that she ___ a vegetarian.", o: ["is", "are", "was", "were"], a: 0, u: 2 },
+  { s: "Pupils should start the day with a healthy ___ before going to school.", o: ["breakfast", "lunch", "dinner", "supper"], a: 0, u: 2 },
+  { s: "A chicken and lettuce sandwich with fresh fruit is a ___ lunch.", o: ["healthy", "harmful", "unhealthy", "chapped"], a: 0, u: 2 },
+  { s: "In the United States, many students spend hours as ___ in hospitals.", o: ["volunteers", "collectors", "riders", "vegetarians"], a: 0, u: 3 },
+  { s: "Robert went to bed early last night because he ___ tired.", o: ["felt", "feel", "feels", "feeling"], a: 0, u: 3 },
+  { s: "Yesterday, I ___ Jim at a bookstore near our school.", o: ["saw", "see", "sees", "seeing"], a: 0, u: 3 }
+];
+
+/* Phần IV (Câu 21-25): Chia động từ trong ngoặc theo đề thi Giữa kì 1 */
+var M_P4 = [
+  { s: "If he (learn) ___ hard, he will pass the exam.", a: ["learns"], u: 2 },
+  { s: "My father (work) ___ in this factory in 2019.", a: ["worked"], u: 3 },
+  { s: "Minh enjoys (read) ___ books in his free time.", a: ["reading"], u: 1 },
+  { s: "They (watch) ___ TV in the living room now.", a: ["are watching"], u: 1 },
+  { s: "We (help) ___ the elderly in a village last summer.", a: ["helped"], u: 3 },
+
+  { s: "If he learns hard, he (pass) ___ the exam.", a: ["will pass"], u: 2 },
+  { s: "They (not work) ___ in this factory in 2019.", a: ["did not work", "didn't work"], u: 3 },
+  { s: "Minh likes (read) ___ books in his free time.", a: ["reading", "to read"], u: 1 },
+  { s: "The sun (rise) ___ every morning.", a: ["rises"], u: 1 },
+  { s: "I (go) ___ fishing with my father last Sunday.", a: ["went"], u: 3 },
+
+  { s: "I enjoy (listen) ___ to classical music in the evening.", a: ["listening"], u: 1 },
+  { s: "My friend (study) ___ English in the library now.", a: ["is studying"], u: 1 },
+  { s: "The weather (be) ___ rainy and cold last week.", a: ["was"], u: 3 },
+  { s: "Minh (not do) ___ the housework after school every day.", a: ["does not do", "doesn't do"], u: 1 },
+  { s: "She (go) ___ to school by bike every morning.", a: ["goes"], u: 1 },
+
+  { s: "I (do) ___ all my homework last night.", a: ["did"], u: 3 },
+  { s: "I love (play) ___ chess with my grandfather at weekends.", a: ["playing", "to play"], u: 1 },
+  { s: "My friend (watch) ___ cartoons on TV now.", a: ["is watching"], u: 1 },
+  { s: "The weather (be) ___ very hot last Saturday.", a: ["was"], u: 3 },
+  { s: "They (not do) ___ morning exercise regularly.", a: ["do not do", "don't do"], u: 2 },
+
+  { s: "Peter (not study) ___ very hard, so he never gets high scores.", a: ["does not study", "doesn't study"], u: 1 },
+  { s: "My mom and my sister (cook) ___ lunch every day.", a: ["cook"], u: 1 },
+  { s: "My father always (make) ___ delicious meals for us.", a: ["makes"], u: 1 },
+  { s: "Rosie (go) ___ shopping with her mother every week.", a: ["goes"], u: 1 },
+  { s: "The students (be) ___ at the theatre last night.", a: ["were"], u: 3 },
+
+  { s: "The flight (start) ___ at 6 a.m. every Thursday.", a: ["starts"], u: 1 },
+  { s: "James (not water) ___ the trees in the garden every day.", a: ["does not water", "doesn't water"], u: 1 },
+  { s: "Her children dislike (jog) ___ every morning.", a: ["jogging"], u: 1 },
+  { s: "They adore (build) ___ dollhouses in their free time.", a: ["building"], u: 1 },
+  { s: "Mr. Tam (take) ___ his children to the museum last Sunday.", a: ["took"], u: 3 },
+
+  { s: "He doesn't like (talk) ___ on the phone for too long.", a: ["talking"], u: 1 },
+  { s: "Hoa (make) ___ a nice cushion for her armchair yesterday.", a: ["made"], u: 3 },
+  { s: "Nam (write) ___ an essay in Literature class yesterday morning.", a: ["wrote"], u: 3 },
+  { s: "They (eat) ___ noodles at a small restaurant two hours ago.", a: ["ate"], u: 3 },
+  { s: "My father (decorate) ___ the house last Sunday.", a: ["decorated"], u: 3 },
+
+  { s: "She (buy) ___ a new dress at the shopping mall yesterday.", a: ["bought"], u: 3 },
+  { s: "Mary (tidy) ___ her bedroom every morning.", a: ["tidies"], u: 1 },
+  { s: "Jack and Jill (not speak) ___ Vietnamese very well.", a: ["do not speak", "don't speak"], u: 1 },
+  { s: "John (not get) ___ up early on Sundays.", a: ["does not get", "doesn't get"], u: 1 },
+  { s: "We (learn) ___ about protecting the environment in a course last week.", a: ["learned", "learnt"], u: 3 },
+
+  { s: "Our teacher always (come) ___ to class on time.", a: ["comes"], u: 1 },
+  { s: "My mother (plant) ___ some flower trees in the garden now.", a: ["is planting"], u: 1 },
+  { s: "At present, all the students (do) ___ a midterm test.", a: ["are doing"], u: 1 },
+  { s: "Julia (not wear) ___ her uniform to school yesterday.", a: ["did not wear", "didn't wear"], u: 3 },
+  { s: "Mimi and Lucy (be) ___ at home in Florida last week.", a: ["were"], u: 3 },
+
+  { s: "The sun (set) ___ in the west every evening.", a: ["sets"], u: 1 },
+  { s: "My friend (study) ___ English for an hour every night.", a: ["studies"], u: 1 },
+  { s: "We (visit) ___ the opera theatre last Thursday.", a: ["visited"], u: 3 },
+  { s: "They (buy) ___ a lot of food for the camping trip yesterday.", a: ["bought"], u: 3 },
+  { s: "She (not go) ___ to the church five days ago.", a: ["did not go", "didn't go"], u: 3 }
+];
+
+/* Phần V (Câu 26-30): Đề 11-15 là Tìm lỗi sai (choice); Đề 16-20 là Điền từ V-ing theo khung (gap) đúng theo 2 file đề Giữa kì 1 */
+var M_P5_ERR = [
+  [
+    { s: "Find ONE mistake: He is <u>fond of</u> <u>watch</u> <u>cartoons</u> <u>in his</u> free time.", o: ["fond of", "watch", "cartoons", "in his"], a: 1, u: 1 },
+    { s: "Find ONE mistake: I <u>didn't</u> <u>went</u> <u>fishing</u> <u>with</u> my friends yesterday.", o: ["didn't", "went", "fishing", "with"], a: 1, u: 3 },
+    { s: "Find ONE mistake: Laughter and <u>love</u> <u>are</u> good <u>to</u> <u>your health</u>.", o: ["love", "are", "to", "your health"], a: 2, u: 2 },
+    { s: "Find ONE mistake: <u>Is</u> the <u>children</u> <u>reading</u> books <u>at the moment</u>?", o: ["Is", "children", "reading", "at the moment"], a: 0, u: 1 },
+    { s: "Find ONE mistake: <u>There</u> <u>are</u> a <u>book</u> <u>on</u> the desk.", o: ["There", "are", "book", "on"], a: 1, u: 1 }
+  ],
+  [
+    { s: "Find ONE mistake: She <u>didn't</u> <u>did</u> the <u>housework</u> <u>last week</u>.", o: ["didn't", "did", "housework", "last week"], a: 1, u: 3 },
+    { s: "Find ONE mistake: Laughter <u>and</u> love <u>is</u> <u>good for</u> <u>your health</u>.", o: ["and", "is", "good for", "your health"], a: 1, u: 2 },
+    { s: "Find ONE mistake: <u>Are</u> the children <u>make</u> <u>cakes</u> <u>at the moment</u>?", o: ["Are", "make", "cakes", "at the moment"], a: 1, u: 1 },
+    { s: "Find ONE mistake: Hoa <u>do</u> <u>the dishes</u> <u>every</u> <u>day</u>.", o: ["do", "the dishes", "every", "day"], a: 0, u: 1 },
+    { s: "Find ONE mistake: She <u>doesn't</u> <u>likes</u> <u>making</u> <u>models</u>.", o: ["doesn't", "likes", "making", "models"], a: 1, u: 1 }
+  ],
+  [
+    { s: "Find ONE mistake: The <u>children</u> <u>hate</u> <u>to jog</u> <u>in the</u> morning.", o: ["children", "hate", "to jog", "in the"], a: 2, u: 1 },
+    { s: "Find ONE mistake: They <u>enjoy</u> <u>to build</u> <u>dollhouses</u> <u>at weekends</u>.", o: ["enjoy", "to build", "dollhouses", "at weekends"], a: 1, u: 1 },
+    { s: "Find ONE mistake: He <u>run</u> <u>very</u> <u>fast</u> <u>in</u> the race.", o: ["run", "very", "fast", "in"], a: 0, u: 1 },
+    { s: "Find ONE mistake: We <u>donate</u> <u>old books</u> to poor children <u>last</u> <u>month</u>.", o: ["donate", "old books", "last", "month"], a: 0, u: 3 },
+    { s: "Find ONE mistake: You <u>shouldn't</u> <u>eating</u> <u>too much</u> <u>junk food</u>.", o: ["shouldn't", "eating", "too much", "junk food"], a: 1, u: 2 }
+  ],
+  [
+    { s: "Find ONE mistake: My brother <u>is</u> interested <u>on</u> <u>collecting</u> old <u>coins</u>.", o: ["is", "on", "collecting", "coins"], a: 1, u: 1 },
+    { s: "Find ONE mistake: <u>Did</u> you <u>went</u> to the <u>nursing home</u> <u>yesterday</u>?", o: ["Did", "went", "nursing home", "yesterday"], a: 1, u: 3 },
+    { s: "Find ONE mistake: Nam <u>and</u> his brother <u>likes</u> <u>playing</u> <u>chess</u>.", o: ["and", "likes", "playing", "chess"], a: 1, u: 2 },
+    { s: "Find ONE mistake: Eating <u>colour</u> vegetables <u>is</u> <u>very</u> good <u>for</u> health.", o: ["colour", "is", "very", "for"], a: 0, u: 2 },
+    { s: "Find ONE mistake: My cooking <u>lesson</u> <u>start</u> <u>at</u> 9 a.m. <u>every</u> Saturday.", o: ["lesson", "start", "at", "every"], a: 1, u: 1 }
+  ],
+  [
+    { s: "Find ONE mistake: Jolie <u>answerred</u> <u>the</u> teacher's <u>question</u> <u>exact</u>.", o: ["answerred", "the", "question", "exact"], a: 0, u: 3 },
+    { s: "Find ONE mistake: A man <u>standed</u> <u>in front</u> <u>of</u> your house <u>yesterday</u>.", o: ["standed", "in front", "of", "yesterday"], a: 0, u: 3 },
+    { s: "Find ONE mistake: I <u>did learned</u> <u>English</u> <u>seven</u> years <u>ago</u>.", o: ["did learned", "English", "seven", "ago"], a: 0, u: 3 },
+    { s: "Find ONE mistake: She <u>wash</u> her <u>face</u> <u>twice</u> <u>a day</u>.", o: ["wash", "face", "twice", "a day"], a: 0, u: 2 },
+    { s: "Find ONE mistake: <u>Both</u> Bao <u>and</u> Lan <u>is</u> good <u>students</u>.", o: ["Both", "and", "is", "students"], a: 2, u: 2 }
+  ]
+];
+
+var M_P5_GAP = [
+  {
+    box: ["tidying", "going", "getting", "making", "doing"],
+    items: [
+      { s: "She doesn't like ___ her room every day.", a: ["tidying"], u: 1 },
+      { s: "Do you like ___ to bed at eleven o'clock?", a: ["going"], u: 1 },
+      { s: "My mother dislikes ___ up late at 7 o'clock.", a: ["getting"], u: 1 },
+      { s: "Does your sister hate ___ cold food?", a: ["making"], u: 1 },
+      { s: "I always like ___ my homework before 7 o'clock.", a: ["doing"], u: 1 }
+    ]
+  },
+  {
+    box: ["driving", "brushing", "eating", "having", "meeting"],
+    items: [
+      { s: "Anne's father loves ___ to work by car.", a: ["driving"], u: 1 },
+      { s: "John likes ___ his teeth at noon after lunch.", a: ["brushing"], u: 2 },
+      { s: "Your grandmother hates ___ hard bread.", a: ["eating"], u: 2 },
+      { s: "Does she like ___ a shower after dinner?", a: ["having"], u: 2 },
+      { s: "Hannah loves ___ her friends once a week.", a: ["meeting"], u: 1 }
+    ]
+  },
+  {
+    box: ["making", "listening", "waiting", "collecting", "watching"],
+    items: [
+      { s: "Do you like ___ pottery in your free time?", a: ["making"], u: 1 },
+      { s: "My grandfather enjoys ___ to the radio in the morning.", a: ["listening"], u: 1 },
+      { s: "I can't stand ___ for buses in the rain.", a: ["waiting"], u: 1 },
+      { s: "My brother likes ___ coins very much.", a: ["collecting"], u: 1 },
+      { s: "She likes ___ action films with her friends at weekends.", a: ["watching"], u: 1 }
+    ]
+  },
+  {
+    box: ["cooking", "learning", "cycling", "planting", "reading"],
+    items: [
+      { s: "My sister enjoys ___ and making new dishes on her own.", a: ["cooking"], u: 1 },
+      { s: "Do Hoa and her classmates enjoy ___ English?", a: ["learning"], u: 1 },
+      { s: "We love ___ across the park together on Sunday afternoons.", a: ["cycling"], u: 1 },
+      { s: "Volunteers enjoyed ___ trees in the schoolyard last month.", a: ["planting"], u: 3 },
+      { s: "He is fond of ___ comic books in his free time.", a: ["reading"], u: 1 }
+    ]
+  },
+  {
+    box: ["swimming", "washing", "travelling", "writing", "dancing"],
+    items: [
+      { s: "He loves ___ in the pool every summer morning.", a: ["swimming"], u: 1 },
+      { s: "Ana's dad hates ___ his car on rainy days.", a: ["washing"], u: 1 },
+      { s: "My father's friend loves ___ by plane.", a: ["travelling", "traveling"], u: 1 },
+      { s: "I hate ___ long emails to strangers.", a: ["writing"], u: 1 },
+      { s: "Tommy loves ___ in the disco at weekends.", a: ["dancing"], u: 1 }
+    ]
+  }
+];
+
+/* Phần VI (Câu 31-35): Điền từ vào đoạn văn (pgap) từ đề thi Giữa kì 1 */
+var M_P6 = [
+  {
+    ptitle: "My Reading Hobby",
+    box: ["started", "reading", "are", "can", "in"],
+    passage: "I {1} reading when I was four years old. The first time I did it, I felt interested, so I kept reading. I enjoy {2} because I like to explore the imaginative world of my favourite author, J.K. Rowling. There {3} a lot of advantages of reading. Reading can make me relaxed and calm. I can also learn new vocabulary items. Then I {4} improve my English. Moreover, it gives me an unlimited imagination, so I can write books {5} the future.",
+    items: [ { a: ["started"], u: 3 }, { a: ["reading"], u: 1 }, { a: ["are"], u: 1 }, { a: ["can"], u: 1 }, { a: ["in"], u: 1 } ]
+  },
+  {
+    ptitle: "Hobbies in Free Time",
+    box: ["read", "sports", "instruments", "painting", "happy"],
+    passage: "Hobbies are activities that we enjoy doing in our free time. There are many different hobbies to choose from. Some people like to {1} books, while others prefer to play {2}. Music is also a popular hobby; many enjoy playing {3} or singing. Some find joy in {4}, which allows them to express their creativity. Having a hobby can help us relax and make us feel {5} after a long day.",
+    items: [ { a: ["read"], u: 1 }, { a: ["sports"], u: 1 }, { a: ["instruments"], u: 1 }, { a: ["painting"], u: 1 }, { a: ["happy"], u: 1 } ]
+  },
+  {
+    ptitle: "A Wonderful Sunday",
+    box: ["was", "got", "listened", "went", "played"],
+    passage: "Yesterday {1} Sunday. I {2} up at 9 o'clock, had breakfast and {3} to music. After that, I {4} shopping with my family and had lunch at a restaurant in the shopping mall. In the afternoon, I met some friends in the park near my house. In the evening, I {5} chess with my brother. We had a lot of fun.",
+    items: [ { a: ["was"], u: 3 }, { a: ["got"], u: 3 }, { a: ["listened"], u: 3 }, { a: ["went"], u: 3 }, { a: ["played"], u: 3 } ]
+  },
+  {
+    ptitle: "Community Activities Dialogue",
+    box: ["activities", "helpful", "trees", "rubbish", "mountainous"],
+    passage: "Lan and Linda often join community {1} because they are very {2}. Last month, Linda planted some {3} in the schoolyard and picked up a lot of {4} along the nearby roads. Meanwhile, Lan collected warm clothes for poor children in the {5} areas.",
+    items: [ { a: ["activities"], u: 3 }, { a: ["helpful"], u: 3 }, { a: ["trees"], u: 3 }, { a: ["rubbish"], u: 3 }, { a: ["mountainous"], u: 3 } ]
+  },
+  {
+    ptitle: "Advice for Tired Eyes",
+    box: ["matter", "tired", "use", "shouldn't", "screen"],
+    passage: "Mai's mother asked her: 'What's the {1} with you?' Mai answered that her eyes were very {2}. Her mother advised her: 'You should {3} eye drops. And you {4} look at your smartphone {5} for too long.' Mai thanked her mother and rested her eyes.",
+    items: [ { a: ["matter"], u: 2 }, { a: ["tired"], u: 2 }, { a: ["use"], u: 2 }, { a: ["shouldn't"], u: 2 }, { a: ["screen"], u: 2 } ]
+  },
+  {
+    ptitle: "The Secrets of Long Life in Okinawa",
+    box: ["oldest", "fishing", "gardening", "cycling", "active"],
+    passage: "The island of Okinawa in Japan has some of the {1} people in the world. Some of the reasons for their good health are that they go {2} and eat what they catch. They regularly do {3} and grow their own fruit and vegetables. They also go {4} and never drive when they can walk. Finally, they do regular exercise and lead {5} lives.",
+    items: [ { a: ["oldest"], u: 2 }, { a: ["fishing"], u: 1 }, { a: ["gardening"], u: 1 }, { a: ["cycling"], u: 1 }, { a: ["active"], u: 2 } ]
+  },
+  {
+    ptitle: "Stamp Collecting",
+    box: ["interesting", "geography", "popular", "culture", "relaxed"],
+    passage: "Stamp collecting is an {1} hobby. You can learn many things, such as the {2} of a country from stamps. Postal stamps are a source of facts and important dates about every country, which makes stamp collecting become very {3}. As you look at the pages of a stamp album, you can learn details of foreign customs, literature, history and {4}. Their colours can make you feel {5} and happy.",
+    items: [ { a: ["interesting"], u: 1 }, { a: ["geography"], u: 1 }, { a: ["popular"], u: 1 }, { a: ["culture"], u: 1 }, { a: ["relaxed"], u: 1 } ]
+  },
+  {
+    ptitle: "My Volunteer Work in Viet Nam",
+    box: ["popular", "blood", "homeless", "orphans", "happiness"],
+    passage: "Volunteer work has become {1} in Viet Nam. At my age, I cannot donate {2}, so I often donate books, toys and clothes to street children and {3} people. Last Sunday, I donated books and clothes to a charity organization with my mother. I met the {4} there and played with them. Doing volunteer work helps me relax after school and brings {5} to others.",
+    items: [ { a: ["popular"], u: 3 }, { a: ["blood"], u: 3 }, { a: ["homeless"], u: 3 }, { a: ["orphans"], u: 3 }, { a: ["happiness"], u: 3 } ]
+  },
+  {
+    ptitle: "Students' Hobbies at Binh Minh School",
+    box: ["different", "drawing", "guitar", "models", "science"],
+    passage: "Students at Binh Minh Lower Secondary School have {1} hobbies. Lan is in class 7A1, and she likes writing poems and {2}. Tung is 14 years old; he likes doing puzzles and playing the {3}. Long is in class 6T1, and his hobbies are playing football and making {4}. Long is one of the best students in {5}, and their hobbies help them study well.",
+    items: [ { a: ["different"], u: 1 }, { a: ["drawing"], u: 1 }, { a: ["guitar"], u: 1 }, { a: ["models"], u: 1 }, { a: ["science"], u: 1 } ]
+  },
+  {
+    ptitle: "Healthy Diet Matters",
+    box: ["energy", "overweight", "quantity", "calories", "fresh"],
+    passage: "There are two important matters in eating. First is eating enough food. If people eat too little food, they will not have enough {1}. If they eat too much, they are easy to get {2}. Second is eating the right {3} of each type of food. For example, it is not good to eat too much food in the high-{4} group and too little {5} fruit and vegetables.",
+    items: [ { a: ["energy"], u: 2 }, { a: ["overweight"], u: 2 }, { a: ["quantity"], u: 2 }, { a: ["calories"], u: 2 }, { a: ["fresh"], u: 2 } ]
+  }
+];
+
+/* Phần VII (Câu 36-40): Đọc hiểu đoạn văn (pchoice) theo đúng các bài đọc trong đề thi Giữa kì 1 */
+var M_P7 = [
+  {
+    ptitle: "How to Have a Healthy Body",
+    passage: "To have a healthy body, we need to pay attention to our diet and exercise. A healthy {1} includes plenty of fruits, vegetables, and whole grains. We should drink enough water every day, about {2} liters. Exercising for at least {3} minutes each day is also beneficial; we can walk, run, or play sports with friends. Additionally, getting enough sleep, around 7 to 8 hours each night, helps our bodies {4} and stay strong. Finally, keeping a {5} mood and avoiding stress is essential for good health.",
+    items: [
+      { o: ["diet", "model", "hobby", "stamp"], a: 0, u: 2 },
+      { o: ["2", "3", "5", "10"], a: 0, u: 2 },
+      { o: ["30", "5", "100", "2"], a: 0, u: 2 },
+      { o: ["recover", "donate", "tutor", "collect"], a: 0, u: 2 },
+      { o: ["positive", "chapped", "itchy", "homeless"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Eating Well at School",
+    passage: "It is important to eat {1}, especially when you are studying. If you are at primary {2}, you may not go home for lunch. You often have meals of meat or {3} and vegetables at school. A chicken and lettuce sandwich, with some {4} fruit would be a {5} lunch. Many people around the world eat plain, boiled eggs two or three times a day. It's also good for you to drink a lot of water through the day.",
+    items: [
+      { o: ["well", "badly", "hard", "fast"], a: 0, u: 2 },
+      { o: ["school", "student", "work", "place"], a: 0, u: 2 },
+      { o: [" chocolate", "sugar", "salt", "fish"], a: 3, u: 2 },
+      { o: ["cooked", "fresh", "uncooked", "helpful"], a: 1, u: 2 },
+      { o: ["sweet", "fatty", "hot", "healthy"], a: 3, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Susan's Model-Making Hobby",
+    passage: "After school, Susan goes {1} to do her model-making. She loves making models. She started her hobby about {2} ago. She needs about {3} to make one model. Then she puts it on the shelf in her bedroom. She has about {4} models now, and she thinks she will need to get another shelf soon. Last term, she failed to start a club for model-making at school because her friends {5} interested in it.",
+    items: [
+      { o: ["home", "to school", "to the library", "to the park"], a: 0, u: 1 },
+      { o: ["a year", "two years", "one week", "two weeks"], a: 0, u: 3 },
+      { o: ["two weeks", "one year", "two days", "one week"], a: 0, u: 1 },
+      { o: ["twenty", "ten", "thirty", "fifty"], a: 0, u: 1 },
+      { o: ["weren't", "were", "are", "aren't"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Why Children Should Do Community Service",
+    passage: "Many schools nowadays require their students to spend time doing {1} service. They hope children will become caring people and see the value in {2} their toys, clothes, or money. Volunteering gives children a sense of {3} because many people depend on them for food, clothes, or shelter. Volunteer work also helps children learn about their ability and likes. Finally, doing voluntary work can reduce {4} and make children feel happier because they bring {5} to other people.",
+    items: [
+      { o: ["community", "collection", "creativity", "calorie"], a: 0, u: 3 },
+      { o: ["donating", "buying", "selling", "taking"], a: 0, u: 3 },
+      { o: ["responsibility", "obesity", "sickness", "sunburn"], a: 0, u: 3 },
+      { o: ["stress", "health", "joy", "skills"], a: 0, u: 2 },
+      { o: ["happiness", "acne", "flu", "litter"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Dean and Lisa's Hobbies",
+    passage: "Dean tried a lot of hobbies over the past few years. He was into painting for a {1} of years, but he wasn't very good at it. One day, he saw a photography exhibition at a museum and got a new {2}. Photography is a great way for him to be {3}. Meanwhile, Lisa is fond of watching {4} films with her friends at weekends. Her other hobby is camping, though she can't stand finding {5} and insects in her tent at night.",
+    items: [
+      { o: ["couple", "lot", "piece", "bit"], a: 0, u: 1 },
+      { o: ["camera", "dollhouse", "bike", "piano"], a: 0, u: 1 },
+      { o: ["creative", "chapped", "homeless", "allergic"], a: 0, u: 1 },
+      { o: ["action", "cooking", "gardening", "judo"], a: 0, u: 1 },
+      { o: ["bugs", "stamps", "coins", "models"], a: 0, u: 1 }
+    ]
+  },
+  {
+    ptitle: "Volunteers in the United States",
+    passage: "Each country has many good people who {1} care of others. For example, many students in the United States often spend hours as {2} in hospitals, orphanages or homes for the {3}. They read books to the people in these places, or they visit them and {4} games with them. Other young volunteers work in the homes of sick or old people. They clean up their houses, do their shopping or {5} their lawns.",
+    items: [
+      { o: ["take", "do", "make", "get"], a: 0, u: 3 },
+      { o: ["volunteers", "vegetarians", "collectors", "riders"], a: 0, u: 3 },
+      { o: ["elderly", "stamps", "models", "calories"], a: 0, u: 3 },
+      { o: ["play", "do", "go", "make"], a: 0, u: 1 },
+      { o: ["water", "tutor", "donate", "exchange"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "School Concert for Orphans",
+    passage: "Last summer, our school {1} a musical concert to raise funds for the orphans in the local area. We {2} the main singers and performers on the school stage. We {3} tickets for the concert to our parents and friends. We also {4} notebooks and plastic bottles to make souvenirs for participants. It was a great success, and we {5} all the money to the local orphanage.",
+    items: [
+      { o: ["organized", "organize", "organizes", "organizing"], a: 0, u: 3 },
+      { o: ["were", "was", "are", "be"], a: 0, u: 3 },
+      { o: ["sold", "sell", "sells", "selling"], a: 0, u: 3 },
+      { o: ["recycled", "tutored", "watered", "coughed"], a: 0, u: 3 },
+      { o: ["donated", "avoided", "affected", "harmed"], a: 0, u: 3 }
+    ]
+  },
+  {
+    ptitle: "Why Do We Shouldn't Skip Breakfast?",
+    passage: "Nam usually feels tired and sleepy in the morning because he gets up late and {1} his breakfast. Mr. Hung advises him not to do that because breakfast is the {2} important meal of a day. It helps students {3} and study better. For breakfast, we should eat bread, eggs, or cereal and drink some {4}. Besides, we need to have enough sleep, about 7 to 8 hours a day, and get some {5} every day by walking or doing a sport.",
+    items: [
+      { o: ["skips", "eats", "cooks", "has"], a: 0, u: 2 },
+      { o: ["most", "more", "best", "much"], a: 0, u: 2 },
+      { o: ["focus", "couch", "sneeze", "sunburn"], a: 0, u: 2 },
+      { o: ["milk", "junk food", "lip balm", "soap"], a: 0, u: 2 },
+      { o: ["exercise", "acne", "flu", "allergy"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Keren's Healthy Lifestyle",
+    passage: "Keren has a very healthy lifestyle. Her favourite sport is {1}, and she jogs four times a week. She says that running in the morning is {2} in the summer than in the winter. In her balanced diet, she eats a lot of {3} and fresh fruit to get vitamins. She avoids eating fast food and drinking {4} drinks. Whenever she feels stressed after work, {5} in the park helps her relax.",
+    items: [
+      { o: ["jogging", "making models", "collecting coins", "building dollhouses"], a: 0, u: 1 },
+      { o: ["easier", "hard", "bad", "harmful"], a: 0, u: 2 },
+      { o: ["vegetables", "chocolates", "sweets", "chips"], a: 0, u: 2 },
+      { o: ["soft", "clean", "warm", "fresh"], a: 0, u: 2 },
+      { o: ["walking", "coughing", "sneezing", "skipping"], a: 0, u: 2 }
+    ]
+  },
+  {
+    ptitle: "Protecting Sea Turtles",
+    passage: "Linda just came back from the Greek island of Zakynthos after helping with a turtle conservation {1} there. Every summer, thousands of female turtles lay their eggs in the sand on the {2}. However, tourists often leave garbage like plastic {3} that the turtles mistake for food. Every day at dawn, Linda's volunteer team {4} up litter on the beach and told tourists how to {5} the sea turtles.",
+    items: [
+      { o: ["project", "collection", "dollhouse", "calorie"], a: 0, u: 3 },
+      { o: ["beach", "nursing home", "orphanage", "hospital"], a: 0, u: 3 },
+      { o: ["bags", "stamps", "coins", "vitamins"], a: 0, u: 3 },
+      { o: ["picked", "tutored", "watered", "donated"], a: 0, u: 3 },
+      { o: ["protect", "avoid", "harm", "affect"], a: 0, u: 3 }
+    ]
+  }
+];
+
+/* Phần VIII (Câu 41-45): Viết lại câu theo đề thi Giữa kì 1 */
+var M_P8 = [
+  { s: "He loves swimming.", stub: "He is fond", a: ["He is fond of swimming."], u: 1 },
+  { s: "They do the homework. They review their lessons.", stub: "They do the homework", a: ["They do the homework and review their lessons."], u: 2 },
+  { s: "If he doesn't go to school, he will go to the park.", stub: "Unless he", a: ["Unless he goes to school, he will go to the park."], u: 2 },
+  { s: "John is good at Math. Mary is good at Math.", stub: "Both John", a: ["Both John and Mary are good at Math."], u: 2 },
+  { s: "He likes playing volleyball.", stub: "He is interested", a: ["He is interested in playing volleyball."], u: 1 },
+
+  { s: "They listen to music. They clean the floor.", stub: "They listen", a: ["They listen to music and clean the floor."], u: 2 },
+  { s: "If he doesn't do the homework carefully, he will make mistakes.", stub: "Unless he", a: ["Unless he does the homework carefully, he will make mistakes."], u: 2 },
+  { s: "Bao walks to school on time. Ba walks to school on time.", stub: "Both Bao", a: ["Both Bao and Ba walk to school on time."], u: 2 },
+  { s: "He likes reading comic books.", stub: "He is keen", a: ["He is keen on reading comic books."], u: 1 },
+  { s: "We avoid sweetened food. We avoid soft drinks.", stub: "We avoid", a: ["We avoid sweetened food and soft drinks."], u: 2 },
+
+  { s: "Hard work brings you success.", stub: "If you work hard,", a: ["If you work hard, you will be successful.", "If you work hard, you will succeed."], u: 2 },
+  { s: "Bao is a student. Lan is a student.", stub: "Both Bao", a: ["Both Bao and Lan are students."], u: 2 },
+  { s: "They love reading comic books.", stub: "They are interested", a: ["They are interested in reading comic books."], u: 1 },
+  { s: "You should wear a hat. You should wear suncream.", stub: "You should wear", a: ["You should wear a hat and suncream."], u: 2 },
+  { s: "You must be quick or you will be late for school.", stub: "If you are not", a: ["If you are not quick, you will be late for school."], u: 2 },
+
+  { s: "My dad loves outdoor activities. I love outdoor activities.", stub: "Both my dad", a: ["Both my dad and I love outdoor activities."], u: 2 },
+  { s: "I find dancing interesting.", stub: "I think that", a: ["I think that dancing is interesting."], u: 1 },
+  { s: "There are four people in my family.", stub: "My family", a: ["My family has four people."], u: 1 },
+  { s: "My father doesn't like listening to music.", stub: "My father hates", a: ["My father hates listening to music."], u: 1 },
+  { s: "My mother rides a bike to work every day.", stub: "My mother goes", a: ["My mother goes to work by bike every day.", "My mother goes to work by bicycle every day."], u: 1 },
+
+  { s: "I like watching TV best.", stub: "My favourite hobby", a: ["My favourite hobby is watching TV.", "My favorite hobby is watching TV."], u: 1 },
+  { s: "I find collecting glass bottles interesting.", stub: "My hobby is", a: ["My hobby is collecting glass bottles."], u: 1 },
+  { s: "It's good for us to go to bed early every day.", stub: "We should", a: ["We should go to bed early every day."], u: 2 },
+  { s: "His lunch doesn't have any fruit or vegetables.", stub: "There isn't", a: ["There isn't any fruit or vegetables in his lunch."], u: 2 },
+  { s: "Dave eats lots of sweets, so he is becoming fat.", stub: "Because Dave", a: ["Because Dave eats lots of sweets, he is becoming fat."], u: 2 },
+
+  { s: "Sitting close to the TV screen is not good for you.", stub: "You shouldn't", a: ["You shouldn't sit close to the TV screen.", "You should not sit close to the TV screen."], u: 2 },
+  { s: "Let's do something outdoors this afternoon.", stub: "How about", a: ["How about doing something outdoors this afternoon?"], u: 1 },
+  { s: "Natalie isn't interested in sleeping in at the weekend.", stub: "Natalie doesn't", a: ["Natalie doesn't like sleeping in at the weekend.", "Natalie does not like sleeping in at the weekend."], u: 1 },
+  { s: "Although Kelvin likes fast food, he doesn't usually eat it.", stub: "Kelvin likes fast food,", a: ["Kelvin likes fast food, but he doesn't usually eat it.", "Kelvin likes fast food, but he does not usually eat it."], u: 2 },
+  { s: "They were late for school yesterday. (Change into negative)", stub: "They weren't", a: ["They weren't late for school yesterday.", "They were not late for school yesterday."], u: 3 },
+
+  { s: "Mr. Tam took his children to the museum last Sunday. (Change into negative)", stub: "Mr. Tam didn't", a: ["Mr. Tam didn't take his children to the museum last Sunday."], u: 3 },
+  { s: "Hoa made a cushion for her armchair. (Change into negative)", stub: "Hoa didn't", a: ["Hoa didn't make a cushion for her armchair."], u: 3 },
+  { s: "Nam wrote an essay in Literature class this morning. (Change into negative)", stub: "Nam didn't", a: ["Nam didn't write an essay in Literature class this morning."], u: 3 },
+  { s: "I watched TV yesterday morning. (Change into negative)", stub: "I didn't", a: ["I didn't watch TV yesterday morning."], u: 3 },
+  { s: "They ate noodles two hours ago. (Change into negative)", stub: "They didn't", a: ["They didn't eat noodles two hours ago."], u: 3 },
+
+  { s: "My father decorated the Christmas tree. (Change into negative)", stub: "My father didn't", a: ["My father didn't decorate the Christmas tree."], u: 3 },
+  { s: "She bought a new dress yesterday. (Change into negative)", stub: "She didn't", a: ["She didn't buy a new dress yesterday."], u: 3 },
+  { s: "She bought a new dress yesterday. (Change into question)", stub: "Did she", a: ["Did she buy a new dress yesterday?"], u: 3 },
+  { s: "They ate noodles two hours ago. (Change into question)", stub: "Did they", a: ["Did they eat noodles two hours ago?"], u: 3 },
+  { s: "Hoa made a cushion for her armchair. (Change into question)", stub: "Did Hoa", a: ["Did Hoa make a cushion for her armchair?"], u: 3 },
+
+  { s: "Mr. Tam took his children to the museum last Sunday. (Change into question)", stub: "Did Mr. Tam", a: ["Did Mr. Tam take his children to the museum last Sunday?"], u: 3 },
+  { s: "They were late for school. (Change into question)", stub: "Were they", a: ["Were they late for school?"], u: 3 },
+  { s: "We avoid fast food. We avoid soft drinks.", stub: "We avoid", a: ["We avoid fast food and soft drinks."], u: 2 },
+  { s: "Mary loves making models. Tom loves making models.", stub: "Both Mary", a: ["Both Mary and Tom love making models."], u: 2 },
+  { s: "My sister is keen on doing yoga every morning.", stub: "My sister enjoys", a: ["My sister enjoys doing yoga every morning."], u: 1 },
+
+  { s: "If you don't wear suncream, you will get sunburn.", stub: "Unless you", a: ["Unless you wear suncream, you will get sunburn."], u: 2 },
+  { s: "Because he had a toothache, he went to see the dentist.", stub: "He had a toothache,", a: ["He had a toothache, so he went to see the dentist."], u: 2 },
+  { s: "It is a good idea to drink two litres of water every day.", stub: "You should", a: ["You should drink two litres of water every day.", "You should drink two liters of water every day."], u: 2 },
+  { s: "Lan is fond of collecting old stamps.", stub: "Lan adores", a: ["Lan adores collecting old stamps."], u: 1 },
+  { s: "Our club donated books to poor children. Our club donated clothes to poor children.", stub: "Our club donated", a: ["Our club donated books and clothes to poor children."], u: 3 }
+];
+
+/* Phần IX (Câu 46-50): Sắp xếp từ thành câu hoàn chỉnh (Rearrange words) theo đề thi Giữa kì 1 */
+var M_P9 = [
+  { s: "always / My mother / goes / to work / early.", stub: "My mother", a: ["My mother always goes to work early."], u: 1 },
+  { s: "playing / They / football / are / at the moment.", stub: "They", a: ["They are playing football at the moment."], u: 1 },
+  { s: "usually / Our family / has / dinner / at 7 p.m.", stub: "Our family", a: ["Our family usually has dinner at 7 p.m."], u: 1 },
+  { s: "walked / I / to work / yesterday.", stub: "I", a: ["I walked to work yesterday."], u: 3 },
+  { s: "eat / We / a lot of garlic / to prevent / the flu.", stub: "We", a: ["We eat a lot of garlic to prevent the flu."], u: 2 },
+
+  { s: "always / Mary / goes / to work / early.", stub: "Mary", a: ["Mary always goes to work early."], u: 1 },
+  { s: "playing / He / football / is / at the moment.", stub: "He", a: ["He is playing football at the moment."], u: 1 },
+  { s: "went / I / to work / by bike / last week.", stub: "I", a: ["I went to work by bike last week."], u: 3 },
+  { s: "soft drinks / My sister / never / drinks.", stub: "My sister", a: ["My sister never drinks soft drinks."], u: 2 },
+  { s: "has / He / for breakfast / bread and eggs.", stub: "He", a: ["He has bread and eggs for breakfast."], u: 2 },
+
+  { s: "don't eat / We / much / fast food.", stub: "We", a: ["We don't eat much fast food.", "We do not eat much fast food."], u: 2 },
+  { s: "affects / Acne / 80% of / young people.", stub: "Acne", a: ["Acne affects 80% of young people."], u: 2 },
+  { s: "a lot of vitamins / Fruit and vegetables / have.", stub: "Fruit and vegetables", a: ["Fruit and vegetables have a lot of vitamins."], u: 2 },
+  { s: "take / They / usually / a lot of / beautiful photos.", stub: "They", a: ["They usually take a lot of beautiful photos."], u: 1 },
+  { s: "cleaned / They / the beach / one week / ago.", stub: "They", a: ["They cleaned the beach one week ago."], u: 3 },
+
+  { s: "morning exercise / Do / you / do / every day?", stub: "Do you", a: ["Do you do morning exercise every day?"], u: 2 },
+  { s: "collected / I / stamps / when / I was a child.", stub: "I collected", a: ["I collected stamps when I was a child."], u: 3 },
+  { s: "is / Having / a healthy lifestyle / important.", stub: "Having", a: ["Having a healthy lifestyle is important."], u: 2 },
+  { s: "went / Yesterday, / I / to the zoo / with my family.", stub: "Yesterday,", a: ["Yesterday, I went to the zoo with my family."], u: 3 },
+  { s: "listening / My mother / likes / to / classical music.", stub: "My mother", a: ["My mother likes listening to classical music."], u: 1 },
+
+  { s: "washing / Ana's dad / hates / his car.", stub: "Ana's dad", a: ["Ana's dad hates washing his car."], u: 1 },
+  { s: "travelling / My father's friend / loves / by plane.", stub: "My father's friend", a: ["My father's friend loves travelling by plane.", "My father's friend loves traveling by plane."], u: 1 },
+  { s: "writing / I / hate / long emails.", stub: "I", a: ["I hate writing long emails."], u: 1 },
+  { s: "watching / She / dislikes / horror films / on TV.", stub: "She", a: ["She dislikes watching horror films on TV."], u: 1 },
+  { s: "speaking / My Maths teacher / loves / English.", stub: "My Maths teacher", a: ["My Maths teacher loves speaking English."], u: 1 },
+
+  { s: "can / You / do / many things / to avoid viruses.", stub: "You", a: ["You can do many things to avoid viruses."], u: 2 },
+  { s: "keep / Always / your surroundings / clean.", stub: "Always", a: ["Always keep your surroundings clean."], u: 2 },
+  { s: "sweep / You / can / and clean / your house every day.", stub: "You", a: ["You can sweep and clean your house every day."], u: 2 },
+  { s: "wash / Often / your hands / with soap.", stub: "Often", a: ["Often wash your hands with soap."], u: 2 },
+  { s: "remember / Always / to wear a mask / when you go out.", stub: "Always", a: ["Always remember to wear a mask when you go out."], u: 2 },
+
+  { s: "got up / Mike / early / and / went to work.", stub: "Mike", a: ["Mike got up early and went to work."], u: 3 },
+  { s: "visited / We / the opera theatre / last Thursday.", stub: "We", a: ["We visited the opera theatre last Thursday.", "We visited the opera theater last Thursday."], u: 3 },
+  { s: "bought / They / a lot of food / for / the camping trip.", stub: "They", a: ["They bought a lot of food for the camping trip."], u: 3 },
+  { s: "was / It / cloudy / yesterday.", stub: "It", a: ["It was cloudy yesterday."], u: 3 },
+  { s: "moved / We / to another city / in 1990.", stub: "We", a: ["We moved to another city in 1990."], u: 3 },
+
+  { s: "did / When / you / get / the first gift?", stub: "When", a: ["When did you get the first gift?"], u: 3 },
+  { s: "did not / She / go / to the church / five days ago.", stub: "She", a: ["She did not go to the church five days ago.", "She didn't go to the church five days ago."], u: 3 },
+  { s: "came back / Mr. and Mrs. James / home / and had lunch late / last night.", stub: "Mr. and Mrs. James", a: ["Mr. and Mrs. James came back home and had lunch late last night."], u: 3 },
+  { s: "played / I / football / last Sunday.", stub: "I", a: ["I played football last Sunday."], u: 3 },
+  { s: "have / I / English lessons / on Monday / and Tuesday.", stub: "I", a: ["I have English lessons on Monday and Tuesday."], u: 1 },
+
+  { s: "is / Swimming / my / favourite / passion.", stub: "Swimming", a: ["Swimming is my favourite passion.", "Swimming is my favorite passion."], u: 1 },
+  { s: "moved / My family / here / in 2004.", stub: "My family", a: ["My family moved here in 2004."], u: 3 },
+  { s: "play / Tuan and Minh / badminton / every afternoon.", stub: "Tuan and Minh", a: ["Tuan and Minh play badminton every afternoon."], u: 1 },
+  { s: "enjoy / They / collecting / old coins.", stub: "They", a: ["They enjoy collecting old coins."], u: 1 },
+  { s: "likes / My sister / going camping / at the weekend.", stub: "My sister", a: ["My sister likes going camping at the weekend."], u: 1 },
+
+  { s: "can / We / exercise / indoors / here.", stub: "We", a: ["We can exercise indoors here."], u: 2 },
+  { s: "have / Most children / chapped lips and skin / in winter.", stub: "Most children", a: ["Most children have chapped lips and skin in winter."], u: 2 },
+  { s: "usually / They / eat / healthy food.", stub: "They", a: ["They usually eat healthy food."], u: 2 },
+  { s: "love / Most children / fast food / and soft drinks.", stub: "Most children", a: ["Most children love fast food and soft drinks."], u: 2 },
+  { s: "often / Hard-working people / stay / fit.", stub: "Hard-working people", a: ["Hard-working people often stay fit."], u: 2 }
+];
+
+for (var m = 0; m < 10; m++) {
+  var mNo = m + 11;
+  var mId = "d" + mNo;
+  var isErr = m < 5;
+  var mp6 = M_P6[m];
+  var mp7 = M_P7[m];
+  window.DES.push({
+    id: mId,
+    no: mNo,
+    title: "Đề số " + mNo,
+    acts: [
+      {
+        id: mId + "-I",
+        part: "I",
+        title: "Phần I. Phát âm",
+        instr: "Find the word which has a different sound in the part underlined.",
+        type: "choice",
+        start: 1,
+        huong: "Đọc kĩ phần gạch chân ở từng từ để tìm từ có âm khác với 3 từ còn lại. Chú ý các quy tắc trong đề thi Giữa kì 1: 1) Đuôi -ed: /ɪd/ sau t, d (wanted, needed, collected, started, visited); /t/ sau k, p, f, gh, s, sh, ch, ce (watched, parked, jumped, asked, helped, talked); /d/ sau các âm còn lại (played, moved, remembered, opened). 2) Đuôi -s/-es: /ɪz/ sau sh, ch, s, x (brushes, watches, misses); /s/ sau k, p, t, f, gh (thanks, laughs, visits, thinks); /z/ sau các âm còn lại (needs, buys, goes, does, clothes). 3) Chữ 'h' câm trong 'hour' (khác với house, hat, hot đọc là /h/). 4) Chữ 'ea' trong 'heavy, health, spread' đọc là /e/, còn trong 'read, meat, seat, meal, weak' đọc là /iː/.",
+        items: M_P1.slice(m * 5, m * 5 + 5)
+      },
+      {
+        id: mId + "-II",
+        part: "II",
+        title: "Phần II. Tìm từ khác loại (Odd one out)",
+        instr: "Choose the word that does not belong to the group.",
+        type: "choice",
+        start: 6,
+        huong: "Xét nghĩa và từ loại của 4 từ để tìm từ không cùng nhóm với 3 từ còn lại. Ví dụ: stamp, coin, doll là đồ vật sưu tầm còn hobby là danh từ chung; played, thanked, needed là động từ có quy tắc (-ed) còn ate, went, drank là động từ bất quy tắc; enjoy, like, love, adore mang nghĩa yêu thích còn hate mang nghĩa ghét; karate, judo, yoga là các môn võ/thể thao còn bike, car là phương tiện; carrots, tomatoes, cabbages là rau củ tốt cho sức khỏe còn soft drinks, apple juice là đồ uống.",
+        items: M_P2.slice(m * 5, m * 5 + 5)
+      },
+      {
+        id: mId + "-III",
+        part: "III",
+        title: "Phần III. Trắc nghiệm từ vựng và ngữ pháp",
+        instr: "Circle the best option (A, B, C, or D) to fill in the gaps.",
+        type: "choice",
+        start: 11,
+        huong: "Dựa vào cụm từ cố định và dấu hiệu ngữ pháp trong câu. Chú ý: go jogging / swimming / camping; do judo / gardening; play the piano / football; keep fit; avoid sunburn; Vitamin A is good for our eyes; keen on / fond of / interested in + V-ing; good for health; donate ... to the orphanage; tutor children; Did + S + V(nguyên thể) + last night?",
+        items: M_P3.slice(m * 10, m * 10 + 10)
+      },
+      {
+        id: mId + "-IV",
+        part: "IV",
+        title: "Phần IV. Chia động từ trong ngoặc",
+        instr: "Supply the correct form of the verbs in the brackets.",
+        type: "gap",
+        start: 21,
+        huong: "Xác định thì hoặc cấu trúc câu: 1) Câu điều kiện loại 1 (If he learns hard, he will pass the exam): mệnh đề If chia hiện tại đơn, mệnh đề chính chia will + V. 2) Có in 2019, last..., yesterday, ... ago: chia Quá khứ đơn (worked, helped, went, did, was/were, didn't work). 3) Có now, at the moment, at present: chia Hiện tại tiếp diễn (am/is/are + V-ing). 4) Có every..., usually, always: chia Hiện tại đơn. 5) Sau enjoy, like, love, dislike, adore: chia V-ing.",
+        items: M_P4.slice(m * 5, m * 5 + 5)
+      },
+      isErr ? {
+        id: mId + "-V",
+        part: "V",
+        title: "Phần V. Tìm lỗi sai",
+        instr: "Find ONE mistake in each of the following sentences.",
+        type: "choice",
+        start: 26,
+        huong: "Kiểm tra ngữ pháp của 4 phần gạch chân. Các lỗi thường gặp trong đề Giữa kì 1: 1) Sau fond of / interested in / enjoy / hate dùng V-ing (watch -> watching, to build -> building, to jog -> jogging). 2) Sau trợ động từ didn't / doesn't / Did phải dùng V nguyên thể (didn't went -> didn't go, didn't did -> didn't do, doesn't likes -> doesn't like). 3) Cụm đúng là 'good for your health' (không dùng good to). 4) Sự hòa hợp chủ ngữ và động từ: 'the children' là số nhiều dùng Are (không dùng Is); 'Laughter and love' hoặc 'Both A and B' là số nhiều dùng are/like (không dùng is/likes).",
+        items: M_P5_ERR[m]
+      } : {
+        id: mId + "-V",
+        part: "V",
+        title: "Phần V. Điền từ vào câu",
+        instr: "Complete each of the following sentences with ONE suitable word from the box.",
+        type: "gap",
+        start: 26,
+        huong: "Sau các động từ like, love, enjoy, dislike, hate, can't stand ta dùng V-ing. Dựa vào tân ngữ phía sau để ghép đúng cụm động từ: tidying her room (dọn phòng), going to bed (đi ngủ), getting up (thức dậy), making cold food / pottery, doing homework, brushing teeth, having a shower, meeting friends.",
+        box: M_P5_GAP[m - 5].box,
+        items: M_P5_GAP[m - 5].items
+      },
+      {
+        id: mId + "-VI",
+        part: "VI",
+        title: "Phần VI. Điền từ vào đoạn văn",
+        instr: "Fill in each blank in the passage with ONE suitable word from the box.",
+        type: "pgap",
+        start: 31,
+        huong: "Đọc ngữ cảnh của từng câu trong đoạn văn để chọn từ đúng loại từ và nghĩa từ khung từ cho sẵn.",
+        ptitle: mp6.ptitle,
+        box: mp6.box,
+        passage: mp6.passage,
+        items: mp6.items
+      },
+      {
+        id: mId + "-VII",
+        part: "VII",
+        title: "Phần VII. Đọc hiểu đoạn văn",
+        instr: "Read the passage and choose the best option (A, B, C, or D) for each blank.",
+        type: "pchoice",
+        start: 36,
+        huong: "Đọc kĩ thông tin trong bài đọc để chọn phương án chính xác nhất hoàn thành đoạn văn.",
+        ptitle: mp7.ptitle,
+        passage: mp7.passage,
+        items: mp7.items
+      },
+      {
+        id: mId + "-VIII",
+        part: "VIII",
+        title: "Phần VIII. Viết lại câu",
+        instr: "Complete the second sentence so that it has the same meaning to the first one.",
+        type: "type",
+        start: 41,
+        huong: "Áp dụng các cấu trúc viết lại câu trong đề thi Giữa kì 1: 1) love/like/enjoy + V-ing <=> be fond of / interested in / keen on + V-ing. 2) Gộp 2 câu cùng chủ ngữ bằng 'and'; gộp 2 chủ ngữ bằng 'Both A and B' + động từ số nhiều. 3) If ... not <=> Unless + S + V(khẳng định). 4) Câu mệnh lệnh + or + S + will... <=> If you are not..., you will... 5) Chuyển câu quá khứ đơn sang phủ định (S + didn't + V) hoặc nghi vấn (Did + S + V?).",
+        items: M_P8.slice(m * 5, m * 5 + 5)
+      },
+      {
+        id: mId + "-IX",
+        part: "IX",
+        title: "Phần IX. Sắp xếp từ thành câu hoàn chỉnh",
+        instr: "Arrange the words to make correct sentences.",
+        type: "type",
+        start: 46,
+        huong: "Sắp xếp các từ/cụm từ theo đúng trật tự câu tiếng Anh: Chủ ngữ (S) + Trạng từ tần suất (always/usually/never) + Động từ (V) + Tân ngữ (O) + Cụm chỉ nơi chốn + Cụm chỉ thời gian (every day, at 7 p.m., at the moment, yesterday, last week).",
+        items: M_P9.slice(m * 5, m * 5 + 5)
+      }
+    ]
+  });
+}
+})();
+</script>
+<script>(function () {
+'use strict';
+var DES = window.DES || [], GR = window.GRAMMAR || [], WEB = window.WEBAPP_URL || '';
+var root = document.getElementById('app');
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function ls(k, v) {
+  try { if (v === undefined) { return JSON.parse(localStorage.getItem(k) || 'null'); } localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; }
+}
+var me = ls('hd_me') || { ten: '', lop: '' };
+var prog = ls('hd_prog') || {};
+var mem = {};
+var curTab = {};
+
+var ICONS = {
+  heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+  clock: '<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>',
+  swap: '<path d="M5 9h13l-3-3"/><path d="M19 15H6l3 3"/>',
+  sound: '<path d="M4 10v4h3l5 4V6L7 10z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a8 8 0 0 1 0 11"/>',
+  scale: '<path d="M12 4v16"/><path d="M6 20h12"/><path d="M5 8h14"/><path d="M5 8l-2.5 6a3 3 0 0 0 5 0z"/><path d="M19 8l-2.5 6a3 3 0 0 0 5 0z"/>',
+  star: '<path d="M12 4l2.4 5 5.4.7-4 3.8 1 5.4L12 16.3 7.2 18.9l1-5.4-4-3.8 5.4-.7z"/>',
+  plus: '<circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/>',
+  leaf: '<path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-5 6-8 10-10"/>',
+  chat: '<path d="M5 6h14v9H10l-4 3v-3H5z"/>'
+};
+function icon(n) { return '<svg class="ic" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[n] || '') + '</svg>'; }
+
+function norm(s) {
+  return String(s).toLowerCase().replace(/[’‘`]/g, "'")
+    .replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not')
+    .replace(/n't\b/g, ' not').replace(/\b(he|she|it|that|there|what|who)'s\b/g, '$1 is').replace(/'m\b/g, ' am').replace(/-/g, ' ')
+    .replace(/[.,;:!?"“”()]/g, ' ').replace(/'/g, '').replace(/\s+/g, ' ').trim();
+}
+function normSent(s) { return norm(s).replace(/ (do|does|did)$/, ''); }
+function match(a, it, val) {
+  var v = a.type === 'type' ? normSent(val) : norm(val);
+  return it.a.some(function (x) { return (a.type === 'type' ? normSent(x) : norm(x)) === v; });
+}
+
+function stars(id) {
+  var p = prog[id]; if (!p) return '';
+  var r = p.best / p.total, n = r >= 1 ? 3 : r >= 0.9 ? 2 : r >= 0.8 ? 1 : 0, h = '';
+  for (var i = 0; i < 3; i++) h += '<span class="st' + (i < n ? ' on' : '') + '">' + icon('star') + '</span>';
+  return h;
+}
+function deStat(d) {
+  var done = 0, st = 0;
+  d.acts.forEach(function (a) {
+    var p = prog[a.id]; if (p) { if (p.best >= p.total) done++; var r = p.best / p.total; st += r >= 1 ? 3 : r >= 0.9 ? 2 : r >= 0.8 ? 1 : 0; }
+  });
+  return { done: done, st: st };
+}
+var SHUF = window.DAO_CAU !== false;
+function idOrder(n) { var r = []; for (var i = 0; i < n; i++) r.push(i); return r; }
+function shuffled(n) {
+  var r = idOrder(n), i, j, t;
+  if (!SHUF) return r;
+  for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = r[i]; r[i] = r[j]; r[j] = t; }
+  return r;
+}
+function blankHTML(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+    .replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/g, '<u>$1</u>')
+    .replace(/___/g, '<span class="bk"></span>');
+}
+
+function itemHTML(a, it, k, pos) {
+  var no = a.start + pos, un = '<span class="un">Unit ' + it.u + '</span>', h = '';
+  if (a.type === 'choice') {
+    var ord = a._opt[k] = it.fix ? idOrder(it.o.length) : shuffled(it.o.length);
+    h = '<li class="q" data-q="' + k + '"><span class="no">' + no + '</span><div class="qb"><p class="qs">' + blankHTML(it.s) + '</p><div class="opts">' +
+      ord.map(function (j, p) { return '<button type="button" class="opt" data-o="' + j + '"><b>' + 'ABCD'.charAt(p) + '</b><span>' + it.o[j] + '</span></button>'; }).join('') +
+      '</div></div>' + un + '</li>';
+  } else if (a.type === 'gap') {
+    var parts = esc(it.s).split('___'), inp = '<input class="gp" type="text" data-q="' + k + '" id="i-' + a.id + '-' + k + '" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Câu ' + no + '">';
+    h = '<li class="q"><span class="no">' + no + '</span><div class="qb"><p class="qs">' + (parts.length > 1 ? parts[0] + inp + parts.slice(1).join('') : parts[0] + ' ' + inp) + '</p></div>' + un + '</li>';
+  } else if (a.type === 'type') {
+    h = '<li class="q"><span class="no">' + no + '</span><div class="qb"><p class="qs">' + esc(it.s) + '</p>' +
+      (it.stub ? '<p class="stub">Bắt đầu bằng: <b>' + esc(it.stub) + '</b></p>' : '') +
+      '<textarea class="ty" rows="2" data-q="' + k + '" id="i-' + a.id + '-' + k + '" autocomplete="off" spellcheck="false" aria-label="Câu ' + no + '"></textarea></div>' + un + '</li>';
+  }
+  return h;
+}
+function passHTML(a) {
+  var t = esc(a.passage);
+  a.items.forEach(function (it, k) {
+    var no = a.start + k, ctl;
+    if (a.type === 'pgap') ctl = '<span class="pb"><i>' + no + '</i><input class="gp" type="text" data-q="' + k + '" id="i-' + a.id + '-' + k + '" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Chỗ trống ' + no + '"></span>';
+    else {
+      var ord = a._opt[k] = it.fix ? idOrder(it.o.length) : shuffled(it.o.length);
+      ctl = '<span class="pb"><i>' + no + '</i><select class="sl" data-q="' + k + '" id="i-' + a.id + '-' + k + '" aria-label="Chỗ trống ' + no + '"><option value="">Chọn</option>' +
+        ord.map(function (j, p) { return '<option value="' + j + '">' + 'ABCD'.charAt(p) + '. ' + esc(it.o[j]) + '</option>'; }).join('') + '</select></span>';
+    }
+    t = t.replace('{' + (k + 1) + '}', ctl);
+  });
+  return '<div class="pass">' + (a.ptitle ? '<h4>' + esc(a.ptitle) + '</h4>' : '') + '<p>' + t + '</p></div>' +
+    '<p class="unrow">' + a.items.map(function (it, k) { return '<span class="un">' + (a.start + k) + ': Unit ' + it.u + '</span>'; }).join('') + '</p>';
+}
+function actHTML(a) {
+  a._opt = {};
+  a._ord = a.passage ? idOrder(a.items.length) : shuffled(a.items.length);
+  var h = '<section class="act" data-act="' + a.id + '"><div class="ah"><div><h3>' + esc(a.title) + '</h3><p class="instr">' + esc(a.instr) + '</p></div><div class="stars" aria-label="Sao">' + stars(a.id) + '</div></div>';
+  if (a.box) h += '<ul class="box" aria-label="Khung từ">' + shuffled(a.box.length).map(function (i) { return '<li>' + esc(a.box[i]) + '</li>'; }).join('') + '</ul>';
+  if (a.passage) h += passHTML(a);
+  else h += '<ol class="ql">' + a._ord.map(function (k, pos) { return itemHTML(a, a.items[k], k, pos); }).join('') + '</ol>';
+  h += '<p class="rule">Em làm hết các câu rồi bấm Kiểm tra. Câu sai sẽ hiện đáp án đúng. Muốn làm lại, em phải làm lại cả bài từ đầu.</p>';
+  h += '<div class="fb" hidden></div><div class="bt"><button type="button" class="btn pri" data-do="check">Kiểm tra</button><button type="button" class="btn" data-do="reset">Làm lại cả bài</button></div></section>';
+  return h;
+}
+
+function homeView() {
+  var h = '<header class="top"><p class="brand">Dịch vụ gia sư và dạy kèm Hoa Dũng</p><h1>Ôn tập Tiếng Anh 7</h1><p class="sub">Ôn tập giữa học kì I · Unit 1, 2, 3 · 20 đề, mỗi đề 50 câu (1.000 câu)</p></header>';
+  h += '<section class="who"><h2>Thông tin của em</h2><div class="row"><label for="ten">Họ và tên<input id="ten" type="text" value="' + esc(me.ten) + '" autocomplete="name"></label><label for="lop">Lớp<input id="lop" type="text" value="' + esc(me.lop) + '" autocomplete="off"></label></div>' +
+    '<p class="note">Kết quả mỗi lần kiểm tra được gửi về cho thầy' + (WEB ? '' : ' khi thầy kết nối Google Sheets') + '. Làm đúng hết cả phần là Hoàn thành; còn câu sai là Chưa hoàn thành, em làm lại cả phần để hoàn thành.</p></section>';
+  h += '<section><h2>Bảng ngữ pháp</h2><div class="grid3">' + GR.map(function (g) { return '<a class="card gcard" href="#' + g.id + '"><b>' + g.title + '</b><span>' + esc(g.topic) + '</span></a>'; }).join('') + '</div></section>';
+  h += '<section><h2>Bộ đề chuẩn Unit 1, 2, 3 (Đề 1 - Đề 10)</h2><div class="grid">' + DES.slice(0, 10).map(function (d) {
+    var s = deStat(d);
+    return '<a class="card dcard" href="#' + d.id + '"><b>' + d.title + '</b><span>' + s.done + '/9 phần đúng hết</span><span class="mini">' + s.st + '/27 sao</span></a>';
+  }).join('') + '</div></section>';
+  h += '<section><h2>Bộ đề luyện thi Giữa kì I mở rộng (Đề 11 - Đề 20)</h2><div class="grid">' + DES.slice(10, 20).map(function (d) {
+    var s = deStat(d);
+    return '<a class="card dcard" href="#' + d.id + '"><b>' + d.title + '</b><span>' + s.done + '/9 phần đúng hết</span><span class="mini">' + s.st + '/27 sao</span></a>';
+  }).join('') + '</div></section>';
+  return h;
+}
+function grammarView(g) {
+  var h = '<a class="back" href="#home">Về trang chính</a><header class="top"><p class="brand">Bảng ngữ pháp</p><h1>' + g.title + '</h1><p class="sub">' + esc(g.topic) + '</p></header><div class="gl">';
+  g.cards.forEach(function (c) {
+    h += '<article class="gc"><h3>' + icon(c.icon) + '<span>' + esc(c.h) + '</span></h3>' + c.body.map(function (b) { return '<p>' + b + '</p>'; }).join('') + (c.tip ? '<p class="tip"><b>Mẹo:</b> ' + esc(c.tip) + '</p>' : '') + '</article>';
+  });
+  h += '</div><nav class="pn">' + GR.map(function (x) { return '<a class="' + (x.id === g.id ? 'cur' : '') + '" href="#' + x.id + '">' + x.title + '</a>'; }).join('') + '<a href="#home">Đề ôn tập</a></nav>';
+  return h;
+}
+function deView(d) {
+  var t = curTab[d.id] || 0;
+  var h = '<a class="back" href="#home">Về trang chính</a><header class="top"><p class="brand">Ôn tập giữa học kì I · Tiếng Anh 7</p><h1>' + d.title + '</h1></header><nav class="tabs" role="tablist">' +
+    d.acts.map(function (a, i) {
+      var p = prog[a.id], ok = p && p.best >= p.total;
+      return '<button type="button" role="tab" class="tab' + (i === t ? ' cur' : '') + (ok ? ' done' : '') + '" data-tab="' + i + '" aria-selected="' + (i === t) + '">' + a.part + '</button>';
+    }).join('') + '</nav><div id="actbox">' + actHTML(d.acts[t]) + '</div>';
+  return h;
+}
+
+function findAct(id) {
+  for (var i = 0; i < DES.length; i++) for (var j = 0; j < DES[i].acts.length; j++) if (DES[i].acts[j].id === id) return DES[i].acts[j];
+}
+function ctl(sec, k) { return sec.querySelector('[data-q="' + k + '"]'); }
+function evalItem(a, sec, k) {
+  var it = a.items[k], el = ctl(sec, k);
+  if (a.type === 'choice') { var s = el.getAttribute('data-sel'); if (s === null || s === '') return null; return +s === it.a; }
+  if (a.type === 'pchoice') { if (el.value === '') return null; return +el.value === it.a; }
+  var v = el.value.trim(); if (!v) return null;
+  return match(a, it, v);
+}
+function lockOK(a, sec, k) {
+  var el = ctl(sec, k);
+  if (a.type === 'choice') { el.classList.add('ok'); el.classList.remove('bad'); el.querySelectorAll('.opt').forEach(function (b) { b.disabled = true; }); }
+  else { el.classList.add('ok'); el.classList.remove('bad'); if (el.tagName === 'SELECT') el.disabled = true; else el.readOnly = true; }
+}
+function insAns(el, text) { if (el.parentNode.querySelector('.ans')) return; var s = document.createElement('span'); s.className = 'ans'; s.textContent = 'Đáp án: ' + text; el.insertAdjacentElement('afterend', s); }
+function lockWrong(a, sec, k) {
+  var el = ctl(sec, k), it = a.items[k];
+  if (a.type === 'choice') {
+    el.classList.add('bad');
+    el.querySelectorAll('.opt').forEach(function (b) { if (+b.getAttribute('data-o') === it.a) b.classList.add('key'); b.disabled = true; });
+  } else if (a.type === 'pchoice') {
+    var op = el.querySelector('option[value="' + it.a + '"]'); el.classList.add('bad'); el.disabled = true; insAns(el, op ? op.textContent : String(it.o[it.a]));
+  } else {
+    el.classList.add('bad'); if (el.tagName === 'SELECT') el.disabled = true; else el.readOnly = true; insAns(el, it.a[0]);
+  }
+}
+function send(a, dung, tong) {
+  if (!WEB) return;
+  var p = new URLSearchParams({ ten: me.ten, lop: me.lop, unit: a.id.split('-')[0].replace('d', 'De '), bai: a.id, tieude: a.title, dung: dung, tong: tong, diem: (Math.round(dung / tong * 100) / 10).toFixed(1), sao: (dung / tong >= 1 ? 3 : dung / tong >= 0.9 ? 2 : dung / tong >= 0.8 ? 1 : 0) });
+  var url = WEB + (WEB.indexOf('?') < 0 ? '?' : '&') + p.toString();
+  try { fetch(url, { mode: 'no-cors' }).catch(function () { showSend(a, url); }); } catch (e) { showSend(a, url); }
+}
+function showSend(a, url) {
+  var sec = root.querySelector('[data-act="' + a.id + '"]'); if (!sec) return;
+  var fb = sec.querySelector('.fb'); fb.insertAdjacentHTML('beforeend', '<p><a class="lnk" target="_blank" rel="noopener" href="' + esc(url) + '">Gửi điểm cho thầy</a></p>');
+}
+function howHTML(h) {
+  var s = String(h || '').trim(); if (!s) return '';
+  var i = s.search(/[.!?]\s/), first = i < 0 ? s : s.slice(0, i + 1), rest = i < 0 ? '' : s.slice(i + 1).trim();
+  return '<p class="how"><b>Cách làm:</b> ' + esc(first) + '</p>' +
+    (rest ? '<details class="more"><summary>Xem thêm</summary><p class="how">' + esc(rest) + '</p></details>' : '');
+}
+function check(a, sec) {
+  var n = a.items.length, k, fb = sec.querySelector('.fb');
+  if (!String(me.ten || '').trim()) {
+    fb.hidden = false; fb.className = 'fb stop';
+    fb.innerHTML = '<p><b>Em chưa nhập họ tên.</b> Em về trang chính, nhập họ tên và lớp rồi quay lại làm bài để điểm được ghi cho em.</p><p><a class="lnk" href="#home">Về trang chính</a></p>';
+    return;
+  }
+  var blank = [];
+  for (k = 0; k < n; k++) if (evalItem(a, sec, k) === null) blank.push(a.start + a._ord.indexOf(k));
+  blank.sort(function (x, y) { return x - y; });
+  if (blank.length) {
+    fb.hidden = false; fb.className = 'fb stop';
+    fb.innerHTML = '<p><b>Em chưa làm xong.</b> Còn ' + blank.length + ' câu chưa trả lời (câu ' + blank.join(', ') + '). Em làm hết rồi mới bấm Kiểm tra.</p>';
+    return;
+  }
+  var dung = 0, wrong = 0;
+  for (k = 0; k < n; k++) {
+    if (evalItem(a, sec, k) === true) { dung++; lockOK(a, sec, k); } else { wrong++; lockWrong(a, sec, k); }
+  }
+  var p = prog[a.id] || (prog[a.id] = { first: dung, total: n, best: dung, lan: 0 });
+  p.total = n; p.lan = (p.lan || 0) + 1; p.last = dung; if (dung > p.best) p.best = dung;
+  ls('hd_prog', prog);
+  send(a, dung, n);
+  fb.hidden = false;
+  if (wrong === 0) {
+    fb.className = 'fb good';
+    fb.innerHTML = '<p><b>Em đã làm đúng hết ' + n + ' câu.</b> Phần này được ghi nhận là <b>Hoàn thành</b>.</p><p>Em có thể bấm Làm lại cả bài để luyện thêm.</p>';
+  } else {
+    fb.className = 'fb warn';
+    fb.innerHTML = '<p>Em đúng <b>' + dung + '/' + n + '</b> câu. Phần này được ghi nhận là <b>Chưa hoàn thành</b>.</p>' +
+      '<p>Các câu sai đã được khóa và hiện đáp án đúng. Em đọc đáp án và làm theo cách làm dưới đây để hiểu vì sao chọn như vậy.</p>' + howHTML(a.huong) +
+      '<p>Muốn hoàn thành, em bấm Làm lại cả bài và làm lại từ câu đầu tiên.</p>';
+  }
+  sec.querySelector('[data-do="check"]').hidden = true;
+  sec.querySelector('.stars').innerHTML = stars(a.id);
+  var tab = root.querySelector('.tab.cur'); if (tab && prog[a.id] && prog[a.id].best >= prog[a.id].total) tab.classList.add('done');
+}
+
+var view = '';
+function route() {
+  var h = (location.hash || '#home').slice(1) || 'home', html = '';
+  var g = GR.filter(function (x) { return x.id === h; })[0], d = DES.filter(function (x) { return x.id === h; })[0];
+  if (g) { html = grammarView(g); } else if (d) { html = deView(d); } else { h = 'home'; html = homeView(); }
+  view = h; root.innerHTML = html; window.scrollTo(0, 0);
+}
+root.addEventListener('click', function (e) {
+  var t = e.target.closest('button'); if (!t) return;
+  var sec = t.closest('.act');
+  if (t.classList.contains('opt')) {
+    var q = t.closest('.q'); if (t.disabled) return;
+    q.querySelectorAll('.opt').forEach(function (b) { b.classList.remove('sel'); }); t.classList.add('sel');
+    q.setAttribute('data-sel', t.getAttribute('data-o')); q.classList.remove('bad'); return;
+  }
+  if (t.hasAttribute('data-tab')) {
+    var dd = DES.filter(function (x) { return x.id === view; })[0]; if (!dd) return;
+    curTab[dd.id] = +t.getAttribute('data-tab'); root.querySelectorAll('.tab').forEach(function (b) { b.classList.remove('cur'); b.setAttribute('aria-selected', 'false'); });
+    t.classList.add('cur'); t.setAttribute('aria-selected', 'true');
+    document.getElementById('actbox').innerHTML = actHTML(dd.acts[curTab[dd.id]]); return;
+  }
+  if (!sec) return;
+  var a = findAct(sec.getAttribute('data-act'));
+  if (t.getAttribute('data-do') === 'check') check(a, sec);
+  if (t.getAttribute('data-do') === 'reset') { mem[a.id] = {}; sec.outerHTML = actHTML(a); }
+});
+root.addEventListener('input', function (e) {
+  var el = e.target;
+  if (el.id === 'ten' || el.id === 'lop') { me.ten = (document.getElementById('ten') || {}).value || ''; me.lop = (document.getElementById('lop') || {}).value || ''; ls('hd_me', me); return; }
+  if (el.classList && el.hasAttribute('data-q')) el.classList.remove('bad');
+});
+root.addEventListener('change', function (e) { var el = e.target; if (el.tagName === 'SELECT') el.classList.remove('bad'); });
+window.addEventListener('hashchange', route);
+route();
+window.__hd = { DES: DES, norm: norm, match: match };
+})();
+</script>
+</body>
+</html>
